@@ -1,0 +1,27 @@
+""
+"Unnamed Show"
+""
+"Coordination Report"
+"RF Zone: Default"
+"Active Channels (6)"
+Series,Band,Source,,Frequency,,,,
+No Inclusion Group (6),,,,,,,,
+EM 6000,A5A8,Sennheiser,,G:-- Ch:--,630,250 MHz,,,
+EM 6000,A5A8,Sennheiser,,G:-- Ch:--,602,875 MHz,,,
+AD/Standard,G56,Shure,,G:-- Ch:--,625,475 MHz,,,
+AD/Standard,G56,Shure,,G:-- Ch:--,578,350 MHz,,,
+AD/Standard,G56,Shure,,G:-- Ch:--,511,875 MHz,,,
+AD/Standard,G56,Shure,,G:-- Ch:--,509,650 MHz,,,
+
+Backup Frequencies (0),,
+
+""
+"Frequency Coordination Parameters"
+"Inclusions"
+"No User Group currently applied"
+"No Inclusion List currently applied"
+"Exclusions"
+"Active TV Channels (0)"
+"Other Exclusions (0)"
+"Created on 26 Aug 2022 at 9:37PM"
+"Generated using Wireless Workbench 6.15.0.119"
