@@ -1,20 +1,23 @@
 # Description of WWB report files
 
+What is not catched by the following regex is CSV.
+```(.*,)```
+
 ## Show name (Title)
 
-```""\n"([\w|\s]*)"\s+""``` 
+```""\n"(.+)"\s+""``` 
 - group1 = Showname
-- Contact info comes right after this as proper CSV
+- Contact info comes right after this as proper CSV, without header
 
 ## Type of report
 
-```""\n"([\w\s]* Report)"\s+``` 
+```""\n"(.* Report)"\s+``` 
 - group1 = Type of report
 - New State to read the report that start next line
 
-### RF Zone
+## RF Zone
 
-```"RF Zone: ([\w\s]+)"\s+```
+```"RF Zone: (.+)"\s+```
 - group1 = Name of RF Zone
 - Every group have an RF Zone, "Default" is default
 - Set RF zone to active group, not seperate state
@@ -28,7 +31,10 @@
 
 ### Backup Frequenzy
 
-```Backup Frequencies \((\d+)\),(?:Frequency List Source: ([\w\s]+))?,\s+```
+```Backup Frequencies \((\d+)\),(?:Frequency List Source: (.+))?,\s+```
+- group1 = Amount of backup frequencies
+- group2 = Optional backup frequency source
+- Followed by a correct CSV of the backup frequencies
 
 
 ## Frequency coordination parameters
@@ -42,14 +48,52 @@
 
 ### Inclusions
 
-```"User Group List: ([\w\s]+)"\s+```
+```"Inclusions"\s+```
+- Followed by the inclusions
+
+#### User grups
+
+```"User Group List: (.+)"\s+```
 - group1 = Name of user group
 - This is followed by a proper CSV containing the user groups
 
-```"Inclusion List: ([\w\s]+)"\s+```
+#### Inclusion lists
+
+```"Inclusion List: (.+)"\s+```
 - group1 = Name of inclusion group
-- This is followed by 
+- This is followed by a proper CSV containing all the inclusions.
+- Inclusion group is equal to the last defined group in that column.
+
+### Exclusions
+
+```"Exclusions"\s+```
+
+Exclusions are either TV channels or other exclusions (self added)
+
+#### TV Channels
+
+```"Active TV Channels \((\d+)\)"\s+```
+- group1 = Amount of excluded TV channels
+- Followed by a CSV, but the TV channels are seperated by ", " (comma-space). CSV are not with space.
+
+#### Other Exclusions
+
+```"Other Exclusions \((\d+)\)"\s+```
+- group1 = Amount of other exclusions
+- Followed by a CSV
 
 
+## Other 
+
+### Date of creation
+
+```"Created on (.+ at .+)"\s+```
+- group1 = Date and time of generation
+- Datetime will be in the format ```
+
+### Version of WWB
+
+```"Generated using Wireless Workbench (.+)"\s+```
+- group1 = Version of WWB
 
 
