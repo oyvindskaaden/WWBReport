@@ -13,21 +13,22 @@ import datetime
 wwb_lexer = WWBLexer()
 
 def main():
-    with open("Testfiles/Test4.csv", "r") as file: 
-        report_str: str = file.read().replace(", ", ";")
+    with open("Testfiles/Test5.csv", "r") as file: 
+        report_str: str = file.read()#.replace(", ", ";")
         #print(report_str)
 
-        lexed_file = wwb_lexer.get_tokens_unprocessed(report_str)
+        #lexed_file = wwb_lexer.get_tokens_unprocessed(report_str)
 
         
-        for i,j,k in lexed_file:
-            print(i,j,k)
-            continue
+        #for i,j,k in lexed_file:
+        #    #print(i,j,k)
+        #    continue
         
-        tree = wwb_lexer.wwb_tree
+        tree = wwb_lexer.get_wwb_tree(report_str)#wwb_lexer.wwb_tree
+        print(wwb_lexer)
         #print(tree)
         #pprint(tree)
-        print(json.dumps(tree, indent=4))
+        #print(json.dumps(tree, indent=4))
 
 
 
