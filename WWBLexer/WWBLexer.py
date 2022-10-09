@@ -14,6 +14,7 @@ class WWBLexer(RegexLexer):
     wwb_tree: dict      = {}
     current_csv: list   = []
     current_zone: dict  = {}
+    current_group: dict = {}
 
     def register_showname_cb(self: RegexLexer, match: re.Match):
         show_name = match.group(1)
@@ -44,26 +45,30 @@ class WWBLexer(RegexLexer):
 
     def register_active_cb(self: RegexLexer, match: re.Match):
         no_channels = match.group(1)
-        self.current_zone["no_active"] = no_channels
-        self.current_zone["active"] = []
+        self.current_zone["active"] = {}
+        self.current_zone["active"]["no_active"] = no_channels
 
-        self.current_csv = self.current_zone["active"]
+        self.current_group = self.current_zone["active"]
 
         yield match.start(), Token.WWB.ActiveChannels, no_channels
     
 
     def register_backup_cb(self: RegexLexer, match: re.Match):
         no_backup = match.group(1)
-        self.current_zone["no_backup"] = no_backup
-        self.current_zone["backup"] = []
+        self.current_zone["backup"] = {}
+        self.current_zone["backup"]["no_backup"] = no_backup
 
-        self.current_csv = self.current_zone["backup"]
+        self.current_group = self.current_zone["backup"]
 
         yield match.start(), Token.WWB.ActiveChannel, no_backup
 
     def register_group_cb(self: RegexLexer, match: re.Match):
         inclusion_group = match.group(1)
         no_ch_in_group = match.group(2)
+
+        self.current_group[inclusion_group] = []
+        self.current_csv = self.current_group[inclusion_group]
+
         yield match.start(), Token.WWB.InclusionGroup, inclusion_group
 
     def register_parameters_cb(self: RegexLexer, match: re.Match):
@@ -133,7 +138,13 @@ class WWBLexer(RegexLexer):
 
 
     def register_csv_cb(self: RegexLexer, match: re.Match):
-        self.current_csv.append(match.group(0))
+        csv_line = match.group(0)
+        
+        if "header" not in self.current_group:
+            self.current_group["header"] = csv_line
+        else:
+            self.current_csv.append(match.group(0))
+        
         yield match.start(), Token.WWB.CSV, "CSV"
 
 
