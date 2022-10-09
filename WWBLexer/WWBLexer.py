@@ -5,7 +5,6 @@ from pygments.lexer import RegexLexer
 from pygments.token import Token, Keyword, Generic
 
 
-
 class WWBLexer(RegexLexer):
     name                = 'WWBLex - Wireless Workbench Report file lexer'
     aliases             = ['wwb']
@@ -13,21 +12,22 @@ class WWBLexer(RegexLexer):
 
     wwb_tree: dict      = {}
     current_csv: list   = []
-    current_zone: dict = {}
+    current_zone: dict  = {}
 
     def register_showname_cb(self, match):
-        self.wwb_tree["show_name"] = match.group(1)
+        show_name = match.group(1)
+        
+        self.wwb_tree["show_name"] = show_name
         self.wwb_tree["contact_info"] = []
         self.current_csv = self.wwb_tree["contact_info"]
-
-        print(f"Show name: {match.group(1)}")
         
-        yield match.start(), Generic, "Show name"
+        yield match.start(), Token.WWB.ShowName, show_name
 
 
     def register_type_cb(self, match):
-        self.wwb_tree["type"] = match.group(1)
-        yield match.start(), Generic, "Report Type"
+        report_type = match.group(1)
+        self.wwb_tree["type"] = report_type
+        yield match.start(), Token.WWB.Type, report_type
 
 
     def register_rf_zone_cb(self, match):
@@ -38,43 +38,46 @@ class WWBLexer(RegexLexer):
         self.wwb_tree["zones"][zone] = {}
         self.current_zone = self.wwb_tree["zones"][zone]
 
-        yield match.start(), Generic, "RF Zone"
+        yield match.start(), Token.WWB.RFZone, zone
 
 
     def register_active_cb(self, match):
-        self.current_zone["no_active"] = match.group(1)
+        no_channels = match.group(1)
+        self.current_zone["no_active"] = no_channels
         self.current_zone["active"] = []
 
         self.current_csv = self.current_zone["active"]
 
-        yield match.start(), Generic, "Active channels"
+        yield match.start(), Token.WWB.ActiveChannels, no_channels
     
 
     def register_backup_cb(self, match):
-        self.current_zone["no_backup"] = match.group(1)
+        no_backup = match.group(1)
+        self.current_zone["no_backup"] = no_backup
         self.current_zone["backup"] = []
 
         self.current_csv = self.current_zone["backup"]
 
-        yield match.start(), Generic, "Backup channels"
+        yield match.start(), Token.WWB.ActiveChannel, no_backup
 
 
     def register_parameters_cb(self, match):
         self.wwb_tree["parameters"] = {}
-        yield match.start(), Generic, "Report Parameters"
+        yield match.start(), Token.WWB.Parameters, "Report Parameters"
 
 
     def register_inclusions_cb(self, match):
         self.wwb_tree["parameters"]["inclusions"] = {}
-        yield match.start(), Generic, "Report Inclusions"
+        yield match.start(), Token.WWB.Inclusions, "Report Inclusions"
     
 
     def register_user_group_cb(self, match):
-        self.wwb_tree["parameters"]["inclusions"]["user_group_name"] = match.group(1)
+        user_group = match.group(1)
+        self.wwb_tree["parameters"]["inclusions"]["user_group_name"] = user_group
         self.wwb_tree["parameters"]["inclusions"]["user_group"] = []
         self.current_csv = self.wwb_tree["parameters"]["inclusions"]["user_group"]
 
-        yield match.start(), Generic, "User group"
+        yield match.start(), Token.WWB.UserGroup, user_group
 
     
     def register_inclusion_list_cb(self, match):
@@ -82,48 +85,51 @@ class WWBLexer(RegexLexer):
         self.wwb_tree["parameters"]["inclusions"]["inclusion_list"] = []
         self.current_csv = self.wwb_tree["parameters"]["inclusions"]["inclusion_list"]
 
-        yield match.start(), Generic, "Inclusion List"
+        yield match.start(), Token.WWB.InclusionList, "Inclusion List"
 
     
     def register_exclusions_cb(self, match):
         self.wwb_tree["parameters"]["exclusions"] = {}
 
-        yield match.start(), Generic, "Report Exclusions"
+        yield match.start(), Token.WWB.UserGroup, "Report Exclusions"
 
 
     def register_active_tv_cb(self, match):
-        self.wwb_tree["parameters"]["exclusions"]["no_active_tv"] = match.group(1)
+        tv_channels = match.group(1)
+        self.wwb_tree["parameters"]["exclusions"]["no_active_tv"] = tv_channels
         self.wwb_tree["parameters"]["exclusions"]["active_tv"] = []
         self.current_csv = self.wwb_tree["parameters"]["exclusions"]["active_tv"]
 
-        yield match.start(), Generic, "Active TV channels"
+        yield match.start(), Token.WWB.TVChannels, tv_channels
 
     
     def register_other_exlusions_cb(self, match):
-        self.wwb_tree["parameters"]["exclusions"]["no_other_exlusions"] = match.group(1)
+        other_exclusions = match.group(1)
+        self.wwb_tree["parameters"]["exclusions"]["no_other_exlusions"] = other_exclusions
         self.wwb_tree["parameters"]["exclusions"]["other_exlusions"] = []
         self.current_csv = self.wwb_tree["parameters"]["exclusions"]["other_exlusions"]
 
-        yield match.start(), Generic, "Other Exclusions"
+        yield match.start(), Token.WWB.OtherExclusions, other_exclusions
+
 
     def register_date_created_cb(self, match):
         time_format = "%d %b %Y at %I:%M%p"
         created = datetime.strptime(match.group(1), time_format)
         self.wwb_tree["created"] = created.isoformat()
 
-        yield match.start(), Generic, created
+        yield match.start(), Token.WWB.Created, created.isoformat()
 
     
     def register_wwb_version_cb(self, match):
         version = match.group(1)
         self.wwb_tree["wwb_version"] = version
 
-        yield match.start(), Generic, version
+        yield match.start(), Token.WWB.Version, version
 
 
     def register_csv_cb(self, match):
         self.current_csv.append(match.group(0))
-        yield match.start(), Generic, "CSV"
+        yield match.start(), Token.WWB.CSV, "CSV"
 
 
     tokens = {
@@ -152,11 +158,7 @@ class WWBLexer(RegexLexer):
             (r'Generated using Wireless Workbench (.+)"\s+', 
                                                     register_wwb_version_cb),
             
-            (r'(.*,)',                          register_csv_cb)
+            (r'(.*,)',                              register_csv_cb)
         ],
 
     }
-
-    
-    def get_wwb_tree(self):
-        return self.wwb_tree
