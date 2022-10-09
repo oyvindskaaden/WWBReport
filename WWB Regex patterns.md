@@ -89,7 +89,7 @@ Exclusions are either TV channels or other exclusions (self added)
 
 ```"Created on (.+ at .+)"\s+```
 - group1 = Date and time of generation
-- Datetime will be in the format ```
+- Datetime will be in the format ```"%d %b %Y at %I:%M%p"```
 
 ### Version of WWB
 
