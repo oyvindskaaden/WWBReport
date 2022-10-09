@@ -36,6 +36,11 @@ What is not catched by the following regex is CSV.
 - group2 = Optional backup frequency source
 - Followed by a correct CSV of the backup frequencies
 
+### Inclusion groups in channel lists
+
+```\n(.+) \((\d+)\),{8}```
+- group1 = Inclusion group name
+- group2 = Number of freq in group
 
 ## Frequency coordination parameters
 
