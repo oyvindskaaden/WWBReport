@@ -1,9 +1,12 @@
 # Wireless Workbench Lexer
 
 from datetime import datetime
+from tokenize import group
 from pygments.lexer import RegexLexer
-from pygments.token import Token, Keyword, Generic
+from pygments.token import Token
 import re
+import pandas as pd
+from io import StringIO
 
 
 class WWBLexer(RegexLexer):
@@ -16,7 +19,7 @@ class WWBLexer(RegexLexer):
     current_zone: dict  = {}
     current_group: dict = {}
 
-    def register_showname_cb(self: RegexLexer, match: re.Match):
+    def __register_showname_cb(self: RegexLexer, match: re.Match):
         show_name = match.group(1)
         
         self.wwb_tree["show_name"] = show_name
@@ -26,13 +29,13 @@ class WWBLexer(RegexLexer):
         yield match.start(), Token.WWB.ShowName, show_name
 
 
-    def register_type_cb(self: RegexLexer, match: re.Match):
+    def __register_type_cb(self: RegexLexer, match: re.Match):
         report_type = match.group(1)
         self.wwb_tree["type"] = report_type
         yield match.start(), Token.WWB.Type, report_type
 
 
-    def register_rf_zone_cb(self: RegexLexer, match: re.Match):
+    def __register_rf_zone_cb(self: RegexLexer, match: re.Match):
         if "zones" not in self.wwb_tree:
                 self.wwb_tree["zones"] = {}
 
@@ -43,7 +46,7 @@ class WWBLexer(RegexLexer):
         yield match.start(), Token.WWB.RFZone, zone
 
 
-    def register_active_cb(self: RegexLexer, match: re.Match):
+    def __register_active_cb(self: RegexLexer, match: re.Match):
         no_channels = match.group(1)
         self.current_zone["active"] = {}
         self.current_zone["active"]["no_active"] = no_channels
@@ -53,7 +56,7 @@ class WWBLexer(RegexLexer):
         yield match.start(), Token.WWB.ActiveChannels, no_channels
     
 
-    def register_backup_cb(self: RegexLexer, match: re.Match):
+    def __register_backup_cb(self: RegexLexer, match: re.Match):
         no_backup = match.group(1)
         self.current_zone["backup"] = {}
         self.current_zone["backup"]["no_backup"] = no_backup
@@ -62,7 +65,7 @@ class WWBLexer(RegexLexer):
 
         yield match.start(), Token.WWB.ActiveChannel, no_backup
 
-    def register_group_cb(self: RegexLexer, match: re.Match):
+    def __register_group_cb(self: RegexLexer, match: re.Match):
         inclusion_group = match.group(1)
         no_ch_in_group = match.group(2)
 
@@ -71,17 +74,17 @@ class WWBLexer(RegexLexer):
 
         yield match.start(), Token.WWB.InclusionGroup, inclusion_group
 
-    def register_parameters_cb(self: RegexLexer, match: re.Match):
+    def __register_parameters_cb(self: RegexLexer, match: re.Match):
         self.wwb_tree["parameters"] = {}
         yield match.start(), Token.WWB.Parameters, "Report Parameters"
 
 
-    def register_inclusions_cb(self: RegexLexer, match: re.Match):
+    def __register_inclusions_cb(self: RegexLexer, match: re.Match):
         self.wwb_tree["parameters"]["inclusions"] = {}
         yield match.start(), Token.WWB.Inclusions, "Report Inclusions"
     
 
-    def register_user_group_cb(self: RegexLexer, match: re.Match):
+    def __register_user_group_cb(self: RegexLexer, match: re.Match):
         user_group = match.group(1)
         self.wwb_tree["parameters"]["inclusions"]["user_group_name"] = user_group
         self.wwb_tree["parameters"]["inclusions"]["user_group"] = []
@@ -90,7 +93,7 @@ class WWBLexer(RegexLexer):
         yield match.start(), Token.WWB.UserGroup, user_group
 
     
-    def register_inclusion_list_cb(self: RegexLexer, match: re.Match):
+    def __register_inclusion_list_cb(self: RegexLexer, match: re.Match):
         self.wwb_tree["parameters"]["inclusions"]["inclusion_list_name"] = match.group(1)
         self.wwb_tree["parameters"]["inclusions"]["inclusion_list"] = []
         self.current_csv = self.wwb_tree["parameters"]["inclusions"]["inclusion_list"]
@@ -98,13 +101,13 @@ class WWBLexer(RegexLexer):
         yield match.start(), Token.WWB.InclusionList, "Inclusion List"
 
     
-    def register_exclusions_cb(self: RegexLexer, match: re.Match):
+    def __register_exclusions_cb(self: RegexLexer, match: re.Match):
         self.wwb_tree["parameters"]["exclusions"] = {}
 
         yield match.start(), Token.WWB.UserGroup, "Report Exclusions"
 
 
-    def register_active_tv_cb(self: RegexLexer, match: re.Match):
+    def __register_active_tv_cb(self: RegexLexer, match: re.Match):
         tv_channels = match.group(1)
         self.wwb_tree["parameters"]["exclusions"]["no_active_tv"] = tv_channels
         self.wwb_tree["parameters"]["exclusions"]["active_tv"] = []
@@ -113,7 +116,7 @@ class WWBLexer(RegexLexer):
         yield match.start(), Token.WWB.TVChannels, tv_channels
 
     
-    def register_other_exlusions_cb(self: RegexLexer, match: re.Match):
+    def __register_other_exlusions_cb(self: RegexLexer, match: re.Match):
         other_exclusions = match.group(1)
         self.wwb_tree["parameters"]["exclusions"]["no_other_exlusions"] = other_exclusions
         self.wwb_tree["parameters"]["exclusions"]["other_exlusions"] = []
@@ -122,7 +125,7 @@ class WWBLexer(RegexLexer):
         yield match.start(), Token.WWB.OtherExclusions, other_exclusions
 
 
-    def register_date_created_cb(self: RegexLexer, match: re.Match):
+    def __register_date_created_cb(self: RegexLexer, match: re.Match):
         time_format = "%d %b %Y at %I:%M%p"
         created = datetime.strptime(match.group(1), time_format)
         self.wwb_tree["created"] = created.isoformat()
@@ -130,52 +133,124 @@ class WWBLexer(RegexLexer):
         yield match.start(), Token.WWB.Created, created.isoformat()
 
     
-    def register_wwb_version_cb(self: RegexLexer, match: re.Match):
+    def __register_wwb_version_cb(self: RegexLexer, match: re.Match):
         version = match.group(1)
         self.wwb_tree["wwb_version"] = version
 
         yield match.start(), Token.WWB.Version, version
 
 
-    def register_csv_cb(self: RegexLexer, match: re.Match):
-        csv_line = match.group(0)
+    def __register_csv_cb(self: RegexLexer, match: re.Match):
+        csv_line = match.group(0).split(',')
         
         if "header" not in self.current_group:
             self.current_group["header"] = csv_line
         else:
-            self.current_csv.append(match.group(0))
+            self.current_csv.append(csv_line)
         
         yield match.start(), Token.WWB.CSV, "CSV"
 
 
     tokens = {
         'root': [
-            (r'""\n"(.+)"\s+""',                    register_showname_cb),
+            (r'""\n"(.+)"\s+""',                    __register_showname_cb),
 
-            (r'""\n"(.* Report)"\s+',               register_type_cb),
+            (r'""\n"(.* Report)"\s+',               __register_type_cb),
 
-            (r'"RF Zone: (.+)"\s+',                 register_rf_zone_cb),
-            (r'"Active Channels \((\d+)\)"\s+',     register_active_cb),
+            (r'"RF Zone: (.+)"\s+',                 __register_rf_zone_cb),
+            (r'"Active Channels \((\d+)\)"\s+',     __register_active_cb),
             (r'Backup Frequencies \((\d+)\),(?:Frequency List Source: (.+))?,\s+', 
-                                                    register_backup_cb),
-            (r'\n(.+) \((\d+)\),{8}',               register_group_cb),
+                                                    __register_backup_cb),
+            (r'\n(.+) \((\d+)\),{8}',               __register_group_cb),
             
             (r'""\n"Frequency Coordination Parameters"\s', 
-                                                    register_parameters_cb),
+                                                    __register_parameters_cb),
             
-            (r'"Inclusions"\s+',                    register_inclusions_cb),
-            (r'"User Group List: (.+)"\s+',         register_user_group_cb),
-            (r'"Inclusion List: (.+)"\s+',          register_inclusion_list_cb),
+            (r'"Inclusions"\s+',                    __register_inclusions_cb),
+            (r'"User Group List: (.+)"\s+',         __register_user_group_cb),
+            (r'"Inclusion List: (.+)"\s+',          __register_inclusion_list_cb),
             
-            (r'"Exclusions"\s+',                    register_exclusions_cb),
-            (r'"Active TV Channels \((\d+)\)"\s+',  register_active_tv_cb),
-            (r'"Other Exclusions \((\d+)\)"\s+',    register_other_exlusions_cb),
+            (r'"Exclusions"\s+',                    __register_exclusions_cb),
+            (r'"Active TV Channels \((\d+)\)"\s+',  __register_active_tv_cb),
+            (r'"Other Exclusions \((\d+)\)"\s+',    __register_other_exlusions_cb),
             
-            (r'"Created on (.+ at .+)"\s+',         register_date_created_cb),
+            (r'"Created on (.+ at .+)"\s+',         __register_date_created_cb),
             (r'Generated using Wireless Workbench (.+)"\s+', 
-                                                    register_wwb_version_cb),
+                                                    __register_wwb_version_cb),
             
-            (r'(.*,)',                              register_csv_cb)
+            (r'(.*,)',                              __register_csv_cb)
         ],
-
     }
+
+    def __to_dataframe(self, csv_list: list[str]):
+        csv_list = pd.read_csv(csv_list)
+
+    def __pre_process_wwb_string(self, wwb_string: str):
+        """Preprocess the string, change wrong commas and change frequency decimal divider"""
+        
+        # Change the commas in the TV channel lists
+        wwb_string = wwb_string.replace(", ", ";")
+
+        # Change the commas to dots for the frequency
+        wwb_string = re.sub(r'(\d{3}),(\d{3})',
+                            r'\1.\2',
+                            wwb_string)
+        return wwb_string
+
+
+    def __post_process_wwb_tree(self):
+
+        self.wwb_tree["contact_info"] = pd.DataFrame(self.wwb_tree["contact_info"])
+
+        for zone in self.wwb_tree["zones"]:
+            for type in self.wwb_tree["zones"][zone]:
+                for group in self.wwb_tree["zones"][zone][type]:
+                    if group == "header" or group.startswith("no_"):
+                        continue
+
+                    self.wwb_tree["zones"][zone][type][group] = pd.DataFrame(
+                        self.wwb_tree["zones"][zone][type][group],
+                        columns=self.wwb_tree["zones"][zone][type]["header"]
+                    )
+
+        for params in self.wwb_tree["parameters"]:
+            for param in self.wwb_tree["parameters"][params]:
+                if param.startswith('no_') or param.endswith('_name'):
+                    continue
+
+                self.wwb_tree["parameters"][params][param] = pd.DataFrame(
+                    self.wwb_tree["parameters"][params][param][1:],
+                    columns=self.wwb_tree["parameters"][params][param][0]
+                )
+        return
+
+
+    def get_wwb_tree(self, wwb_string: str, post_process: bool = True) -> dict:
+        # Pre process the string to fix issues with wwb format
+        wwb_string = self.__pre_process_wwb_string(wwb_string)
+    
+        # Lex the string and itterate trough to get the tree back
+        lexed_wwb_report = self.get_tokens_unprocessed(wwb_string)
+        for _, _, _ in lexed_wwb_report:
+            continue
+
+        if post_process:
+            self.__post_process_wwb_tree()
+        
+        
+        return self.wwb_tree
+
+    def __str__(self) -> str:
+        
+
+
+        return f"""
+# {self.wwb_tree["show_name"]}
+        
+{self.wwb_tree["contact_info"].to_markdown()}
+
+## {self.wwb_tree["type"]}
+
+
+        #
+        """
