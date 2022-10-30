@@ -251,8 +251,9 @@ class WWBLexer(RegexLexer):
                 self.wwb_tree["parameters"][params][param] = df.to_dict()
         return
 
+    
 
-    def get_wwb_tree(self, wwb_string: str, post_process: bool = False) -> dict:
+    def get_wwb_tree(self, wwb_string: str, post_process: bool = True) -> dict:
         # Pre process the string to fix issues with wwb format
         wwb_string = self.__pre_process_wwb_string(wwb_string)
     
@@ -264,74 +265,15 @@ class WWBLexer(RegexLexer):
         if post_process:
             self.__post_process_wwb_tree()
         
-        
         return self.wwb_tree
 
+
+    def to_json(self, minimize: bool = False) -> str:
+        return json.dumps(self.wwb_tree, indent= 4 if not minimize else None)
+
+    
     def __str__(self) -> str:
-
-        return json.dumps(self.wwb_tree, indent=4)
-
-    def to_markdown(self) -> str:
+        return self.to_json()
         
 
-        markdown_output = f"""# {self.wwb_tree["show_name"]}
----
-
-> Created on: {datetime.fromisoformat(self.wwb_tree["created"]).strftime("%d %b %Y at %H:%M:%S")}
-
-> Created on version: {self.wwb_tree["wwb_version"]}
-
-## Venue Information
-
-{pd.DataFrame(self.wwb_tree["contact_info_show"]).to_markdown(index=False)}
-
-## Customer Information
-
-{pd.DataFrame(self.wwb_tree["contact_info_customer"]).to_markdown(index=False)}
-
-## {self.wwb_tree["type"]}
-        """
-# RF Zones
-        for zone in self.wwb_tree["zones"]:
-            markdown_output += f"""
-### RF Zone: {zone}
-            """
-            for type in self.wwb_tree["zones"][zone]:
-                markdown_output += f"""
-#### {type.capitalize()} channels ({str(self.wwb_tree["zones"][zone][type]["no_" + type])})
-                """
-
-                for group in self.wwb_tree["zones"][zone][type]:
-                    if group in "header" or group.startswith("no_"):
-                        continue
-                    markdown_output += f"""
-##### {group}
-
-{pd.DataFrame(self.wwb_tree["zones"][zone][type][group]).to_markdown(index=False)}
-"""
-
-# Frequency Coordination Parameters
-        markdown_output += """
-## Frequency Coordination Parameters
-"""
-        for param in self.wwb_tree["parameters"]:
-            markdown_output += f"""
-### {param.capitalize()} 
-"""
-
-            for list in self.wwb_tree["parameters"][param]:
-                if list.endswith("_name") or list.startswith("no_"):
-                    continue
-
-                markdown_output += f"""
-#### {list.replace("_", " ").capitalize()}"""
-
-                if (param == "inclusions"):
-                    markdown_output += " - " + self.wwb_tree["parameters"][param][list + "_name"]
-                elif (param == "exclusions"):
-                    markdown_output += f""" ({self.wwb_tree["parameters"][param]["no_" + list]})"""
-                markdown_output += f"""\n
-{pd.DataFrame(self.wwb_tree["parameters"][param][list]).to_markdown(index=False)}
-"""
-
-        return markdown_output
+    
