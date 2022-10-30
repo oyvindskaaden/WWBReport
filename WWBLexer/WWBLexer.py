@@ -1,12 +1,12 @@
 # Wireless Workbench Lexer
 
 from datetime import datetime
-from tokenize import group
+import json
+#from tokenize import group
 from pygments.lexer import RegexLexer
 from pygments.token import Token
 import re
 import pandas as pd
-from io import StringIO
 
 
 class WWBLexer(RegexLexer):
@@ -268,12 +268,13 @@ class WWBLexer(RegexLexer):
         return self.wwb_tree
 
     def __str__(self) -> str:
-        
-        markdown_output = ""
 
+        return json.dumps(self.wwb_tree, indent=4)
+
+    def to_markdown(self) -> str:
         
 
-        markdown_output += f"""# {self.wwb_tree["show_name"]}
+        markdown_output = f"""# {self.wwb_tree["show_name"]}
 ---
 
 > Created on: {datetime.fromisoformat(self.wwb_tree["created"]).strftime("%d %b %Y at %H:%M:%S")}
