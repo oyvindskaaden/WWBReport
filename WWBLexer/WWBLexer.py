@@ -185,7 +185,7 @@ class WWBLexer(RegexLexer):
     def __to_dataframe(self, csv_list: list[str]):
         csv_list = pd.read_csv(csv_list)
 
-    def __pre_process_wwb_string(self, wwb_string: str):
+    def __pre_process_wwb_string(self, wwb_string: str) -> str:
         """Preprocess the string, change wrong commas and change frequency decimal divider"""
         
         # Change the commas in the TV channel lists
@@ -198,7 +198,7 @@ class WWBLexer(RegexLexer):
         return wwb_string
 
 
-    def __post_process_wwb_tree(self):
+    def __post_process_wwb_tree(self) -> None:
 
         self.wwb_tree["contact_info_show"] = pd.DataFrame(
             self.wwb_tree["contact_info_show"][1:],
