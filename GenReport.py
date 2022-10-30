@@ -99,8 +99,9 @@ def main():
             #lexed_file = wwb_lexer.get_tokens_unprocessed(report_str)
 
             
-            tree = wwb_lexer.get_wwb_tree(report_str, True)#wwb_lexer.wwb_tree
-            print(wwb_lexer)
+            tree = wwb_lexer.get_wwb_tree(report_str)#wwb_lexer.wwb_tree
+            #print(wwb_lexer)
+            #print(wwb_lexer.to_json(True))
             #print(to_markdown(tree))
             #print(tree)
             #pprint(tree)
