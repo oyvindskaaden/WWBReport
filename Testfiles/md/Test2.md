@@ -5,32 +5,34 @@
 
 > Created on version: 6.15.0.119
 
-## Venue Information
+## Show Information
 
-| Venue:   |    |
-|:---------|:---|
-| Address: |    |
-| Phone:   |    |
-| Fax:     |    |
-| E-mail:  |    |
-| Notes:   |    |
+|         | 0   |
+|:--------|:----|
+| Venue   |     |
+| Address |     |
+| Phone   |     |
+| Fax     |     |
+| E-mail  |     |
+| Notes   |     |
+
 
 ## Customer Information
 
-| Point of Contact:   |    |
-|:--------------------|:---|
-| Address:            |    |
-| Phone:              |    |
-| Fax:                |    |
-| E-mail:             |    |
-|                     |    |
+|                  | 0   |
+|:-----------------|:----|
+| Point of Contact |     |
+| Address          |     |
+| Phone            |     |
+| Fax              |     |
+| E-mail           |     |
 
 ## Inventory Report
-        
+    
 ### RF Zone: Default
-            
+
 #### Active channels (4)
-                
+
 ##### No Inclusion Group
 
 | Model   | Band   | Channel Name   | Device ID   | Frequency   | Tags   |
@@ -41,7 +43,7 @@
 | AD4D-A  | G56    | Shure          | [AD4D-A]    | 540.700 MHz |        |
 
 #### Backup channels (2)
-                
+
 ##### No Inclusion Group
 
 | Type        | Band   | Frequency   |
@@ -50,9 +52,9 @@
 | AD/Standard | G56    | 615.100 MHz |
 
 ### RF Zone: Test 1
-            
+
 #### Active channels (6)
-                
+
 ##### Group 1
 
 | Model   | Band   | Channel Name   | Device ID   | Frequency   | Tags   |
@@ -70,7 +72,7 @@
 | AD4D-A  | G56    | Shure          | [AD4D-A]    | 587.725 MHz |        |
 
 #### Backup channels (3)
-                
+
 ##### Group 1
 
 | Type        | Band   | Frequency   |
@@ -85,9 +87,9 @@
 | AD/Standard | G56    | 579.700 MHz |
 
 ### RF Zone: Test 2
-            
+
 #### Active channels (4)
-                
+
 ##### Group 2
 
 | Model   | Band   | Channel Name   | Device ID   | Frequency   | Tags   |
@@ -98,7 +100,7 @@
 | AD4D-A  | G56    | Shure          | [AD4D-A]    | 580.000 MHz |        |
 
 #### Backup channels (2)
-                
+
 ##### Group 2
 
 | Type        | Band   | Frequency   |

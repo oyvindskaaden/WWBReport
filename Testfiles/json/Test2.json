@@ -1,19 +1,20 @@
 {
     "show_name": "Unnamed Show",
-    "contact_info_show": {
-        "Venue:": {
-            "0": "Address:",
-            "1": "Phone:",
-            "2": "Fax:",
-            "3": "E-mail:",
-            "4": "Notes:"
+    "contact_info": {
+        "show": {
+            "Venue": "",
+            "Address": "",
+            "Phone": "",
+            "Fax": "",
+            "E-mail": "",
+            "Notes": ""
         },
-        "": {
-            "0": "",
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": ""
+        "customer": {
+            "Point of Contact": "",
+            "Address": "",
+            "Phone": "",
+            "Fax": "",
+            "E-mail": ""
         }
     },
     "type": "Inventory Report",
@@ -300,21 +301,5 @@
         }
     },
     "created": "2022-09-22T23:55:00",
-    "wwb_version": "6.15.0.119",
-    "contact_info_customer": {
-        "Point of Contact:": {
-            "0": "Address:",
-            "1": "Phone:",
-            "2": "Fax:",
-            "3": "E-mail:",
-            "4": ""
-        },
-        "": {
-            "0": "",
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": ""
-        }
-    }
+    "wwb_version": "6.15.0.119"
 }

@@ -1,0 +1,60 @@
+{
+    "show_name": "Unnamed Show",
+    "contact_info": [],
+    "type": "Coordination Report",
+    "zones": {
+        "Default": {
+            "active": {
+                "no_active": "6",
+                "No Inclusion Group": {
+                    "Series": {
+                        "0": "EM 6000",
+                        "1": "EM 6000",
+                        "2": "AD/Standard",
+                        "3": "AD/Standard",
+                        "4": "AD/Standard",
+                        "5": "AD/Standard"
+                    },
+                    "Band": {
+                        "0": "A5A8",
+                        "1": "A5A8",
+                        "2": "G56",
+                        "3": "G56",
+                        "4": "G56",
+                        "5": "G56"
+                    },
+                    "Source": {
+                        "0": "Sennheiser",
+                        "1": "Sennheiser",
+                        "2": "Shure",
+                        "3": "Shure",
+                        "4": "Shure",
+                        "5": "Shure"
+                    },
+                    "Frequency": {
+                        "0": "630.250 MHz",
+                        "1": "602.875 MHz",
+                        "2": "625.475 MHz",
+                        "3": "578.350 MHz",
+                        "4": "511.875 MHz",
+                        "5": "509.650 MHz"
+                    }
+                }
+            },
+            "backup": {
+                "no_backup": "0"
+            }
+        }
+    },
+    "parameters": {
+        "inclusions": {},
+        "exclusions": {
+            "no_active_tv": "0",
+            "active_tv": [],
+            "no_other_exlusions": "0",
+            "other_exlusions": []
+        }
+    },
+    "created": "2022-08-26T21:37:00",
+    "wwb_version": "6.15.0.119"
+}
