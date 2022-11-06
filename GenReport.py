@@ -4,13 +4,8 @@
 """
 
 import argparse
-from pprint import pprint
 from WWBLexer.WWBLexer import WWBLexer
 from Templates.WWBMarkdown import to_markdown
-import json
-import pandas as pd
-
-from datetime import datetime
 
 
 wwb_lexer = WWBLexer()
@@ -34,13 +29,9 @@ def main():
     args = parser.parse_args()
 
     with open(args.filename, "r") as file: 
-        report_str: str = file.read()#.replace(", ", ";")
-        #print(report_str)
+        report_str: str = file.read()
 
-        #lexed_file = wwb_lexer.get_tokens_unprocessed(report_str)
-
-        
-        tree = wwb_lexer.get_wwb_tree(report_str)#wwb_lexer.wwb_tree
+        tree = wwb_lexer.get_wwb_tree(report_str)
 
         match args.format:
             case "md":
@@ -51,7 +42,6 @@ def main():
 
             case "json_minified":
                 print(wwb_lexer.to_json())
-
 
 
 if __name__ == '__main__':
