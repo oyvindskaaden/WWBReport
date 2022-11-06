@@ -5,3 +5,4 @@ all: clean
 
 clean: 
 	rm -r json/*.json
+	rm -r md/*.md
