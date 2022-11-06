@@ -23,8 +23,8 @@ class WWBLexer(RegexLexer):
         show_name = match.group(1)
         
         self.wwb_tree["show_name"] = show_name
-        self.wwb_tree["contact_info_show"] = []
-        self.current_csv = self.wwb_tree["contact_info_show"]
+        self.wwb_tree["contact_info"] = []
+        self.current_csv = self.wwb_tree["contact_info"]
         
         yield match.start(), Token.WWB.ShowName, show_name
 
@@ -155,7 +155,7 @@ class WWBLexer(RegexLexer):
         'root': [
             (r'""\n"(.+)"\s+""',                    __register_showname_cb),
 
-            (r'""\n"(.* Report)"\s+',               __register_type_cb),
+            (r'"(.* Report)"\s+',                   __register_type_cb),
 
             (r'"RF Zone: (.+)"\s+',                 __register_rf_zone_cb),
             (r'"Active Channels \((\d+)\)"\s+',     __register_active_cb),
@@ -197,20 +197,41 @@ class WWBLexer(RegexLexer):
                             wwb_string)
         return wwb_string
 
+    def __generate_info_dict(self, data_src: pd.DataFrame, data_target_key: str, location: list) -> None:
+        self.wwb_tree["contact_info"][data_target_key] = {}
+        for _, row in data_src.iloc[:,location].copy().iterrows():
+            if not row[location[0]]:
+                continue
+            self.wwb_tree["contact_info"][data_target_key][row[location[0]].replace(":", "")] = row[location[1]]
+        return
 
     def __post_process_wwb_tree(self) -> None:
 
-        self.wwb_tree["contact_info_show"] = pd.DataFrame(
-            self.wwb_tree["contact_info_show"][1:],
-            columns=self.wwb_tree["contact_info_show"][0]
-        )
-        self.wwb_tree["contact_info_customer"] = self.wwb_tree["contact_info_show"].iloc[:,[3,4]].copy().to_dict()
-        self.wwb_tree["contact_info_show"] = self.wwb_tree["contact_info_show"].iloc[:,[0,1]].copy().to_dict()
+        if self.wwb_tree["contact_info"]:
+            #self.wwb_tree["contact_info_show"] = pd.DataFrame(
+            show_info: pd.DataFrame = pd.DataFrame(
+                self.wwb_tree["contact_info"]#[1:],
+                #columns=self.wwb_tree["contact_info_show"][0]
+            )
+
+            self.wwb_tree["contact_info"] = {}
+
+            self.__generate_info_dict(show_info, "show", [0,1])
+            self.__generate_info_dict(show_info, "customer", [3,4])
+
+        #for index, row in self.wwb_tree["contact_info_show"].iloc[:,[3,4]].copy().iterrows():
+        #    print(row[3].replace(":", "") , row[4])
+
+        #self.wwb_tree["contact_info_customer"] = self.wwb_tree["contact_info_show"].iloc[:,[3,4]].copy().to_dict()
+        #self.wwb_tree["contact_info_show"] = self.wwb_tree["contact_info_show"].iloc[:,[0,1]].copy().to_dict()
 
         for zone in self.wwb_tree["zones"]:
             for type in self.wwb_tree["zones"][zone]:
                 for group in self.wwb_tree["zones"][zone][type]:
                     if group == "header" or group.startswith("no_"):
+                        continue
+                    
+                    if not self.wwb_tree["zones"][zone][type][group]:
                         continue
 
                     # Move the Frequency header from GroupChannel to actual frequency.
@@ -232,6 +253,8 @@ class WWBLexer(RegexLexer):
                     
                     self.wwb_tree["zones"][zone][type][group] = df.to_dict()
                 
+                if "header" not in self.wwb_tree["zones"][zone][type]:
+                    continue
                 self.wwb_tree["zones"][zone][type].pop("header")
 
 
@@ -240,6 +263,8 @@ class WWBLexer(RegexLexer):
                 if param.startswith('no_') or param.endswith('_name'):
                     continue
 
+                if not self.wwb_tree["parameters"][params][param]:
+                    continue
                 df = pd.DataFrame(
                     self.wwb_tree["parameters"][params][param][1:],
                     columns=self.wwb_tree["parameters"][params][param][0]
@@ -262,18 +287,19 @@ class WWBLexer(RegexLexer):
         for _, _, _ in lexed_wwb_report:
             continue
 
+
         if post_process:
             self.__post_process_wwb_tree()
         
         return self.wwb_tree
 
 
-    def to_json(self, minimize: bool = False) -> str:
+    def to_json(self, minimize: bool = True) -> str:
         return json.dumps(self.wwb_tree, indent= 4 if not minimize else None)
 
     
     def __str__(self) -> str:
-        return self.to_json()
+        return self.to_json(minimize=False)
         
 
     
