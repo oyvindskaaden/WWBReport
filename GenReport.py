@@ -21,6 +21,10 @@ parser = argparse.ArgumentParser(
 parser.add_argument('filenames', type=str, nargs='+',
                     help='Files to be scanned and generated')
 
+parser.add_argument("-f", "--format", choices=["md", "json", "json_minified"],
+                    default="json",
+                    help='Way of formatting the structure, default is json')
+
 def to_markdown(wwb_tree: dict) -> str:
 
     markdown_output = f"""# {wwb_tree["show_name"]}
@@ -29,16 +33,18 @@ def to_markdown(wwb_tree: dict) -> str:
 > Created on: {datetime.fromisoformat(wwb_tree["created"]).strftime("%d %b %Y at %H:%M:%S")}
 
 > Created on version: {wwb_tree["wwb_version"]}
+"""
 
-## Venue Information
+    if (wwb_tree["contact_info"]):
+        for info in wwb_tree["contact_info"]:
+            markdown_output += f"""
+## {info.capitalize()} Information
 
-{pd.DataFrame(wwb_tree["contact_info_show"]).to_markdown(index=False)}
+{pd.DataFrame().from_records([wwb_tree["contact_info"][info]]).T.to_markdown()}
 
-## Customer Information
+"""
 
-{pd.DataFrame(wwb_tree["contact_info_customer"]).to_markdown(index=False)}
-
-## {wwb_tree["type"]}
+    markdown_output += f"""## {wwb_tree["type"]}
     """
 # RF Zones
     for zone in wwb_tree["zones"]:
@@ -100,9 +106,19 @@ def main():
 
             
             tree = wwb_lexer.get_wwb_tree(report_str)#wwb_lexer.wwb_tree
-            #print(wwb_lexer)
-            #print(wwb_lexer.to_json(True))
-            print(to_markdown(tree))
+
+            match args.format:
+                case "md":
+                    print(to_markdown(tree))
+                
+                case "json":
+                    print(wwb_lexer)
+
+                case "json_minified":
+                    print(wwb_lexer.to_json())
+                
+            #
+            
             #print(tree)
             #pprint(tree)
             #print(json.dumps(tree, indent=4))
