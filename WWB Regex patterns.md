@@ -11,7 +11,7 @@ What is not catched by the following regex is CSV.
 
 ## Type of report
 
-```""\n"(.* Report)"\s+``` 
+```"(.* Report)"\s+``` 
 - group1 = Type of report
 - New State to read the report that start next line
 
