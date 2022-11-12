@@ -5,7 +5,6 @@ JSON_FILES 	= $(patsubst csv/%,%.json,$(FILES))
 
 GENERATOR	= ../GenReport.py
 
-#bash recompile
 all: md json
 
 md: md_clean $(MD_FILES)
@@ -17,11 +16,11 @@ test:
 	echo $(MD_FILES)
 	echo $(JSON_FILES)
 
-%.md: %.csv
+%.md: csv/%.csv
 	$(GENERATOR) -f md csv/$*.csv > ./md/$*.md
 
-%.json: %.csv
-	$(GENERATOR) -f json $*.csv > ./json/$*.json
+%.json: csv/%.csv
+	$(GENERATOR) -f json csv/$*.csv > ./json/$*.json
 
 clean: md_clean json_clean
 
