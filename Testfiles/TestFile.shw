@@ -1,4 +1,4 @@
-<show time="17:49:54" source="oyvinds-mbp.local" version="1.0" appl_version="6.15.0.119" date="Sun Nov 6 2022">
+<show date="Sat Nov 12 2022" source="oyvinds-mbp.local" time="13:34:29" appl_version="6.15.0.119" version="1.0">
     <show_properties version="1.0">
         <show_info>
             <name>Test Show</name>
@@ -6,9 +6,7 @@
         </show_info>
         <point_of_contact_info>
             <name>Øyvind</name>
-            <address>Test adresse 2
-3741834 Sted
-Norge</address>
+            <address/>
             <phone1>1234</phone1>
             <phone2>5678</phone2>
             <fax>90</fax>
@@ -18,8 +16,7 @@ Norge</address>
         </point_of_contact_info>
         <venue_info>
             <name>Studentersamfundet</name>
-            <address>Elgeseter Gate 1
-7030 Trondheim</address>
+            <address/>
             <country>Norway</country>
             <zipcode>7030</zipcode>
             <state>Trondheim</state>
@@ -232,6 +229,7 @@ Norge</address>
                 <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
                 <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
                 <group_channel type="10">--,--</group_channel>
+                <tags type="10">Tag Test 1,Tag Test 2</tags>
             </channel>
             <channel number="2">
                 <channel_name type="10"><![CDATA[Shure]]></channel_name>
@@ -309,6 +307,7 @@ Norge</address>
                 <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
                 <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
                 <group_channel type="10">--,--</group_channel>
+                <tags type="10">Tag Test 1</tags>
             </channel>
             <channel number="2">
                 <channel_name type="10"><![CDATA[Shure]]></channel_name>
@@ -337,6 +336,7 @@ Norge</address>
                 <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
                 <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
                 <group_channel type="10">--,--</group_channel>
+                <tags type="10">Tag Test 2</tags>
             </channel>
         </device>
         <device>
@@ -583,9 +583,9 @@ Norge</address>
             </channel>
         </device>
         <zones version="1.1">
-            <zone color="#7863ed" ordinal="1">Test 1</zone>
-            <zone color="#da2d7f" ordinal="2">Test 2</zone>
-            <zone color="#6692fc" ordinal="0">Default</zone>
+            <zone ordinal="0" color="#6692fc">Default</zone>
+            <zone ordinal="1" color="#7863ed">Test 1</zone>
+            <zone ordinal="2" color="#da2d7f">Test 2</zone>
             <zone_matrix>
                 <from zone="Default">
                     <to zone="Default">
@@ -1945,7 +1945,7 @@ Norge</address>
                         <end>738000</end>
                     </frequency>
                     <source>User defined</source>
-                    <notes/>
+                    <notes>Test Lower</notes>
                     <exclude>1</exclude>
                 </range>
                 <range>
@@ -1954,743 +1954,22 @@ Norge</address>
                         <end>758000</end>
                     </frequency>
                     <source>User defined</source>
-                    <notes/>
+                    <notes>Test Higher</notes>
                     <exclude>1</exclude>
                 </range>
             </freq_range_exclusions>
         </global_exclusions>
         <band_planning version="1.0">
             <accounted>true</accounted>
-            <country>Custom</country>
-            <user_group>Test</user_group>
+            <country>Australia</country>
+            <user_group>Australia Indoors</user_group>
             <band_plan_accounted>true</band_plan_accounted>
         </band_planning>
     </coordination_info>
     <CFLs version="1.0">
-        <CFL id="87f18912-44f0-4146-9fb5-5ad85b603fea" parts="3" time="23:55:34" zone="Test 1" zone_uuid="09f4f1ac-a811-44c9-b52a-1218e725b3f3" version="0.3" part="2" user="" machine="oyvinds-mbp.local" date="Thu Sep 22 2022">
-            <frequencies units="KHz" count="9">
-                <frequency gr_ch="G:-- Ch:--" value="521200">
-                    <series>AD</series>
-                    <band>G56</band>
-                    <tx_profile>Standard</tx_profile>
-                    <band_plan_group>830cf9dc-b271-4315-82ac-9a683c17d219</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>RESERVED</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid>4314C463-D587-4A69-8C0D-BCBB336665E5</device_cid>
-                    <channel_num>1</channel_num>
-                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
-                    <tuning_capability_id>826ca487-1802-6b4d-0fbd-7524058151f7</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="552075">
-                    <series>AD</series>
-                    <band>G56</band>
-                    <tx_profile>Standard</tx_profile>
-                    <band_plan_group>830cf9dc-b271-4315-82ac-9a683c17d219</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>RESERVED</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid>4314C463-D587-4A69-8C0D-BCBB336665E5</device_cid>
-                    <channel_num>0</channel_num>
-                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
-                    <tuning_capability_id>826ca487-1802-6b4d-0fbd-7524058151f7</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="558200">
-                    <series>PSM1000</series>
-                    <band>J8E</band>
-                    <tx_profile/>
-                    <band_plan_group>830cf9dc-b271-4315-82ac-9a683c17d219</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>RESERVED</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid>5114812F-825A-44D2-A8EC-708BACCB8BA0</device_cid>
-                    <channel_num>1</channel_num>
-                    <compat_prof_id>f3686491-6146-5a07-8108-bed37183ae4a</compat_prof_id>
-                    <tuning_capability_id>0170da8a-3215-cbdc-4267-13a6ad0927b2</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="559225">
-                    <series>PSM1000</series>
-                    <band>J8E</band>
-                    <tx_profile/>
-                    <band_plan_group>830cf9dc-b271-4315-82ac-9a683c17d219</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>RESERVED</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid>5114812F-825A-44D2-A8EC-708BACCB8BA0</device_cid>
-                    <channel_num>0</channel_num>
-                    <compat_prof_id>f3686491-6146-5a07-8108-bed37183ae4a</compat_prof_id>
-                    <tuning_capability_id>0170da8a-3215-cbdc-4267-13a6ad0927b2</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="579700">
-                    <series>AD</series>
-                    <band>G56</band>
-                    <tx_profile>Standard</tx_profile>
-                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>AVAILABLE</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid/>
-                    <channel_num>-1</channel_num>
-                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
-                    <tuning_capability_id>ebc1a80f-556e-1fa6-1b1f-5d156b2394ba</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="580400">
-                    <series>PSM1000</series>
-                    <band>J8E</band>
-                    <tx_profile/>
-                    <band_plan_group>830cf9dc-b271-4315-82ac-9a683c17d219</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>WWB_MONITOR</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid>00000000-0000-0000-0000-000000000000</device_cid>
-                    <channel_num>-1</channel_num>
-                    <compat_prof_id>f3686491-6146-5a07-8108-bed37183ae4a</compat_prof_id>
-                    <tuning_capability_id>0170da8a-3215-cbdc-4267-13a6ad0927b2</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="581525">
-                    <series>AD</series>
-                    <band>G56</band>
-                    <tx_profile>Standard</tx_profile>
-                    <band_plan_group>830cf9dc-b271-4315-82ac-9a683c17d219</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>AVAILABLE</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid/>
-                    <channel_num>-1</channel_num>
-                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
-                    <tuning_capability_id>826ca487-1802-6b4d-0fbd-7524058151f7</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="587725">
-                    <series>AD</series>
-                    <band>G56</band>
-                    <tx_profile>Standard</tx_profile>
-                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>RESERVED</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid>4F17E27C-6162-4B9B-8CD0-9B6278DAE51B</device_cid>
-                    <channel_num>0</channel_num>
-                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
-                    <tuning_capability_id>ebc1a80f-556e-1fa6-1b1f-5d156b2394ba</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="594125">
-                    <series>AD</series>
-                    <band>G56</band>
-                    <tx_profile>Standard</tx_profile>
-                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>RESERVED</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid>4F17E27C-6162-4B9B-8CD0-9B6278DAE51B</device_cid>
-                    <channel_num>1</channel_num>
-                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
-                    <tuning_capability_id>ebc1a80f-556e-1fa6-1b1f-5d156b2394ba</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-            </frequencies>
-            <device_list parts="3" cfl_id="87f18912-44f0-4146-9fb5-5ad85b603fea" time="23:55:36" zone="Test 1" zone_uuid="{09f4f1ac-a811-44c9-b52a-1218e725b3f3}" version="0.3" part="2" date="Thu Sep 22 2022">
-                <devices count="3">
-                    <device>
-                        <cid>4314C463-D587-4A69-8C0D-BCBB336665E5</cid>
-                        <device_id>AD4D-A</device_id>
-                        <manufacturer>Shure</manufacturer>
-                        <model>AD4D-A</model>
-                        <band>G56</band>
-                        <series>AD</series>
-                        <hd_mode>0</hd_mode>
-                        <wwb_types>
-                            <wwb_type>Receiver</wwb_type>
-                            <wwb_type>Microphone</wwb_type>
-                            <wwb_type>Rack</wwb_type>
-                        </wwb_types>
-                        <diversity>0</diversity>
-                        <zone_name>Test 1</zone_name>
-                        <zone_uuid>{09f4f1ac-a811-44c9-b52a-1218e725b3f3}</zone_uuid>
-                        <channel_count>2</channel_count>
-                        <channels>
-                            <channel>
-                                <num>0</num>
-                                <band>G56</band>
-                                <name>Shure</name>
-                                <frequency>552075</frequency>
-                                <group_channel/>
-                                <tx_profile>Standard</tx_profile>
-                                <color>#000000</color>
-                                <linked_devices count="0"/>
-                                <inclusion_group name="Group 1" uuid=""/>
-                            </channel>
-                            <channel>
-                                <num>1</num>
-                                <band>G56</band>
-                                <name>Shure</name>
-                                <frequency>521200</frequency>
-                                <group_channel/>
-                                <tx_profile>Standard</tx_profile>
-                                <color>#000000</color>
-                                <linked_devices count="0"/>
-                                <inclusion_group name="Group 1" uuid=""/>
-                            </channel>
-                        </channels>
-                    </device>
-                    <device>
-                        <cid>4F17E27C-6162-4B9B-8CD0-9B6278DAE51B</cid>
-                        <device_id>AD4D-A</device_id>
-                        <manufacturer>Shure</manufacturer>
-                        <model>AD4D-A</model>
-                        <band>G56</band>
-                        <series>AD</series>
-                        <hd_mode>0</hd_mode>
-                        <wwb_types>
-                            <wwb_type>Microphone</wwb_type>
-                            <wwb_type>Receiver</wwb_type>
-                            <wwb_type>Rack</wwb_type>
-                        </wwb_types>
-                        <diversity>0</diversity>
-                        <zone_name>Test 1</zone_name>
-                        <zone_uuid>{09f4f1ac-a811-44c9-b52a-1218e725b3f3}</zone_uuid>
-                        <channel_count>2</channel_count>
-                        <channels>
-                            <channel>
-                                <num>0</num>
-                                <band>G56</band>
-                                <name>Shure</name>
-                                <frequency>587725</frequency>
-                                <group_channel/>
-                                <tx_profile>Standard</tx_profile>
-                                <color>#000000</color>
-                                <linked_devices count="0"/>
-                                <inclusion_group name="Group 2" uuid=""/>
-                            </channel>
-                            <channel>
-                                <num>1</num>
-                                <band>G56</band>
-                                <name>Shure</name>
-                                <frequency>594125</frequency>
-                                <group_channel/>
-                                <tx_profile>Standard</tx_profile>
-                                <color>#000000</color>
-                                <linked_devices count="0"/>
-                                <inclusion_group name="Group 2" uuid=""/>
-                            </channel>
-                        </channels>
-                    </device>
-                    <device>
-                        <cid>5114812F-825A-44D2-A8EC-708BACCB8BA0</cid>
-                        <device_id>P10T</device_id>
-                        <manufacturer>Shure</manufacturer>
-                        <model>PSM1000</model>
-                        <band>J8E</band>
-                        <series>PSM1000</series>
-                        <hd_mode>-1</hd_mode>
-                        <wwb_types>
-                            <wwb_type>Transmitter</wwb_type>
-                            <wwb_type>In Ear Monitor</wwb_type>
-                            <wwb_type>Rack</wwb_type>
-                        </wwb_types>
-                        <diversity>0</diversity>
-                        <zone_name>Test 1</zone_name>
-                        <zone_uuid>{09f4f1ac-a811-44c9-b52a-1218e725b3f3}</zone_uuid>
-                        <channel_count>2</channel_count>
-                        <channels>
-                            <channel>
-                                <num>0</num>
-                                <band>J8E</band>
-                                <name>Shure</name>
-                                <frequency>559225</frequency>
-                                <group_channel/>
-                                <tx_profile/>
-                                <color>#000000</color>
-                                <linked_devices count="0"/>
-                                <inclusion_group name="Group 1" uuid=""/>
-                            </channel>
-                            <channel>
-                                <num>1</num>
-                                <band>J8E</band>
-                                <name>Shure</name>
-                                <frequency>558200</frequency>
-                                <group_channel/>
-                                <tx_profile/>
-                                <color>#000000</color>
-                                <linked_devices count="0"/>
-                                <inclusion_group name="Group 1" uuid=""/>
-                            </channel>
-                        </channels>
-                    </device>
-                </devices>
-            </device_list>
-            <global_exclusions version="1.1">
-                <frequency_exclusions>
-                    <channel>
-                        <frequency units="kHz">543350</frequency>
-                        <series>Generic Device - IMD</series>
-                        <manufacturer/>
-                        <model/>
-                        <band>Wideband</band>
-                        <tx_profile/>
-                        <compat_prof_id>6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2</compat_prof_id>
-                        <source>User defined</source>
-                        <notes/>
-                        <exclude>1</exclude>
-                    </channel>
-                </frequency_exclusions>
-                <compat_profiles>
-                    <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" synthesizable="0" version="0.0.0.1" name="Standard" imd_source="1">
-                        <spacing freq_units="KHz">
-                            <ch_ch>800</ch_ch>
-                            <imd_2t3o>400</imd_2t3o>
-                            <imd_2t5o>0</imd_2t5o>
-                            <imd_2t7o>0</imd_2t7o>
-                            <imd_2t9o>0</imd_2t9o>
-                            <imd_3t3o>0</imd_3t3o>
-                        </spacing>
-                        <filter type="1">
-                            <filter_start>-100000</filter_start>
-                            <filter_end>100000</filter_end>
-                            <filter_center>0</filter_center>
-                        </filter>
-                    </compat_profile>
-                </compat_profiles>
-                <freq_range_exclusions>
-                    <range>
-                        <frequency units="kHz">
-                            <start>734000</start>
-                            <end>738000</end>
-                        </frequency>
-                        <source>User defined</source>
-                        <notes/>
-                        <exclude>1</exclude>
-                    </range>
-                    <range>
-                        <frequency units="kHz">
-                            <start>753000</start>
-                            <end>758000</end>
-                        </frequency>
-                        <source>User defined</source>
-                        <notes/>
-                        <exclude>1</exclude>
-                    </range>
-                </freq_range_exclusions>
-            </global_exclusions>
-            <keys_coord_order version="1.1">
-                <profile>
-                    <band>G56</band>
-                    <series>AD</series>
-                    <tx_profile>Standard</tx_profile>
-                    <zone/>
-                    <incl_group>00000000-0000-0000-0000-000000000000</incl_group>
-                    <coord_order>300732201</coord_order>
-                </profile>
-                <profile>
-                    <band>G56</band>
-                    <series>AD</series>
-                    <tx_profile>Standard</tx_profile>
-                    <zone/>
-                    <incl_group>830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
-                    <coord_order>100732201</coord_order>
-                </profile>
-                <profile>
-                    <band>G56</band>
-                    <series>AD</series>
-                    <tx_profile>Standard</tx_profile>
-                    <zone/>
-                    <incl_group>fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
-                    <coord_order>200732201</coord_order>
-                </profile>
-                <profile>
-                    <band>J8E</band>
-                    <series>PSM1000</series>
-                    <tx_profile/>
-                    <zone/>
-                    <incl_group>00000000-0000-0000-0000-000000000000</incl_group>
-                    <coord_order>300622600</coord_order>
-                </profile>
-                <profile>
-                    <band>J8E</band>
-                    <series>PSM1000</series>
-                    <tx_profile/>
-                    <zone/>
-                    <incl_group>830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
-                    <coord_order>100622600</coord_order>
-                </profile>
-                <profile>
-                    <band>J8E</band>
-                    <series>PSM1000</series>
-                    <tx_profile/>
-                    <zone/>
-                    <incl_group>fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
-                    <coord_order>200622600</coord_order>
-                </profile>
-            </keys_coord_order>
-            <exclusion_threshold units="dBm">-85</exclusion_threshold>
-            <peak_threshold units="dBm">-60</peak_threshold>
-        </CFL>
-        <CFL id="87f18912-44f0-4146-9fb5-5ad85b603fea" parts="3" time="23:55:34" zone="Test 2" zone_uuid="833e519d-f38b-4a96-8706-7ce10afb8717" version="0.3" part="3" user="" machine="oyvinds-mbp.local" date="Thu Sep 22 2022">
+        <CFL id="87f18912-44f0-4146-9fb5-5ad85b603fea" zone_uuid="168efbc9-82c6-47a4-b9ff-75cde3d53017" date="Thu Sep 22 2022" part="1" zone="Default" parts="3" user="" time="23:55:34" version="0.3" machine="oyvinds-mbp.local">
             <frequencies units="KHz" count="6">
-                <frequency gr_ch="G:-- Ch:--" value="577750">
-                    <series>PSM1000</series>
-                    <band>J8E</band>
-                    <tx_profile/>
-                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>RESERVED</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid>748E60DB-F58E-44C2-9BBB-1D233BB7D1E0</device_cid>
-                    <channel_num>0</channel_num>
-                    <compat_prof_id>f3686491-6146-5a07-8108-bed37183ae4a</compat_prof_id>
-                    <tuning_capability_id>a25baad9-18a6-066b-d1ec-31ef2a37fef9</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="578225">
-                    <series>PSM1000</series>
-                    <band>J8E</band>
-                    <tx_profile/>
-                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>RESERVED</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid>748E60DB-F58E-44C2-9BBB-1D233BB7D1E0</device_cid>
-                    <channel_num>1</channel_num>
-                    <compat_prof_id>f3686491-6146-5a07-8108-bed37183ae4a</compat_prof_id>
-                    <tuning_capability_id>a25baad9-18a6-066b-d1ec-31ef2a37fef9</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="580000">
-                    <series>AD</series>
-                    <band>G56</band>
-                    <tx_profile>Standard</tx_profile>
-                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>RESERVED</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid>C6C495CA-FE4C-4C1B-B49F-14AEA190913A</device_cid>
-                    <channel_num>0</channel_num>
-                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
-                    <tuning_capability_id>f172fec2-7362-4aae-a8cf-dd00f280fb8a</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="584225">
-                    <series>AD</series>
-                    <band>G56</band>
-                    <tx_profile>Standard</tx_profile>
-                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>RESERVED</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid>C6C495CA-FE4C-4C1B-B49F-14AEA190913A</device_cid>
-                    <channel_num>1</channel_num>
-                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
-                    <tuning_capability_id>f172fec2-7362-4aae-a8cf-dd00f280fb8a</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="596450">
-                    <series>PSM1000</series>
-                    <band>J8E</band>
-                    <tx_profile/>
-                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>WWB_MONITOR</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid>00000000-0000-0000-0000-000000000000</device_cid>
-                    <channel_num>-1</channel_num>
-                    <compat_prof_id>f3686491-6146-5a07-8108-bed37183ae4a</compat_prof_id>
-                    <tuning_capability_id>a25baad9-18a6-066b-d1ec-31ef2a37fef9</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="632650">
-                    <series>AD</series>
-                    <band>G56</band>
-                    <tx_profile>Standard</tx_profile>
-                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
-                    <compat_status>COMPATIBLE</compat_status>
-                    <usage_status>AVAILABLE</usage_status>
-                    <origin>SYNTHESIZED</origin>
-                    <device_cid/>
-                    <channel_num>-1</channel_num>
-                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
-                    <tuning_capability_id>f172fec2-7362-4aae-a8cf-dd00f280fb8a</tuning_capability_id>
-                    <additional_compat>
-                        <profile>
-                            <series>TODO</series>
-                            <band>TODO</band>
-                        </profile>
-                    </additional_compat>
-                </frequency>
-            </frequencies>
-            <device_list parts="3" cfl_id="87f18912-44f0-4146-9fb5-5ad85b603fea" time="23:55:36" zone="Test 2" zone_uuid="{833e519d-f38b-4a96-8706-7ce10afb8717}" version="0.3" part="3" date="Thu Sep 22 2022">
-                <devices count="2">
-                    <device>
-                        <cid>748E60DB-F58E-44C2-9BBB-1D233BB7D1E0</cid>
-                        <device_id>P10T</device_id>
-                        <manufacturer>Shure</manufacturer>
-                        <model>PSM1000</model>
-                        <band>J8E</band>
-                        <series>PSM1000</series>
-                        <hd_mode>-1</hd_mode>
-                        <wwb_types>
-                            <wwb_type>Transmitter</wwb_type>
-                            <wwb_type>In Ear Monitor</wwb_type>
-                            <wwb_type>Rack</wwb_type>
-                        </wwb_types>
-                        <diversity>0</diversity>
-                        <zone_name>Test 2</zone_name>
-                        <zone_uuid>{833e519d-f38b-4a96-8706-7ce10afb8717}</zone_uuid>
-                        <channel_count>2</channel_count>
-                        <channels>
-                            <channel>
-                                <num>0</num>
-                                <band>J8E</band>
-                                <name>Shure</name>
-                                <frequency>577750</frequency>
-                                <group_channel/>
-                                <tx_profile/>
-                                <color>#000000</color>
-                                <linked_devices count="0"/>
-                                <inclusion_group name="Group 2" uuid=""/>
-                            </channel>
-                            <channel>
-                                <num>1</num>
-                                <band>J8E</band>
-                                <name>Shure</name>
-                                <frequency>578225</frequency>
-                                <group_channel/>
-                                <tx_profile/>
-                                <color>#000000</color>
-                                <linked_devices count="0"/>
-                                <inclusion_group name="Group 2" uuid=""/>
-                            </channel>
-                        </channels>
-                    </device>
-                    <device>
-                        <cid>C6C495CA-FE4C-4C1B-B49F-14AEA190913A</cid>
-                        <device_id>AD4D-A</device_id>
-                        <manufacturer>Shure</manufacturer>
-                        <model>AD4D-A</model>
-                        <band>G56</band>
-                        <series>AD</series>
-                        <hd_mode>0</hd_mode>
-                        <wwb_types>
-                            <wwb_type>Receiver</wwb_type>
-                            <wwb_type>Microphone</wwb_type>
-                            <wwb_type>Rack</wwb_type>
-                        </wwb_types>
-                        <diversity>0</diversity>
-                        <zone_name>Test 2</zone_name>
-                        <zone_uuid>{833e519d-f38b-4a96-8706-7ce10afb8717}</zone_uuid>
-                        <channel_count>2</channel_count>
-                        <channels>
-                            <channel>
-                                <num>0</num>
-                                <band>G56</band>
-                                <name>Shure</name>
-                                <frequency>580000</frequency>
-                                <group_channel/>
-                                <tx_profile>Standard</tx_profile>
-                                <color>#000000</color>
-                                <linked_devices count="0"/>
-                                <inclusion_group name="Group 2" uuid=""/>
-                            </channel>
-                            <channel>
-                                <num>1</num>
-                                <band>G56</band>
-                                <name>Shure</name>
-                                <frequency>584225</frequency>
-                                <group_channel/>
-                                <tx_profile>Standard</tx_profile>
-                                <color>#000000</color>
-                                <linked_devices count="0"/>
-                                <inclusion_group name="Group 2" uuid=""/>
-                            </channel>
-                        </channels>
-                    </device>
-                </devices>
-            </device_list>
-            <global_exclusions version="1.1">
-                <frequency_exclusions>
-                    <channel>
-                        <frequency units="kHz">543350</frequency>
-                        <series>Generic Device - IMD</series>
-                        <manufacturer/>
-                        <model/>
-                        <band>Wideband</band>
-                        <tx_profile/>
-                        <compat_prof_id>6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2</compat_prof_id>
-                        <source>User defined</source>
-                        <notes/>
-                        <exclude>1</exclude>
-                    </channel>
-                </frequency_exclusions>
-                <compat_profiles>
-                    <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" synthesizable="0" version="0.0.0.1" name="Standard" imd_source="1">
-                        <spacing freq_units="KHz">
-                            <ch_ch>800</ch_ch>
-                            <imd_2t3o>400</imd_2t3o>
-                            <imd_2t5o>0</imd_2t5o>
-                            <imd_2t7o>0</imd_2t7o>
-                            <imd_2t9o>0</imd_2t9o>
-                            <imd_3t3o>0</imd_3t3o>
-                        </spacing>
-                        <filter type="1">
-                            <filter_start>-100000</filter_start>
-                            <filter_end>100000</filter_end>
-                            <filter_center>0</filter_center>
-                        </filter>
-                    </compat_profile>
-                </compat_profiles>
-                <freq_range_exclusions>
-                    <range>
-                        <frequency units="kHz">
-                            <start>734000</start>
-                            <end>738000</end>
-                        </frequency>
-                        <source>User defined</source>
-                        <notes/>
-                        <exclude>1</exclude>
-                    </range>
-                    <range>
-                        <frequency units="kHz">
-                            <start>753000</start>
-                            <end>758000</end>
-                        </frequency>
-                        <source>User defined</source>
-                        <notes/>
-                        <exclude>1</exclude>
-                    </range>
-                </freq_range_exclusions>
-            </global_exclusions>
-            <keys_coord_order version="1.1">
-                <profile>
-                    <band>G56</band>
-                    <series>AD</series>
-                    <tx_profile>Standard</tx_profile>
-                    <zone/>
-                    <incl_group>00000000-0000-0000-0000-000000000000</incl_group>
-                    <coord_order>300732201</coord_order>
-                </profile>
-                <profile>
-                    <band>G56</band>
-                    <series>AD</series>
-                    <tx_profile>Standard</tx_profile>
-                    <zone/>
-                    <incl_group>830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
-                    <coord_order>100732201</coord_order>
-                </profile>
-                <profile>
-                    <band>G56</band>
-                    <series>AD</series>
-                    <tx_profile>Standard</tx_profile>
-                    <zone/>
-                    <incl_group>fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
-                    <coord_order>200732201</coord_order>
-                </profile>
-                <profile>
-                    <band>J8E</band>
-                    <series>PSM1000</series>
-                    <tx_profile/>
-                    <zone/>
-                    <incl_group>00000000-0000-0000-0000-000000000000</incl_group>
-                    <coord_order>300622600</coord_order>
-                </profile>
-                <profile>
-                    <band>J8E</band>
-                    <series>PSM1000</series>
-                    <tx_profile/>
-                    <zone/>
-                    <incl_group>830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
-                    <coord_order>100622600</coord_order>
-                </profile>
-                <profile>
-                    <band>J8E</band>
-                    <series>PSM1000</series>
-                    <tx_profile/>
-                    <zone/>
-                    <incl_group>fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
-                    <coord_order>200622600</coord_order>
-                </profile>
-            </keys_coord_order>
-            <exclusion_threshold units="dBm">-85</exclusion_threshold>
-            <peak_threshold units="dBm">-60</peak_threshold>
-        </CFL>
-        <CFL id="87f18912-44f0-4146-9fb5-5ad85b603fea" parts="3" time="23:55:34" zone="Default" zone_uuid="da26a3bc-b248-441a-8a5b-113f565bd86b" version="0.3" part="1" user="" machine="oyvinds-mbp.local" date="Thu Sep 22 2022">
-            <frequencies units="KHz" count="6">
-                <frequency gr_ch="G:-- Ch:--" value="540700">
+                <frequency value="540700" gr_ch="G:-- Ch:--">
                     <series>AD</series>
                     <band>G56</band>
                     <tx_profile>Standard</tx_profile>
@@ -2709,7 +1988,7 @@ Norge</address>
                         </profile>
                     </additional_compat>
                 </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="555450">
+                <frequency value="555450" gr_ch="G:-- Ch:--">
                     <series>AD</series>
                     <band>G56</band>
                     <tx_profile>Standard</tx_profile>
@@ -2728,7 +2007,7 @@ Norge</address>
                         </profile>
                     </additional_compat>
                 </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="574450">
+                <frequency value="574450" gr_ch="G:-- Ch:--">
                     <series>PSM1000</series>
                     <band>J8E</band>
                     <tx_profile/>
@@ -2747,7 +2026,7 @@ Norge</address>
                         </profile>
                     </additional_compat>
                 </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="575200">
+                <frequency value="575200" gr_ch="G:-- Ch:--">
                     <series>PSM1000</series>
                     <band>J8E</band>
                     <tx_profile/>
@@ -2766,7 +2045,7 @@ Norge</address>
                         </profile>
                     </additional_compat>
                 </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="589000">
+                <frequency value="589000" gr_ch="G:-- Ch:--">
                     <series>PSM1000</series>
                     <band>J8E</band>
                     <tx_profile/>
@@ -2785,7 +2064,7 @@ Norge</address>
                         </profile>
                     </additional_compat>
                 </frequency>
-                <frequency gr_ch="G:-- Ch:--" value="615100">
+                <frequency value="615100" gr_ch="G:-- Ch:--">
                     <series>AD</series>
                     <band>G56</band>
                     <tx_profile>Standard</tx_profile>
@@ -2805,7 +2084,7 @@ Norge</address>
                     </additional_compat>
                 </frequency>
             </frequencies>
-            <device_list parts="3" cfl_id="87f18912-44f0-4146-9fb5-5ad85b603fea" time="23:55:36" zone="Default" zone_uuid="{da26a3bc-b248-441a-8a5b-113f565bd86b}" version="0.3" part="1" date="Thu Sep 22 2022">
+            <device_list zone_uuid="{168efbc9-82c6-47a4-b9ff-75cde3d53017}" cfl_id="87f18912-44f0-4146-9fb5-5ad85b603fea" date="Thu Sep 22 2022" part="1" zone="Default" parts="3" time="23:55:36" version="0.3">
                 <devices count="2">
                     <device>
                         <cid>A3F76A1D-A58A-472D-9269-A437E3699109</cid>
@@ -2822,7 +2101,7 @@ Norge</address>
                         </wwb_types>
                         <diversity>0</diversity>
                         <zone_name>Default</zone_name>
-                        <zone_uuid>{da26a3bc-b248-441a-8a5b-113f565bd86b}</zone_uuid>
+                        <zone_uuid>{168efbc9-82c6-47a4-b9ff-75cde3d53017}</zone_uuid>
                         <channel_count>2</channel_count>
                         <channels>
                             <channel>
@@ -2864,7 +2143,7 @@ Norge</address>
                         </wwb_types>
                         <diversity>0</diversity>
                         <zone_name>Default</zone_name>
-                        <zone_uuid>{da26a3bc-b248-441a-8a5b-113f565bd86b}</zone_uuid>
+                        <zone_uuid>{168efbc9-82c6-47a4-b9ff-75cde3d53017}</zone_uuid>
                         <channel_count>2</channel_count>
                         <channels>
                             <channel>
@@ -2932,7 +2211,7 @@ Norge</address>
                             <end>738000</end>
                         </frequency>
                         <source>User defined</source>
-                        <notes/>
+                        <notes>Test Lower</notes>
                         <exclude>1</exclude>
                     </range>
                     <range>
@@ -2941,7 +2220,728 @@ Norge</address>
                             <end>758000</end>
                         </frequency>
                         <source>User defined</source>
+                        <notes>Test Higher</notes>
+                        <exclude>1</exclude>
+                    </range>
+                </freq_range_exclusions>
+            </global_exclusions>
+            <keys_coord_order version="1.1">
+                <profile>
+                    <band>G56</band>
+                    <series>AD</series>
+                    <tx_profile>Standard</tx_profile>
+                    <zone/>
+                    <incl_group>00000000-0000-0000-0000-000000000000</incl_group>
+                    <coord_order>300732201</coord_order>
+                </profile>
+                <profile>
+                    <band>G56</band>
+                    <series>AD</series>
+                    <tx_profile>Standard</tx_profile>
+                    <zone/>
+                    <incl_group>830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
+                    <coord_order>100732201</coord_order>
+                </profile>
+                <profile>
+                    <band>G56</band>
+                    <series>AD</series>
+                    <tx_profile>Standard</tx_profile>
+                    <zone/>
+                    <incl_group>fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
+                    <coord_order>200732201</coord_order>
+                </profile>
+                <profile>
+                    <band>J8E</band>
+                    <series>PSM1000</series>
+                    <tx_profile/>
+                    <zone/>
+                    <incl_group>00000000-0000-0000-0000-000000000000</incl_group>
+                    <coord_order>300622600</coord_order>
+                </profile>
+                <profile>
+                    <band>J8E</band>
+                    <series>PSM1000</series>
+                    <tx_profile/>
+                    <zone/>
+                    <incl_group>830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
+                    <coord_order>100622600</coord_order>
+                </profile>
+                <profile>
+                    <band>J8E</band>
+                    <series>PSM1000</series>
+                    <tx_profile/>
+                    <zone/>
+                    <incl_group>fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
+                    <coord_order>200622600</coord_order>
+                </profile>
+            </keys_coord_order>
+            <exclusion_threshold units="dBm">-85</exclusion_threshold>
+            <peak_threshold units="dBm">-60</peak_threshold>
+        </CFL>
+        <CFL id="87f18912-44f0-4146-9fb5-5ad85b603fea" zone_uuid="6cc25817-6127-474f-b582-ab183e295015" date="Thu Sep 22 2022" part="2" zone="Test 1" parts="3" user="" time="23:55:34" version="0.3" machine="oyvinds-mbp.local">
+            <frequencies units="KHz" count="9">
+                <frequency value="521200" gr_ch="G:-- Ch:--">
+                    <series>AD</series>
+                    <band>G56</band>
+                    <tx_profile>Standard</tx_profile>
+                    <band_plan_group>830cf9dc-b271-4315-82ac-9a683c17d219</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>RESERVED</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid>4314C463-D587-4A69-8C0D-BCBB336665E5</device_cid>
+                    <channel_num>1</channel_num>
+                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
+                    <tuning_capability_id>826ca487-1802-6b4d-0fbd-7524058151f7</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+                <frequency value="552075" gr_ch="G:-- Ch:--">
+                    <series>AD</series>
+                    <band>G56</band>
+                    <tx_profile>Standard</tx_profile>
+                    <band_plan_group>830cf9dc-b271-4315-82ac-9a683c17d219</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>RESERVED</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid>4314C463-D587-4A69-8C0D-BCBB336665E5</device_cid>
+                    <channel_num>0</channel_num>
+                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
+                    <tuning_capability_id>826ca487-1802-6b4d-0fbd-7524058151f7</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+                <frequency value="558200" gr_ch="G:-- Ch:--">
+                    <series>PSM1000</series>
+                    <band>J8E</band>
+                    <tx_profile/>
+                    <band_plan_group>830cf9dc-b271-4315-82ac-9a683c17d219</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>RESERVED</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid>5114812F-825A-44D2-A8EC-708BACCB8BA0</device_cid>
+                    <channel_num>1</channel_num>
+                    <compat_prof_id>f3686491-6146-5a07-8108-bed37183ae4a</compat_prof_id>
+                    <tuning_capability_id>0170da8a-3215-cbdc-4267-13a6ad0927b2</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+                <frequency value="559225" gr_ch="G:-- Ch:--">
+                    <series>PSM1000</series>
+                    <band>J8E</band>
+                    <tx_profile/>
+                    <band_plan_group>830cf9dc-b271-4315-82ac-9a683c17d219</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>RESERVED</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid>5114812F-825A-44D2-A8EC-708BACCB8BA0</device_cid>
+                    <channel_num>0</channel_num>
+                    <compat_prof_id>f3686491-6146-5a07-8108-bed37183ae4a</compat_prof_id>
+                    <tuning_capability_id>0170da8a-3215-cbdc-4267-13a6ad0927b2</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+                <frequency value="579700" gr_ch="G:-- Ch:--">
+                    <series>AD</series>
+                    <band>G56</band>
+                    <tx_profile>Standard</tx_profile>
+                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>AVAILABLE</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid/>
+                    <channel_num>-1</channel_num>
+                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
+                    <tuning_capability_id>ebc1a80f-556e-1fa6-1b1f-5d156b2394ba</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+                <frequency value="580400" gr_ch="G:-- Ch:--">
+                    <series>PSM1000</series>
+                    <band>J8E</band>
+                    <tx_profile/>
+                    <band_plan_group>830cf9dc-b271-4315-82ac-9a683c17d219</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>WWB_MONITOR</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid>00000000-0000-0000-0000-000000000000</device_cid>
+                    <channel_num>-1</channel_num>
+                    <compat_prof_id>f3686491-6146-5a07-8108-bed37183ae4a</compat_prof_id>
+                    <tuning_capability_id>0170da8a-3215-cbdc-4267-13a6ad0927b2</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+                <frequency value="581525" gr_ch="G:-- Ch:--">
+                    <series>AD</series>
+                    <band>G56</band>
+                    <tx_profile>Standard</tx_profile>
+                    <band_plan_group>830cf9dc-b271-4315-82ac-9a683c17d219</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>AVAILABLE</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid/>
+                    <channel_num>-1</channel_num>
+                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
+                    <tuning_capability_id>826ca487-1802-6b4d-0fbd-7524058151f7</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+                <frequency value="587725" gr_ch="G:-- Ch:--">
+                    <series>AD</series>
+                    <band>G56</band>
+                    <tx_profile>Standard</tx_profile>
+                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>RESERVED</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid>4F17E27C-6162-4B9B-8CD0-9B6278DAE51B</device_cid>
+                    <channel_num>0</channel_num>
+                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
+                    <tuning_capability_id>ebc1a80f-556e-1fa6-1b1f-5d156b2394ba</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+                <frequency value="594125" gr_ch="G:-- Ch:--">
+                    <series>AD</series>
+                    <band>G56</band>
+                    <tx_profile>Standard</tx_profile>
+                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>RESERVED</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid>4F17E27C-6162-4B9B-8CD0-9B6278DAE51B</device_cid>
+                    <channel_num>1</channel_num>
+                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
+                    <tuning_capability_id>ebc1a80f-556e-1fa6-1b1f-5d156b2394ba</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+            </frequencies>
+            <device_list zone_uuid="{6cc25817-6127-474f-b582-ab183e295015}" cfl_id="87f18912-44f0-4146-9fb5-5ad85b603fea" date="Thu Sep 22 2022" part="2" zone="Test 1" parts="3" time="23:55:36" version="0.3">
+                <devices count="3">
+                    <device>
+                        <cid>4314C463-D587-4A69-8C0D-BCBB336665E5</cid>
+                        <device_id>AD4D-A</device_id>
+                        <manufacturer>Shure</manufacturer>
+                        <model>AD4D-A</model>
+                        <band>G56</band>
+                        <series>AD</series>
+                        <hd_mode>0</hd_mode>
+                        <wwb_types>
+                            <wwb_type>Receiver</wwb_type>
+                            <wwb_type>Microphone</wwb_type>
+                            <wwb_type>Rack</wwb_type>
+                        </wwb_types>
+                        <diversity>0</diversity>
+                        <zone_name>Test 1</zone_name>
+                        <zone_uuid>{6cc25817-6127-474f-b582-ab183e295015}</zone_uuid>
+                        <channel_count>2</channel_count>
+                        <channels>
+                            <channel>
+                                <num>0</num>
+                                <band>G56</band>
+                                <name>Shure</name>
+                                <frequency>552075</frequency>
+                                <group_channel/>
+                                <tx_profile>Standard</tx_profile>
+                                <color>#000000</color>
+                                <linked_devices count="0"/>
+                                <inclusion_group name="Group 1" uuid=""/>
+                            </channel>
+                            <channel>
+                                <num>1</num>
+                                <band>G56</band>
+                                <name>Shure</name>
+                                <frequency>521200</frequency>
+                                <group_channel/>
+                                <tx_profile>Standard</tx_profile>
+                                <color>#000000</color>
+                                <linked_devices count="0"/>
+                                <inclusion_group name="Group 1" uuid=""/>
+                            </channel>
+                        </channels>
+                    </device>
+                    <device>
+                        <cid>4F17E27C-6162-4B9B-8CD0-9B6278DAE51B</cid>
+                        <device_id>AD4D-A</device_id>
+                        <manufacturer>Shure</manufacturer>
+                        <model>AD4D-A</model>
+                        <band>G56</band>
+                        <series>AD</series>
+                        <hd_mode>0</hd_mode>
+                        <wwb_types>
+                            <wwb_type>Microphone</wwb_type>
+                            <wwb_type>Receiver</wwb_type>
+                            <wwb_type>Rack</wwb_type>
+                        </wwb_types>
+                        <diversity>0</diversity>
+                        <zone_name>Test 1</zone_name>
+                        <zone_uuid>{6cc25817-6127-474f-b582-ab183e295015}</zone_uuid>
+                        <channel_count>2</channel_count>
+                        <channels>
+                            <channel>
+                                <num>0</num>
+                                <band>G56</band>
+                                <name>Shure</name>
+                                <frequency>587725</frequency>
+                                <group_channel/>
+                                <tx_profile>Standard</tx_profile>
+                                <color>#000000</color>
+                                <linked_devices count="0"/>
+                                <inclusion_group name="Group 2" uuid=""/>
+                            </channel>
+                            <channel>
+                                <num>1</num>
+                                <band>G56</band>
+                                <name>Shure</name>
+                                <frequency>594125</frequency>
+                                <group_channel/>
+                                <tx_profile>Standard</tx_profile>
+                                <color>#000000</color>
+                                <linked_devices count="0"/>
+                                <inclusion_group name="Group 2" uuid=""/>
+                            </channel>
+                        </channels>
+                    </device>
+                    <device>
+                        <cid>5114812F-825A-44D2-A8EC-708BACCB8BA0</cid>
+                        <device_id>P10T</device_id>
+                        <manufacturer>Shure</manufacturer>
+                        <model>PSM1000</model>
+                        <band>J8E</band>
+                        <series>PSM1000</series>
+                        <hd_mode>-1</hd_mode>
+                        <wwb_types>
+                            <wwb_type>Transmitter</wwb_type>
+                            <wwb_type>In Ear Monitor</wwb_type>
+                            <wwb_type>Rack</wwb_type>
+                        </wwb_types>
+                        <diversity>0</diversity>
+                        <zone_name>Test 1</zone_name>
+                        <zone_uuid>{6cc25817-6127-474f-b582-ab183e295015}</zone_uuid>
+                        <channel_count>2</channel_count>
+                        <channels>
+                            <channel>
+                                <num>0</num>
+                                <band>J8E</band>
+                                <name>Shure</name>
+                                <frequency>559225</frequency>
+                                <group_channel/>
+                                <tx_profile/>
+                                <color>#000000</color>
+                                <linked_devices count="0"/>
+                                <inclusion_group name="Group 1" uuid=""/>
+                            </channel>
+                            <channel>
+                                <num>1</num>
+                                <band>J8E</band>
+                                <name>Shure</name>
+                                <frequency>558200</frequency>
+                                <group_channel/>
+                                <tx_profile/>
+                                <color>#000000</color>
+                                <linked_devices count="0"/>
+                                <inclusion_group name="Group 1" uuid=""/>
+                            </channel>
+                        </channels>
+                    </device>
+                </devices>
+            </device_list>
+            <global_exclusions version="1.1">
+                <frequency_exclusions>
+                    <channel>
+                        <frequency units="kHz">543350</frequency>
+                        <series>Generic Device - IMD</series>
+                        <manufacturer/>
+                        <model/>
+                        <band>Wideband</band>
+                        <tx_profile/>
+                        <compat_prof_id>6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2</compat_prof_id>
+                        <source>User defined</source>
                         <notes/>
+                        <exclude>1</exclude>
+                    </channel>
+                </frequency_exclusions>
+                <compat_profiles>
+                    <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" synthesizable="0" version="0.0.0.1" name="Standard" imd_source="1">
+                        <spacing freq_units="KHz">
+                            <ch_ch>800</ch_ch>
+                            <imd_2t3o>400</imd_2t3o>
+                            <imd_2t5o>0</imd_2t5o>
+                            <imd_2t7o>0</imd_2t7o>
+                            <imd_2t9o>0</imd_2t9o>
+                            <imd_3t3o>0</imd_3t3o>
+                        </spacing>
+                        <filter type="1">
+                            <filter_start>-100000</filter_start>
+                            <filter_end>100000</filter_end>
+                            <filter_center>0</filter_center>
+                        </filter>
+                    </compat_profile>
+                </compat_profiles>
+                <freq_range_exclusions>
+                    <range>
+                        <frequency units="kHz">
+                            <start>734000</start>
+                            <end>738000</end>
+                        </frequency>
+                        <source>User defined</source>
+                        <notes>Test Lower</notes>
+                        <exclude>1</exclude>
+                    </range>
+                    <range>
+                        <frequency units="kHz">
+                            <start>753000</start>
+                            <end>758000</end>
+                        </frequency>
+                        <source>User defined</source>
+                        <notes>Test Higher</notes>
+                        <exclude>1</exclude>
+                    </range>
+                </freq_range_exclusions>
+            </global_exclusions>
+            <keys_coord_order version="1.1">
+                <profile>
+                    <band>G56</band>
+                    <series>AD</series>
+                    <tx_profile>Standard</tx_profile>
+                    <zone/>
+                    <incl_group>00000000-0000-0000-0000-000000000000</incl_group>
+                    <coord_order>300732201</coord_order>
+                </profile>
+                <profile>
+                    <band>G56</band>
+                    <series>AD</series>
+                    <tx_profile>Standard</tx_profile>
+                    <zone/>
+                    <incl_group>830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
+                    <coord_order>100732201</coord_order>
+                </profile>
+                <profile>
+                    <band>G56</band>
+                    <series>AD</series>
+                    <tx_profile>Standard</tx_profile>
+                    <zone/>
+                    <incl_group>fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
+                    <coord_order>200732201</coord_order>
+                </profile>
+                <profile>
+                    <band>J8E</band>
+                    <series>PSM1000</series>
+                    <tx_profile/>
+                    <zone/>
+                    <incl_group>00000000-0000-0000-0000-000000000000</incl_group>
+                    <coord_order>300622600</coord_order>
+                </profile>
+                <profile>
+                    <band>J8E</band>
+                    <series>PSM1000</series>
+                    <tx_profile/>
+                    <zone/>
+                    <incl_group>830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
+                    <coord_order>100622600</coord_order>
+                </profile>
+                <profile>
+                    <band>J8E</band>
+                    <series>PSM1000</series>
+                    <tx_profile/>
+                    <zone/>
+                    <incl_group>fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
+                    <coord_order>200622600</coord_order>
+                </profile>
+            </keys_coord_order>
+            <exclusion_threshold units="dBm">-85</exclusion_threshold>
+            <peak_threshold units="dBm">-60</peak_threshold>
+        </CFL>
+        <CFL id="87f18912-44f0-4146-9fb5-5ad85b603fea" zone_uuid="715b11ff-8beb-471a-b452-7a89d6ca8c26" date="Thu Sep 22 2022" part="3" zone="Test 2" parts="3" user="" time="23:55:34" version="0.3" machine="oyvinds-mbp.local">
+            <frequencies units="KHz" count="6">
+                <frequency value="577750" gr_ch="G:-- Ch:--">
+                    <series>PSM1000</series>
+                    <band>J8E</band>
+                    <tx_profile/>
+                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>RESERVED</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid>748E60DB-F58E-44C2-9BBB-1D233BB7D1E0</device_cid>
+                    <channel_num>0</channel_num>
+                    <compat_prof_id>f3686491-6146-5a07-8108-bed37183ae4a</compat_prof_id>
+                    <tuning_capability_id>a25baad9-18a6-066b-d1ec-31ef2a37fef9</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+                <frequency value="578225" gr_ch="G:-- Ch:--">
+                    <series>PSM1000</series>
+                    <band>J8E</band>
+                    <tx_profile/>
+                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>RESERVED</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid>748E60DB-F58E-44C2-9BBB-1D233BB7D1E0</device_cid>
+                    <channel_num>1</channel_num>
+                    <compat_prof_id>f3686491-6146-5a07-8108-bed37183ae4a</compat_prof_id>
+                    <tuning_capability_id>a25baad9-18a6-066b-d1ec-31ef2a37fef9</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+                <frequency value="580000" gr_ch="G:-- Ch:--">
+                    <series>AD</series>
+                    <band>G56</band>
+                    <tx_profile>Standard</tx_profile>
+                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>RESERVED</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid>C6C495CA-FE4C-4C1B-B49F-14AEA190913A</device_cid>
+                    <channel_num>0</channel_num>
+                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
+                    <tuning_capability_id>f172fec2-7362-4aae-a8cf-dd00f280fb8a</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+                <frequency value="584225" gr_ch="G:-- Ch:--">
+                    <series>AD</series>
+                    <band>G56</band>
+                    <tx_profile>Standard</tx_profile>
+                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>RESERVED</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid>C6C495CA-FE4C-4C1B-B49F-14AEA190913A</device_cid>
+                    <channel_num>1</channel_num>
+                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
+                    <tuning_capability_id>f172fec2-7362-4aae-a8cf-dd00f280fb8a</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+                <frequency value="596450" gr_ch="G:-- Ch:--">
+                    <series>PSM1000</series>
+                    <band>J8E</band>
+                    <tx_profile/>
+                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>WWB_MONITOR</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid>00000000-0000-0000-0000-000000000000</device_cid>
+                    <channel_num>-1</channel_num>
+                    <compat_prof_id>f3686491-6146-5a07-8108-bed37183ae4a</compat_prof_id>
+                    <tuning_capability_id>a25baad9-18a6-066b-d1ec-31ef2a37fef9</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+                <frequency value="632650" gr_ch="G:-- Ch:--">
+                    <series>AD</series>
+                    <band>G56</band>
+                    <tx_profile>Standard</tx_profile>
+                    <band_plan_group>fdf415e6-f469-44d6-ab28-8091a49aab86</band_plan_group>
+                    <compat_status>COMPATIBLE</compat_status>
+                    <usage_status>AVAILABLE</usage_status>
+                    <origin>SYNTHESIZED</origin>
+                    <device_cid/>
+                    <channel_num>-1</channel_num>
+                    <compat_prof_id>f1e4f397-b27b-f54e-f620-03c401dbfd5f</compat_prof_id>
+                    <tuning_capability_id>f172fec2-7362-4aae-a8cf-dd00f280fb8a</tuning_capability_id>
+                    <additional_compat>
+                        <profile>
+                            <series>TODO</series>
+                            <band>TODO</band>
+                        </profile>
+                    </additional_compat>
+                </frequency>
+            </frequencies>
+            <device_list zone_uuid="{715b11ff-8beb-471a-b452-7a89d6ca8c26}" cfl_id="87f18912-44f0-4146-9fb5-5ad85b603fea" date="Thu Sep 22 2022" part="3" zone="Test 2" parts="3" time="23:55:36" version="0.3">
+                <devices count="2">
+                    <device>
+                        <cid>748E60DB-F58E-44C2-9BBB-1D233BB7D1E0</cid>
+                        <device_id>P10T</device_id>
+                        <manufacturer>Shure</manufacturer>
+                        <model>PSM1000</model>
+                        <band>J8E</band>
+                        <series>PSM1000</series>
+                        <hd_mode>-1</hd_mode>
+                        <wwb_types>
+                            <wwb_type>Transmitter</wwb_type>
+                            <wwb_type>In Ear Monitor</wwb_type>
+                            <wwb_type>Rack</wwb_type>
+                        </wwb_types>
+                        <diversity>0</diversity>
+                        <zone_name>Test 2</zone_name>
+                        <zone_uuid>{715b11ff-8beb-471a-b452-7a89d6ca8c26}</zone_uuid>
+                        <channel_count>2</channel_count>
+                        <channels>
+                            <channel>
+                                <num>0</num>
+                                <band>J8E</band>
+                                <name>Shure</name>
+                                <frequency>577750</frequency>
+                                <group_channel/>
+                                <tx_profile/>
+                                <color>#000000</color>
+                                <linked_devices count="0"/>
+                                <inclusion_group name="Group 2" uuid=""/>
+                            </channel>
+                            <channel>
+                                <num>1</num>
+                                <band>J8E</band>
+                                <name>Shure</name>
+                                <frequency>578225</frequency>
+                                <group_channel/>
+                                <tx_profile/>
+                                <color>#000000</color>
+                                <linked_devices count="0"/>
+                                <inclusion_group name="Group 2" uuid=""/>
+                            </channel>
+                        </channels>
+                    </device>
+                    <device>
+                        <cid>C6C495CA-FE4C-4C1B-B49F-14AEA190913A</cid>
+                        <device_id>AD4D-A</device_id>
+                        <manufacturer>Shure</manufacturer>
+                        <model>AD4D-A</model>
+                        <band>G56</band>
+                        <series>AD</series>
+                        <hd_mode>0</hd_mode>
+                        <wwb_types>
+                            <wwb_type>Receiver</wwb_type>
+                            <wwb_type>Microphone</wwb_type>
+                            <wwb_type>Rack</wwb_type>
+                        </wwb_types>
+                        <diversity>0</diversity>
+                        <zone_name>Test 2</zone_name>
+                        <zone_uuid>{715b11ff-8beb-471a-b452-7a89d6ca8c26}</zone_uuid>
+                        <channel_count>2</channel_count>
+                        <channels>
+                            <channel>
+                                <num>0</num>
+                                <band>G56</band>
+                                <name>Shure</name>
+                                <frequency>580000</frequency>
+                                <group_channel/>
+                                <tx_profile>Standard</tx_profile>
+                                <color>#000000</color>
+                                <linked_devices count="0"/>
+                                <inclusion_group name="Group 2" uuid=""/>
+                            </channel>
+                            <channel>
+                                <num>1</num>
+                                <band>G56</band>
+                                <name>Shure</name>
+                                <frequency>584225</frequency>
+                                <group_channel/>
+                                <tx_profile>Standard</tx_profile>
+                                <color>#000000</color>
+                                <linked_devices count="0"/>
+                                <inclusion_group name="Group 2" uuid=""/>
+                            </channel>
+                        </channels>
+                    </device>
+                </devices>
+            </device_list>
+            <global_exclusions version="1.1">
+                <frequency_exclusions>
+                    <channel>
+                        <frequency units="kHz">543350</frequency>
+                        <series>Generic Device - IMD</series>
+                        <manufacturer/>
+                        <model/>
+                        <band>Wideband</band>
+                        <tx_profile/>
+                        <compat_prof_id>6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2</compat_prof_id>
+                        <source>User defined</source>
+                        <notes/>
+                        <exclude>1</exclude>
+                    </channel>
+                </frequency_exclusions>
+                <compat_profiles>
+                    <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" synthesizable="0" version="0.0.0.1" name="Standard" imd_source="1">
+                        <spacing freq_units="KHz">
+                            <ch_ch>800</ch_ch>
+                            <imd_2t3o>400</imd_2t3o>
+                            <imd_2t5o>0</imd_2t5o>
+                            <imd_2t7o>0</imd_2t7o>
+                            <imd_2t9o>0</imd_2t9o>
+                            <imd_3t3o>0</imd_3t3o>
+                        </spacing>
+                        <filter type="1">
+                            <filter_start>-100000</filter_start>
+                            <filter_end>100000</filter_end>
+                            <filter_center>0</filter_center>
+                        </filter>
+                    </compat_profile>
+                </compat_profiles>
+                <freq_range_exclusions>
+                    <range>
+                        <frequency units="kHz">
+                            <start>734000</start>
+                            <end>738000</end>
+                        </frequency>
+                        <source>User defined</source>
+                        <notes>Test Lower</notes>
+                        <exclude>1</exclude>
+                    </range>
+                    <range>
+                        <frequency units="kHz">
+                            <start>753000</start>
+                            <end>758000</end>
+                        </frequency>
+                        <source>User defined</source>
+                        <notes>Test Higher</notes>
                         <exclude>1</exclude>
                     </range>
                 </freq_range_exclusions>
@@ -3004,7 +3004,7 @@ Norge</address>
         <coordination_plot version="1.2">
             <plots>
                 <plot>
-                    <id selected="0" color="#ff0000">{3bd91c7d-54dd-44d2-a86b-3a7771f0a655}</id>
+                    <id selected="0" color="#ff0000">{b93935fb-57c8-4968-ac00-9e2f7a13114a}</id>
                 </plot>
             </plots>
             <start>462,516 MHz</start>
@@ -3014,8 +3014,8 @@ Norge</address>
         </coordination_plot>
     </plot_info>
     <custom_user_group_list>
-        <inclusion_list version="1.0" name="Custom" uuid="33847979-8d4a-4b8b-a230-2f7b439b14d1" active="true">
-            <inclusion_group version="1.0" name="Test" color="#ffffff" uuid="0c3dd934-c8bc-4f92-bc94-3cfd64d7b38a">
+        <inclusion_list active="false" version="1.0" name="Custom" uuid="33847979-8d4a-4b8b-a230-2f7b439b14d1">
+            <inclusion_group version="1.0" name="Test" uuid="0c3dd934-c8bc-4f92-bc94-3cfd64d7b38a" color="#ffffff">
                 <freqs units="KHz" count="0"/>
                 <freq_ranges units="KHz" count="1">
                     <fr>
@@ -3027,9 +3027,11 @@ Norge</address>
         </inclusion_list>
     </custom_user_group_list>
     <band_plan_group_list version="1.0">
-        <band_plan_list version="1.0" name="Inclusion 1" uuid="d760f05b-5422-496f-8304-d52a02e2893b" active="true">
-            <inclusion_group version="1.0" name="Group 1" color="#ffffff" uuid="830cf9dc-b271-4315-82ac-9a683c17d219">
-                <freqs units="KHz" count="0"/>
+        <band_plan_list active="true" version="1.0" name="Inclusion 1" uuid="d760f05b-5422-496f-8304-d52a02e2893b">
+            <inclusion_group version="1.0" name="Group 1" uuid="830cf9dc-b271-4315-82ac-9a683c17d219" color="#ffffff">
+                <freqs units="KHz" count="1">
+                    <f>567250</f>
+                </freqs>
                 <freq_ranges units="KHz" count="2">
                     <fr>
                         <f>494000</f>
@@ -3041,9 +3043,9 @@ Norge</address>
                     </fr>
                 </freq_ranges>
             </inclusion_group>
-            <inclusion_group version="1.0" name="Group 2" color="#ffffff" uuid="fdf415e6-f469-44d6-ab28-8091a49aab86">
+            <inclusion_group version="1.0" name="Group 2" uuid="fdf415e6-f469-44d6-ab28-8091a49aab86" color="#ffffff">
                 <freqs units="KHz" count="0"/>
-                <freq_ranges units="KHz" count="2">
+                <freq_ranges units="KHz" count="3">
                     <fr>
                         <f>566000</f>
                         <f>636000</f>
@@ -3051,6 +3053,10 @@ Norge</address>
                     <fr>
                         <f>590000</f>
                         <f>622000</f>
+                    </fr>
+                    <fr>
+                        <f>223168</f>
+                        <f>224704</f>
                     </fr>
                 </freq_ranges>
             </inclusion_group>
@@ -3077,7 +3083,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>0</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>AD4D-A</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>CED3A52E-1B79-4087-AD0F-6C0C4BD98469-0</source_id>
@@ -3107,7 +3113,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>AD4D-A</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>CED3A52E-1B79-4087-AD0F-6C0C4BD98469-1</source_id>
@@ -3137,7 +3143,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>0</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>PSM1000</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>A3F76A1D-A58A-472D-9269-A437E3699109-0</source_id>
@@ -3167,7 +3173,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>PSM1000</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>A3F76A1D-A58A-472D-9269-A437E3699109-1</source_id>
@@ -3197,7 +3203,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>0</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>AD4D-A</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>4314C463-D587-4A69-8C0D-BCBB336665E5-0</source_id>
@@ -3227,7 +3233,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>1</synth_status>
                 <chann_num>1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>AD4D-A</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>4314C463-D587-4A69-8C0D-BCBB336665E5-1</source_id>
@@ -3257,7 +3263,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>0</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>AD4D-A</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>C6C495CA-FE4C-4C1B-B49F-14AEA190913A-0</source_id>
@@ -3287,7 +3293,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>AD4D-A</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>C6C495CA-FE4C-4C1B-B49F-14AEA190913A-1</source_id>
@@ -3317,7 +3323,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>0</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>PSM1000</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>5114812F-825A-44D2-A8EC-708BACCB8BA0-0</source_id>
@@ -3347,7 +3353,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>1</synth_status>
                 <chann_num>1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>PSM1000</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>5114812F-825A-44D2-A8EC-708BACCB8BA0-1</source_id>
@@ -3377,7 +3383,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>0</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>PSM1000</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>748E60DB-F58E-44C2-9BBB-1D233BB7D1E0-0</source_id>
@@ -3407,7 +3413,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>-1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model/>
                 <manufacturer/>
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
@@ -3432,7 +3438,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>-1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model/>
                 <manufacturer/>
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
@@ -3457,7 +3463,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>-1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model/>
                 <manufacturer/>
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
@@ -3482,7 +3488,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>-1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model/>
                 <manufacturer/>
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
@@ -3507,7 +3513,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>-1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model/>
                 <manufacturer/>
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
@@ -3532,7 +3538,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>-1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model/>
                 <manufacturer/>
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
@@ -3557,7 +3563,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>0</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>AD4D-A</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>4F17E27C-6162-4B9B-8CD0-9B6278DAE51B-0</source_id>
@@ -3587,7 +3593,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>AD4D-A</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>4F17E27C-6162-4B9B-8CD0-9B6278DAE51B-1</source_id>
@@ -3617,7 +3623,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>1</synth_status>
                 <chann_num>-1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model/>
                 <manufacturer/>
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
@@ -3642,7 +3648,7 @@ Norge</address>
                 <vip>0</vip>
                 <synth_status>0</synth_status>
                 <chann_num>1</chann_num>
-                <diversity div_partner_id="-1" div_mode="0"/>
+                <diversity div_mode="0" div_partner_id="-1"/>
                 <model>PSM1000</model>
                 <manufacturer>Shure</manufacturer>
                 <source_id>748E60DB-F58E-44C2-9BBB-1D233BB7D1E0-1</source_id>
@@ -3918,7 +3924,7 @@ Norge</address>
             <plot_view_mode>2</plot_view_mode>
         </autolog_parameters>
         <monitoring_pager version="1.1">
-            <view id="{b08d8eba-21d8-4b04-b484-452001daf4d6}" name="View 1" active="true"/>
+            <view id="{b08d8eba-21d8-4b04-b484-452001daf4d6}" active="true" name="View 1"/>
         </monitoring_pager>
         <monitoring_registry version="1.1">
             <view id="{b08d8eba-21d8-4b04-b484-452001daf4d6}">
