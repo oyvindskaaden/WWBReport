@@ -1,0 +1,100 @@
+""
+"Test Show"
+""
+Show Information,,,Customer Information,,
+Venue:,Studentersamfundet,,Point of Contact:,Øyvind,
+Address:,Trondheim, Trondheim   7030,,Address:,,
+Phone:,12345,,Phone:,1234,
+Fax:,67890,,Fax:,90,
+E-mail:,samf@safsm.d,,E-mail:,email1@email.com,
+Notes:,Test,,,,
+
+""
+"Inventory Report"
+"RF Zone: Default"
+"Active Channels (4)"
+Model,Band,Channel Name,Device ID,Frequency,,Tags,,
+No Inclusion Group (4),,,,,,,,
+AD4D-A,G56,Shure,[AD4D-A],G:-- Ch:--,540,700 MHz,,,
+AD4D-A,G56,Shure,[AD4D-A],G:-- Ch:--,555,450 MHz,,,
+PSM1000,J8E,Shure,[P10T],G:-- Ch:--,575,200 MHz,,,
+PSM1000,J8E,Shure,[P10T],G:-- Ch:--,589,000 MHz,,,
+
+Backup Frequencies (2),Frequency List Source: WWB,
+
+Type,Band,,,Frequency,,,,
+No Inclusion Group (2),,,,,,,,
+AD/Standard,G56,,,G:-- Ch:--,615,100 MHz,,,
+PSM1000,J8E,,,G:-- Ch:--,574,450 MHz,,,
+
+"RF Zone: Test 1"
+"Active Channels (6)"
+Model,Band,Channel Name,Device ID,Frequency,,Tags,,
+Group 1 (4),,,,,,,,
+AD4D-A,G56,Shure,[AD4D-A],G:-- Ch:--,521,200 MHz,,,
+AD4D-A,G56,Shure,[AD4D-A],G:-- Ch:--,552,075 MHz,Tag Test 1,Tag Test 2,,
+PSM1000,J8E,Shure,[P10T],G:-- Ch:--,558,200 MHz,,,
+PSM1000,J8E,Shure,[P10T],G:-- Ch:--,559,225 MHz,,,
+
+Group 2 (2),,,,,,,,
+AD4D-A,G56,Shure,[AD4D-A],G:-- Ch:--,587,725 MHz,,,
+AD4D-A,G56,Shure,[AD4D-A],G:-- Ch:--,594,125 MHz,,,
+
+Backup Frequencies (3),Frequency List Source: WWB,
+
+Type,Band,,,Frequency,,,,
+Group 1 (2),,,,,,,,
+AD/Standard,G56,,,G:-- Ch:--,581,525 MHz,,,
+PSM1000,J8E,,,G:-- Ch:--,580,400 MHz,,,
+
+Group 2 (1),,,,,,,,
+AD/Standard,G56,,,G:-- Ch:--,579,700 MHz,,,
+
+"RF Zone: Test 2"
+"Active Channels (4)"
+Model,Band,Channel Name,Device ID,Frequency,,Tags,,
+Group 2 (4),,,,,,,,
+AD4D-A,G56,Shure,[AD4D-A],G:-- Ch:--,580,000 MHz,Tag Test 1,,
+AD4D-A,G56,Shure,[AD4D-A],G:-- Ch:--,584,225 MHz,Tag Test 2,,
+PSM1000,J8E,Shure,[P10T],G:-- Ch:--,577,750 MHz,,,
+PSM1000,J8E,Shure,[P10T],G:-- Ch:--,578,225 MHz,,,
+
+Backup Frequencies (2),Frequency List Source: WWB,
+
+Type,Band,,,Frequency,,,,
+Group 2 (2),,,,,,,,
+AD/Standard,G56,,,G:-- Ch:--,632,650 MHz,,,
+PSM1000,J8E,,,G:-- Ch:--,596,450 MHz,,,
+
+""
+"Frequency Coordination Parameters"
+"Inclusions"
+"User Group List: Australia"
+User Group,Type,Frequency,TV,,
+Australia Indoors,Range,1786.000 MHz - 1800.000 MHz,,,
+,Range,520.150 MHz - 694.000 MHz,,,
+,Range,915.150 MHz - 928.000 MHz,,,
+
+"Inclusion List: Inclusion 1"
+Inclusion Group,Type,Frequency,TV,,
+Group 1,Range,494.000 MHz - 566.000 MHz,,,
+,Range,554.000 MHz - 590.000 MHz,,,
+,Single,567.250 MHz,,,
+Group 2,Range,223.168 MHz - 224.704 MHz,12A,,
+,Range,566.000 MHz - 636.000 MHz,,,
+,Range,590.000 MHz - 622.000 MHz,,,
+
+"Exclusions"
+"Active TV Channels (72)"
+Type,Channels,,,,
+Digital Audio,10A, 10B, 10C, 10D, 10N, 11A, 11B, 11C, 11D, 11N, 12A, 12B, 12C, 12D, 12N, 5A, 5B, 5C, 5D, 6A, 6B, 6C, 6D, 7A, 7B, 7C, 7D, 8A, 8B, 8C, 8D, 9A, 9B, 9C, 9D,,,,
+Other,10, 11, 12, 2, 21, 22, 23, 25, 26, 28, 3, 30, 33, 37, 38, 4, 40, 44, 45, 46, 47, 48, 49, 5, 50, 51, 52, 53, 57, 58, 59, 6, 60, 61, 7, 8, 9,,,,
+
+"Other Exclusions (3)"
+Type,Source,Frequency,Notes,,
+Single,Manual,543,350 MHz,,,
+Range,Manual,734,000 MHz - 738,000 MHz,Test Lower,,
+Range,Manual,753,000 MHz - 758,000 MHz,Test Higher,,
+
+"Created on 12 Nov 2022 at 1:34PM"
+"Generated using Wireless Workbench 6.15.0.119"
