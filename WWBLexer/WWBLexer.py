@@ -14,10 +14,10 @@ class WWBLexer(RegexLexer):
     aliases             = ['wwb']
     filenames           = ['*.csv']
 
-    wwb_tree: dict      = {}
-    current_csv: list   = []
-    current_zone: dict  = {}
-    current_group: dict = {}
+    wwb_tree        : dict  = {}
+    current_csv     : list  = []
+    current_zone    : dict  = {}
+    current_group   : dict  = {}
 
     def __register_showname_cb(self: RegexLexer, match: re.Match):
         show_name = match.group(1)
