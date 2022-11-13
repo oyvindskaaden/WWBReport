@@ -1,346 +1,40 @@
-<show date="Sat Nov 12 2022" source="oyvinds-mbp.local" time="13:34:29" appl_version="6.15.0.119" version="1.0">
+<show source="oyvinds-mbp.local" date="Sun Nov 13 2022" time="19:12:55" version="1.0" appl_version="6.15.0.119">
     <show_properties version="1.0">
         <show_info>
             <name>Test Show</name>
-            <customer>Øyvind Kunde</customer>
+            <customer>Customers Name here</customer>
         </show_info>
         <point_of_contact_info>
-            <name>Øyvind</name>
-            <address/>
-            <phone1>1234</phone1>
-            <phone2>5678</phone2>
-            <fax>90</fax>
-            <email>email1@email.com</email>
+            <name>ContactName Contact</name>
+            <address>Contact Line 1
+Contact Line 2
+Contact Line 3</address>
+            <phone1>Contact Phone 1</phone1>
+            <phone2>Contact Phone 2</phone2>
+            <fax>Contact Fax</fax>
+            <email>contact@email.com</email>
             <remember_poc>false</remember_poc>
             <graphic>89504e470d0a1a0a0000000d494844520000003c0000003c08060000003afcd972000000097048597300000b1300000b1301009a9c1800000bb9494441546881e59b7b7054d77dc73fe7debbbb5a0949480824108847638131d890380969284d0692669c775a5cbb79b94d62e3d8219e8ceda44d87508a27b6d3e6e57a9c34ef71333876b133b563438dc523068283102858200b81f516927657d2beefe39cfeb168adf7de7de04927df993b7bf7dcf33bbff3bdbfdf39f7f73be75ef8138378b3f42cdeb9af4295962c3134cfdbd0743f00d2892bdb1a94d1e8d1ee9d1f0801eaaa77e4aab57cfb0f3d75d7addba609f1170ab15e08ad0ef0cca0d3544a760a549354eab7d24c1eeebe6f53f3d5e85661096f7d52afddb0e8ed1eddb855e9c6870462458e2d291ceb11cbb1f7f484ad93ec7caf5da82e168c70dd9dbff8ac50c67656d6af1386a615a859a9946a92b6fda8a2f389eeafdc1ccfb7c1bc09afdefaa4375215bf5528fde700ac5c89300ac5f70d28a53a3c6d032b2f3c7253329f76f2ea59ed3f7cff866895795028fd676ff44ce6d3e48c10422cb5de52d550fbf0d17579b5939bd856fd6fefacfce269f5ce0713788b2734b87c1914fbf3e9d3ac504a45a56ddfdf75bcf3873c75b393adbc9e8bd2bfbb7dc323bea2921dc3aad41b5393c89594208a7cb934eb0a4208afa6eb3795d696d62ca8bffec5e02b2f64453a6b97deba75abd7eb2fbd4b80982bc2532b2412e953a55287946ac231569e07846e78ee482cbff147d90a1a59d6d7b4cab287c7feccd346b830e9feaa680c6539ccf568bc675919d5c51eaa4a3c147b753420623a0cc76dfaa3169742093ac32643b6420881c87280191edfa781db00d71347362ac42d9fbbed565f49d9e34288b467bc62ae21aafc14e3b069f542365e57cb3bd62c65c9dc22fcdecc2326694b7e7d7680a39da31cea0833e22884aeb9266f8f063fd9fdf5f7edc16594e69af0fb3ffad125d5754b1a754d9f3fbebcdbae61d1f21bf8c1dd5bf0fb3c6e9b9b16a62d79f962885f9d1d625f4f04cd056be5380356dff9b7f73ef4994e373adcbab456593defabe3c90ae55016eea05e3671ef5d5fc6e382ac158fd179f204d1c101ec780c2b69a294c45f568ebfa29239d5356c585cc77b3f5ecfee0397d8732e48548859890b5d5fa0cf5bfc35e06e5cb8b62b0b6fd9faa1bada9a65e7344d2b069813eda672e82c8615c371141fb9e77bacffabbf9e22a7a464b8bb939ea693f4bfdacc686f0f02c598bf8e2957004aa1a44201fe8a0ad6dff219a87d0bdf39decfd31786b1b599dd5c492761bed6bcaaefd1cf7764e252f890e88f1c6e2c2ceefda78ffd736999779786c4b06354f7fd1ec711d8a6c04c0abca5f56c7becf0042169dbbcf4e04e467bbad10c1d91e514ec5816beb272ea366c24fc6737b2bb31c2f9e8cc39841abdbca3e3eb373d4006b7766361a3bc8c4f783d36e5560fb5c19378bc8a22bf644eb943e5021bbfb7658a909492c8e53e748f91355900dde3c18ec7687f691f833ffe263b8c5360cb99a7627fd9277011486524fce14f6f5aacebeadacad0792a826d886962655d87e8f0e5096586d78b72f28fab85a6018afe1347f86a592725524e1bb408c3776df5e7bfb538537b19efc89acf166d12f37b3f355c1260b01286cbc070043e6be278b043516aafdf32c19aa1ae4e2297fb73b2f0640821f0779f63ad18e155631171dd33711213c2d0481e1cfdedd3afcdd64e46c2cb6e511f8ed5c4df1f2a5704e72a06e7292e2d91b42f95042a14b62e2849ea54c5e218a5d5942eaa4fcb2e58b59a8e13c770cc6441486b9a46492cc09ad1365ae62c256e4c8ce385156d1c39f8abdf314b1092d1a5b5226aa62bb70ce8af529cbe4e7174f35c06ca6d3af67f9b91aed6741ddf9c52deb56d3b4237507906cf63109a461531eeec7d8e4a2b32e19a344aaac9301167242cbca278c66b08e6f8aad07c45fc667d9c17578df0fbe7ee271ee849d7a95cba9c0db77f09250bbb3e37cf0ef3859ee726167a8a4bc997f06c28f155e1d58b0050023ae7db3cb9fa751e3ffc45a2a343e97a35abd7f0ae6ddb0bbe24596306d1c7798e74b1fa9091b04ca8c874e57ecf5c7cc6d4445f69f04ad5251e6afadc84f2856bd771c3cd9fcaa42e6b6c0934a6cff564649a7c75223212b64d06269779743f7e6fe98c3242087ac525da47ce4e285fb1f13d48bb600b90006c099d6479bc3fa5d78c4ee9eb6464246c8d888b93cb4abc15880c419a10827f6bbe83b6d09989b2f3abc1b20a3689194ab2f5f221f4780c2770f92219d2c48c848317542b4a58e3cb74cd5d926511e63bafde4d67f88d47e3fa4fde8674249a69826de74d5c29c5c2e865de7df1a0193b7fbc957c099fd913ec9226bd6901e17e91442030d508df6edece483208c082fa6ba979db3b504a216c1b2d9904994344a614380e5a3289701c369badbdc1a65f76932f618298769c63637f8b3c338fdde92010849d1e7e7cee5f905726d1b51ffb1bec71248569229249b02cb0ed996f8094a9eba69992b1528ea7e3a09ba32f13c4246fc260c707b4170034a15364cc7121324989d0383bd24043f75e004aab17b2e8fa7588f1898d5208c741d8768a4c2201c964fa108944aadcb61152a6ea23f189041e611288860f00196744378465dbcfe32f295b8c7af4e29c434443d378a6e33fd2ff57fce5660c27864f24d071520b039320944a1f0002858e83212c7c22894f2411282cc709ef6d7ead01172b1eae087735c586ada8d8ef33660cba5c212183e9f3f9d7aec1282d47a0f008139f485024e2698b8d3fbc22895724d3d70cec09de114e5afb8eb4f70670b190e736d23223178a1e37346f5e53aa26b4f4e4a57b7dcc5bb576ca2c3d66c5f18786449bc1780aa5da02c1c721f3f805f7849dd3df8abe6cc6e41f5cd69f11077b9e4e9f57d6af21df3df0b869ffe147475b8ee2726dda2d61353232120b5d8a3f967bd752383ef02c8e4aadde57acb806e9e447f8f560f8b1eed1d12805260c601dda35b0d78c391772eb5a0a03898b7485534d142f5888d072dade4ae3e186937b012b63c52bc886b08cf4474683ed898733579d45a126383d7404008fdf8f5694df4e637f24324a165b2dd9a687d6e107069ec95266028480b6d1a6d439e09d935d20331ee1a475922cac0bd91396e1def0a8922ae7944720e88a9e4f85864290f50eda1528a5ec53bd03df200beb426e0b0056a4dffaaf1ce4d21836074838f9bdae311089fff29b2f9e78395bb95c08abc6ff0ceeb612b22b07d994520181443f2885639a59cb276da7fb6767da7603b1ac7567ad0db8d030d0d3772672bf52b9b9b61082a815464a89151ec94a5629659fe91dbcef504b7b0f90f52b0fb9ae6999ff7bdfebcf87fbcc9fe4288f42120f0ea19cecee595f38fad31dfb8ebd0024c9216ac995b004620ddf08ec4a84edc68cb5a78560a4f3d2b449c34c8824cdc61d2f36ee025c071a93f127b77b980f617ba87528d0f264e80edb74fab21355f8f5124217ce5dd93b7287ff6e6edbd61d080c91c3d81d43be16364ffda2ef5ce791c85dd908395251ee9dc7504bb3ebfc5a4a957ca2a9b5059759d14cc897b002120dbb3a0e64138c941815e8c309a2bd1937ec01904ad92d97835f0112e4995e15620c4b2036d89a7c402977ef1d2e2eaea7fbd82134177d570ad93618da7defb387f790e344351ef9a52a6f40b53e1768aedb58ea14577a368a59fc5429c55be76ec6da7b0c323c92144ab507861fdafecca1ef0261fe88080358adff133a55f7ee32595c69fcf9f877b9c6c351921bdaaf41b476ce3a7e95524e7b60f8c1bb9f3ef8efa4c81664cba290842560b53e1b3cb5f0c6f260c97c7d93105317b1bda69f55071cf40cbb89af0e06fff19e670e3d4a8a6c5619d16c282461b842baedf9e0d9b92bfc2d95cb8aa6bccbb4f47c19b5ddde59ad6b3972e8eff7ecbf8d025a760c5723f0b081f0c11d1dcf26c276d3e48b2b2e96cd4a3692349b9e3afddac7b90a64a1f0161e8302ecb64391dfd4bed5475199679dd084473a821b1baba61570a48c7785461fbb67ff91edbfbbd8d74eea795b705c2dc200ca0edb89f3bf0e1dd77c5a43698d778146c9f2b5ad6553bc6a289678e1f9b68b77fdebfe134fc4e37688ab4416de9cef9674c00b946efee0caebeeacbae691228fb1142061d91da158e2c8179e3ab093940b9be41136bac19bf6a116a9f9c20b945ff98514c12430b610f7fff843ad99618cd3ab4811bd3a5f864c83ff03f7073636bc0cd5570000000049454e44ae426082</graphic>
         </point_of_contact_info>
         <venue_info>
-            <name>Studentersamfundet</name>
-            <address/>
-            <country>Norway</country>
-            <zipcode>7030</zipcode>
-            <state>Trondheim</state>
-            <city>Trondheim</city>
-            <phone>12345</phone>
-            <fax>67890</fax>
-            <email>samf@safsm.d</email>
+            <name>Super Cool Venue</name>
+            <address>Venue Line 1
+Venue Line 2
+Venue Line 3</address>
+            <country>Venue Contry</country>
+            <zipcode>Venue Postal</zipcode>
+            <state>Venue State</state>
+            <city>Venue City</city>
+            <phone>Venue Phone</phone>
+            <fax>Venue Fax</fax>
+            <email>venue@email.com</email>
         </venue_info>
-        <notes>Test</notes>
+        <notes>Notes line 1
+Notes line 2, with commas!!</notes>
     </show_properties>
     <inventory version="2.1">
         <device>
-            <id dcid="04D81BE8-FD5A-11E3-8B44-0015C5F3F612">4F17E27C-6162-4B9B-8CD0-9B6278DAE51B</id>
-            <series>AD</series>
-            <model type="10">AD4D-A</model>
-            <manufacturer type="10">Shure</manufacturer>
-            <firmware_version_valid type="1">true</firmware_version_valid>
-            <device_name type="10"><![CDATA[AD4D-A]]></device_name>
-            <scan_freq_step_capability type="11">25</scan_freq_step_capability>
-            <scan_rbw_capability type="11">200</scan_rbw_capability>
-            <start type="3">470150</start>
-            <end type="3">636000</end>
-            <band type="10">G56</band>
-            <cid_of_freq_server type="12">4f17e27c-6162-4b9b-8cd0-9b6278dae51b</cid_of_freq_server>
-            <front_panel_lock type="1">false</front_panel_lock>
-            <power_lock type="1">false</power_lock>
-            <dc_power type="1">true</dc_power>
-            <zone type="12">Test 1</zone>
-            <audio_encryption_mode type="3">0</audio_encryption_mode>
-            <modem_mode type="3">0</modem_mode>
-            <quadversity_mode type="3">0</quadversity_mode>
-            <channel number="1">
-                <channel_name type="10"><![CDATA[Shure]]></channel_name>
-                <color type="3">4294967295</color>
-                <audio_gain type="2">12</audio_gain>
-                <frequency type="3">587725</frequency>
-                <diversity type="3">0</diversity>
-                <interference_mode type="3">1</interference_mode>
-                <interference_sensitivity type="3">0</interference_sensitivity>
-                <incl_group type="12">fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
-                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
-                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
-                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
-                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
-                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
-                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
-                <rf_scaling_factor type="3">10</rf_scaling_factor>
-                <audio_peak_hold type="1">false</audio_peak_hold>
-                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
-                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
-                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
-                <tone_gen_level type="2">-128</tone_gen_level>
-                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
-                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
-                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
-                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
-                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
-                <group_channel type="10">--,--</group_channel>
-            </channel>
-            <channel number="2">
-                <channel_name type="10"><![CDATA[Shure]]></channel_name>
-                <color type="3">4294967295</color>
-                <audio_gain type="2">12</audio_gain>
-                <frequency type="3">594125</frequency>
-                <diversity type="3">0</diversity>
-                <interference_mode type="3">1</interference_mode>
-                <interference_sensitivity type="3">0</interference_sensitivity>
-                <incl_group type="12">fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
-                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
-                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
-                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
-                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
-                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
-                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
-                <rf_scaling_factor type="3">10</rf_scaling_factor>
-                <audio_peak_hold type="1">false</audio_peak_hold>
-                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
-                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
-                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
-                <tone_gen_level type="2">-128</tone_gen_level>
-                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
-                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
-                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
-                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
-                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
-                <group_channel type="10">--,--</group_channel>
-            </channel>
-        </device>
-        <device>
-            <id dcid="04D81BE8-FD5A-11E3-8B44-0015C5F3F612">CED3A52E-1B79-4087-AD0F-6C0C4BD98469</id>
-            <series>AD</series>
-            <model type="10">AD4D-A</model>
-            <manufacturer type="10">Shure</manufacturer>
-            <firmware_version_valid type="1">true</firmware_version_valid>
-            <device_name type="10"><![CDATA[AD4D-A]]></device_name>
-            <scan_freq_step_capability type="11">25</scan_freq_step_capability>
-            <scan_rbw_capability type="11">200</scan_rbw_capability>
-            <start type="3">470150</start>
-            <end type="3">636000</end>
-            <band type="10">G56</band>
-            <cid_of_freq_server type="12">ced3a52e-1b79-4087-ad0f-6c0c4bd98469</cid_of_freq_server>
-            <front_panel_lock type="1">false</front_panel_lock>
-            <power_lock type="1">false</power_lock>
-            <dc_power type="1">true</dc_power>
-            <zone type="12">Default</zone>
-            <audio_encryption_mode type="3">0</audio_encryption_mode>
-            <modem_mode type="3">0</modem_mode>
-            <quadversity_mode type="3">0</quadversity_mode>
-            <channel number="1">
-                <channel_name type="10"><![CDATA[Shure]]></channel_name>
-                <color type="3">4294967295</color>
-                <audio_gain type="2">12</audio_gain>
-                <frequency type="3">540700</frequency>
-                <diversity type="3">0</diversity>
-                <interference_mode type="3">1</interference_mode>
-                <interference_sensitivity type="3">0</interference_sensitivity>
-                <incl_group type="12">00000000-0000-0000-0000-000000000000</incl_group>
-                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
-                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
-                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
-                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
-                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
-                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
-                <rf_scaling_factor type="3">10</rf_scaling_factor>
-                <audio_peak_hold type="1">false</audio_peak_hold>
-                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
-                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
-                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
-                <tone_gen_level type="2">-128</tone_gen_level>
-                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
-                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
-                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
-                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
-                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
-                <group_channel type="10">--,--</group_channel>
-            </channel>
-            <channel number="2">
-                <channel_name type="10"><![CDATA[Shure]]></channel_name>
-                <color type="3">4294967295</color>
-                <audio_gain type="2">12</audio_gain>
-                <frequency type="3">555450</frequency>
-                <diversity type="3">0</diversity>
-                <interference_mode type="3">1</interference_mode>
-                <interference_sensitivity type="3">0</interference_sensitivity>
-                <incl_group type="12">00000000-0000-0000-0000-000000000000</incl_group>
-                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
-                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
-                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
-                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
-                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
-                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
-                <rf_scaling_factor type="3">10</rf_scaling_factor>
-                <audio_peak_hold type="1">false</audio_peak_hold>
-                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
-                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
-                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
-                <tone_gen_level type="2">-128</tone_gen_level>
-                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
-                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
-                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
-                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
-                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
-                <group_channel type="10">--,--</group_channel>
-            </channel>
-        </device>
-        <device>
-            <id dcid="04D81BE8-FD5A-11E3-8B44-0015C5F3F612">4314C463-D587-4A69-8C0D-BCBB336665E5</id>
-            <series>AD</series>
-            <model type="10">AD4D-A</model>
-            <manufacturer type="10">Shure</manufacturer>
-            <firmware_version_valid type="1">true</firmware_version_valid>
-            <device_name type="10"><![CDATA[AD4D-A]]></device_name>
-            <scan_freq_step_capability type="11">25</scan_freq_step_capability>
-            <scan_rbw_capability type="11">200</scan_rbw_capability>
-            <start type="3">470150</start>
-            <end type="3">636000</end>
-            <band type="10">G56</band>
-            <cid_of_freq_server type="12">4314c463-d587-4a69-8c0d-bcbb336665e5</cid_of_freq_server>
-            <front_panel_lock type="1">false</front_panel_lock>
-            <power_lock type="1">false</power_lock>
-            <dc_power type="1">true</dc_power>
-            <zone type="12">Test 1</zone>
-            <audio_encryption_mode type="3">0</audio_encryption_mode>
-            <modem_mode type="3">0</modem_mode>
-            <quadversity_mode type="3">0</quadversity_mode>
-            <channel number="1">
-                <channel_name type="10"><![CDATA[Shure]]></channel_name>
-                <color type="3">4294967295</color>
-                <audio_gain type="2">12</audio_gain>
-                <frequency type="3">552075</frequency>
-                <diversity type="3">0</diversity>
-                <interference_mode type="3">1</interference_mode>
-                <interference_sensitivity type="3">0</interference_sensitivity>
-                <incl_group type="12">830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
-                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
-                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
-                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
-                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
-                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
-                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
-                <rf_scaling_factor type="3">10</rf_scaling_factor>
-                <audio_peak_hold type="1">false</audio_peak_hold>
-                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
-                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
-                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
-                <tone_gen_level type="2">-128</tone_gen_level>
-                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
-                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
-                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
-                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
-                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
-                <group_channel type="10">--,--</group_channel>
-                <tags type="10">Tag Test 1,Tag Test 2</tags>
-            </channel>
-            <channel number="2">
-                <channel_name type="10"><![CDATA[Shure]]></channel_name>
-                <color type="3">4294967295</color>
-                <audio_gain type="2">12</audio_gain>
-                <frequency type="3">521200</frequency>
-                <diversity type="3">0</diversity>
-                <interference_mode type="3">1</interference_mode>
-                <interference_sensitivity type="3">0</interference_sensitivity>
-                <incl_group type="12">830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
-                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
-                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
-                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
-                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
-                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
-                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
-                <rf_scaling_factor type="3">10</rf_scaling_factor>
-                <audio_peak_hold type="1">false</audio_peak_hold>
-                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
-                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
-                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
-                <tone_gen_level type="2">-128</tone_gen_level>
-                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
-                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
-                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
-                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
-                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
-                <group_channel type="10">--,--</group_channel>
-            </channel>
-        </device>
-        <device>
-            <id dcid="04D81BE8-FD5A-11E3-8B44-0015C5F3F612">C6C495CA-FE4C-4C1B-B49F-14AEA190913A</id>
-            <series>AD</series>
-            <model type="10">AD4D-A</model>
-            <manufacturer type="10">Shure</manufacturer>
-            <firmware_version_valid type="1">true</firmware_version_valid>
-            <device_name type="10"><![CDATA[AD4D-A]]></device_name>
-            <scan_freq_step_capability type="11">25</scan_freq_step_capability>
-            <scan_rbw_capability type="11">200</scan_rbw_capability>
-            <start type="3">470150</start>
-            <end type="3">636000</end>
-            <band type="10">G56</band>
-            <cid_of_freq_server type="12">c6c495ca-fe4c-4c1b-b49f-14aea190913a</cid_of_freq_server>
-            <front_panel_lock type="1">false</front_panel_lock>
-            <power_lock type="1">false</power_lock>
-            <dc_power type="1">true</dc_power>
-            <zone type="12">Test 2</zone>
-            <audio_encryption_mode type="3">0</audio_encryption_mode>
-            <modem_mode type="3">0</modem_mode>
-            <quadversity_mode type="3">0</quadversity_mode>
-            <channel number="1">
-                <channel_name type="10"><![CDATA[Shure]]></channel_name>
-                <color type="3">4294967295</color>
-                <audio_gain type="2">12</audio_gain>
-                <frequency type="3">580000</frequency>
-                <diversity type="3">0</diversity>
-                <interference_mode type="3">1</interference_mode>
-                <interference_sensitivity type="3">0</interference_sensitivity>
-                <incl_group type="12">fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
-                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
-                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
-                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
-                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
-                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
-                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
-                <rf_scaling_factor type="3">10</rf_scaling_factor>
-                <audio_peak_hold type="1">false</audio_peak_hold>
-                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
-                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
-                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
-                <tone_gen_level type="2">-128</tone_gen_level>
-                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
-                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
-                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
-                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
-                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
-                <group_channel type="10">--,--</group_channel>
-                <tags type="10">Tag Test 1</tags>
-            </channel>
-            <channel number="2">
-                <channel_name type="10"><![CDATA[Shure]]></channel_name>
-                <color type="3">4294967295</color>
-                <audio_gain type="2">12</audio_gain>
-                <frequency type="3">584225</frequency>
-                <diversity type="3">0</diversity>
-                <interference_mode type="3">1</interference_mode>
-                <interference_sensitivity type="3">0</interference_sensitivity>
-                <incl_group type="12">fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
-                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
-                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
-                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
-                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
-                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
-                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
-                <rf_scaling_factor type="3">10</rf_scaling_factor>
-                <audio_peak_hold type="1">false</audio_peak_hold>
-                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
-                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
-                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
-                <tone_gen_level type="2">-128</tone_gen_level>
-                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
-                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
-                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
-                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
-                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
-                <group_channel type="10">--,--</group_channel>
-                <tags type="10">Tag Test 2</tags>
-            </channel>
-        </device>
-        <device>
-            <id dcid="CCC713E8-E139-11DF-8462-0015C5F3F612">A3F76A1D-A58A-472D-9269-A437E3699109</id>
+            <id dcid="CCC713E8-E139-11DF-8462-0015C5F3F612">748E60DB-F58E-44C2-9BBB-1D233BB7D1E0</id>
             <series>PSM1000</series>
             <model type="10">PSM1000</model>
             <manufacturer type="10">Shure</manufacturer>
@@ -348,15 +42,15 @@
             <device_name type="10"><![CDATA[P10T]]></device_name>
             <band type="10">J8E</band>
             <power_lock type="1">false</power_lock>
-            <zone type="12">Default</zone>
+            <zone type="12">Test 2</zone>
             <channel number="1">
                 <channel_name type="10"><![CDATA[Shure]]></channel_name>
                 <color type="3">4294967295</color>
-                <frequency type="3">575200</frequency>
+                <frequency type="3">577750</frequency>
                 <rf_mute type="1">false</rf_mute>
                 <tx_power type="2">10</tx_power>
                 <front_panel_lock type="1">false</front_panel_lock>
-                <incl_group type="12">00000000-0000-0000-0000-000000000000</incl_group>
+                <incl_group type="12">fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
                 <audio_level_setting type="2">-16</audio_level_setting>
                 <audio_pad type="3">1</audio_pad>
                 <audio_mode type="3">3</audio_mode>
@@ -387,11 +81,11 @@
             <channel number="2">
                 <channel_name type="10"><![CDATA[Shure]]></channel_name>
                 <color type="3">4294967295</color>
-                <frequency type="3">589000</frequency>
+                <frequency type="3">578225</frequency>
                 <rf_mute type="1">false</rf_mute>
                 <tx_power type="2">10</tx_power>
                 <front_panel_lock type="1">false</front_panel_lock>
-                <incl_group type="12">00000000-0000-0000-0000-000000000000</incl_group>
+                <incl_group type="12">fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
                 <audio_level_setting type="2">-16</audio_level_setting>
                 <audio_pad type="3">1</audio_pad>
                 <audio_mode type="3">3</audio_mode>
@@ -502,7 +196,7 @@
             </channel>
         </device>
         <device>
-            <id dcid="CCC713E8-E139-11DF-8462-0015C5F3F612">748E60DB-F58E-44C2-9BBB-1D233BB7D1E0</id>
+            <id dcid="CCC713E8-E139-11DF-8462-0015C5F3F612">A3F76A1D-A58A-472D-9269-A437E3699109</id>
             <series>PSM1000</series>
             <model type="10">PSM1000</model>
             <manufacturer type="10">Shure</manufacturer>
@@ -510,15 +204,15 @@
             <device_name type="10"><![CDATA[P10T]]></device_name>
             <band type="10">J8E</band>
             <power_lock type="1">false</power_lock>
-            <zone type="12">Test 2</zone>
+            <zone type="12">Default</zone>
             <channel number="1">
                 <channel_name type="10"><![CDATA[Shure]]></channel_name>
                 <color type="3">4294967295</color>
-                <frequency type="3">577750</frequency>
+                <frequency type="3">575200</frequency>
                 <rf_mute type="1">false</rf_mute>
                 <tx_power type="2">10</tx_power>
                 <front_panel_lock type="1">false</front_panel_lock>
-                <incl_group type="12">fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
+                <incl_group type="12">00000000-0000-0000-0000-000000000000</incl_group>
                 <audio_level_setting type="2">-16</audio_level_setting>
                 <audio_pad type="3">1</audio_pad>
                 <audio_mode type="3">3</audio_mode>
@@ -549,11 +243,11 @@
             <channel number="2">
                 <channel_name type="10"><![CDATA[Shure]]></channel_name>
                 <color type="3">4294967295</color>
-                <frequency type="3">578225</frequency>
+                <frequency type="3">589000</frequency>
                 <rf_mute type="1">false</rf_mute>
                 <tx_power type="2">10</tx_power>
                 <front_panel_lock type="1">false</front_panel_lock>
-                <incl_group type="12">fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
+                <incl_group type="12">00000000-0000-0000-0000-000000000000</incl_group>
                 <audio_level_setting type="2">-16</audio_level_setting>
                 <audio_pad type="3">1</audio_pad>
                 <audio_mode type="3">3</audio_mode>
@@ -582,10 +276,321 @@
                 <group_channel type="10">--,--</group_channel>
             </channel>
         </device>
+        <device>
+            <id dcid="04D81BE8-FD5A-11E3-8B44-0015C5F3F612">C6C495CA-FE4C-4C1B-B49F-14AEA190913A</id>
+            <series>AD</series>
+            <model type="10">AD4D-A</model>
+            <manufacturer type="10">Shure</manufacturer>
+            <firmware_version_valid type="1">true</firmware_version_valid>
+            <device_name type="10"><![CDATA[AD4D-A]]></device_name>
+            <scan_freq_step_capability type="11">25</scan_freq_step_capability>
+            <scan_rbw_capability type="11">200</scan_rbw_capability>
+            <start type="3">470150</start>
+            <end type="3">636000</end>
+            <band type="10">G56</band>
+            <cid_of_freq_server type="12">c6c495ca-fe4c-4c1b-b49f-14aea190913a</cid_of_freq_server>
+            <front_panel_lock type="1">false</front_panel_lock>
+            <power_lock type="1">false</power_lock>
+            <dc_power type="1">true</dc_power>
+            <zone type="12">Test 2</zone>
+            <audio_encryption_mode type="3">0</audio_encryption_mode>
+            <modem_mode type="3">0</modem_mode>
+            <quadversity_mode type="3">0</quadversity_mode>
+            <channel number="1">
+                <channel_name type="10"><![CDATA[Shure]]></channel_name>
+                <color type="3">4294967295</color>
+                <audio_gain type="2">12</audio_gain>
+                <frequency type="3">580000</frequency>
+                <diversity type="3">0</diversity>
+                <interference_mode type="3">1</interference_mode>
+                <interference_sensitivity type="3">0</interference_sensitivity>
+                <incl_group type="12">fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
+                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
+                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
+                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
+                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
+                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
+                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
+                <rf_scaling_factor type="3">10</rf_scaling_factor>
+                <audio_peak_hold type="1">false</audio_peak_hold>
+                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
+                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
+                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
+                <tone_gen_level type="2">-128</tone_gen_level>
+                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
+                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
+                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
+                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
+                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
+                <group_channel type="10">--,--</group_channel>
+                <tags type="10">Tag Test 1</tags>
+            </channel>
+            <channel number="2">
+                <channel_name type="10"><![CDATA[Shure]]></channel_name>
+                <color type="3">4294967295</color>
+                <audio_gain type="2">12</audio_gain>
+                <frequency type="3">584225</frequency>
+                <diversity type="3">0</diversity>
+                <interference_mode type="3">1</interference_mode>
+                <interference_sensitivity type="3">0</interference_sensitivity>
+                <incl_group type="12">fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
+                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
+                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
+                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
+                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
+                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
+                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
+                <rf_scaling_factor type="3">10</rf_scaling_factor>
+                <audio_peak_hold type="1">false</audio_peak_hold>
+                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
+                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
+                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
+                <tone_gen_level type="2">-128</tone_gen_level>
+                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
+                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
+                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
+                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
+                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
+                <group_channel type="10">--,--</group_channel>
+                <tags type="10">Tag Test 2</tags>
+            </channel>
+        </device>
+        <device>
+            <id dcid="04D81BE8-FD5A-11E3-8B44-0015C5F3F612">4314C463-D587-4A69-8C0D-BCBB336665E5</id>
+            <series>AD</series>
+            <model type="10">AD4D-A</model>
+            <manufacturer type="10">Shure</manufacturer>
+            <firmware_version_valid type="1">true</firmware_version_valid>
+            <device_name type="10"><![CDATA[AD4D-A]]></device_name>
+            <scan_freq_step_capability type="11">25</scan_freq_step_capability>
+            <scan_rbw_capability type="11">200</scan_rbw_capability>
+            <start type="3">470150</start>
+            <end type="3">636000</end>
+            <band type="10">G56</band>
+            <cid_of_freq_server type="12">4314c463-d587-4a69-8c0d-bcbb336665e5</cid_of_freq_server>
+            <front_panel_lock type="1">false</front_panel_lock>
+            <power_lock type="1">false</power_lock>
+            <dc_power type="1">true</dc_power>
+            <zone type="12">Test 1</zone>
+            <audio_encryption_mode type="3">0</audio_encryption_mode>
+            <modem_mode type="3">0</modem_mode>
+            <quadversity_mode type="3">0</quadversity_mode>
+            <channel number="1">
+                <channel_name type="10"><![CDATA[Shure]]></channel_name>
+                <color type="3">4294967295</color>
+                <audio_gain type="2">12</audio_gain>
+                <frequency type="3">552075</frequency>
+                <diversity type="3">0</diversity>
+                <interference_mode type="3">1</interference_mode>
+                <interference_sensitivity type="3">0</interference_sensitivity>
+                <incl_group type="12">830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
+                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
+                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
+                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
+                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
+                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
+                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
+                <rf_scaling_factor type="3">10</rf_scaling_factor>
+                <audio_peak_hold type="1">false</audio_peak_hold>
+                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
+                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
+                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
+                <tone_gen_level type="2">-128</tone_gen_level>
+                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
+                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
+                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
+                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
+                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
+                <group_channel type="10">--,--</group_channel>
+                <tags type="10">Tag Test 1,Tag Test 2</tags>
+            </channel>
+            <channel number="2">
+                <channel_name type="10"><![CDATA[Shure]]></channel_name>
+                <color type="3">4294967295</color>
+                <audio_gain type="2">12</audio_gain>
+                <frequency type="3">521200</frequency>
+                <diversity type="3">0</diversity>
+                <interference_mode type="3">1</interference_mode>
+                <interference_sensitivity type="3">0</interference_sensitivity>
+                <incl_group type="12">830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
+                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
+                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
+                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
+                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
+                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
+                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
+                <rf_scaling_factor type="3">10</rf_scaling_factor>
+                <audio_peak_hold type="1">false</audio_peak_hold>
+                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
+                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
+                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
+                <tone_gen_level type="2">-128</tone_gen_level>
+                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
+                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
+                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
+                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
+                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
+                <group_channel type="10">--,--</group_channel>
+            </channel>
+        </device>
+        <device>
+            <id dcid="04D81BE8-FD5A-11E3-8B44-0015C5F3F612">CED3A52E-1B79-4087-AD0F-6C0C4BD98469</id>
+            <series>AD</series>
+            <model type="10">AD4D-A</model>
+            <manufacturer type="10">Shure</manufacturer>
+            <firmware_version_valid type="1">true</firmware_version_valid>
+            <device_name type="10"><![CDATA[AD4D-A]]></device_name>
+            <scan_freq_step_capability type="11">25</scan_freq_step_capability>
+            <scan_rbw_capability type="11">200</scan_rbw_capability>
+            <start type="3">470150</start>
+            <end type="3">636000</end>
+            <band type="10">G56</band>
+            <cid_of_freq_server type="12">ced3a52e-1b79-4087-ad0f-6c0c4bd98469</cid_of_freq_server>
+            <front_panel_lock type="1">false</front_panel_lock>
+            <power_lock type="1">false</power_lock>
+            <dc_power type="1">true</dc_power>
+            <zone type="12">Default</zone>
+            <audio_encryption_mode type="3">0</audio_encryption_mode>
+            <modem_mode type="3">0</modem_mode>
+            <quadversity_mode type="3">0</quadversity_mode>
+            <channel number="1">
+                <channel_name type="10"><![CDATA[Shure]]></channel_name>
+                <color type="3">4294967295</color>
+                <audio_gain type="2">12</audio_gain>
+                <frequency type="3">540700</frequency>
+                <diversity type="3">0</diversity>
+                <interference_mode type="3">1</interference_mode>
+                <interference_sensitivity type="3">0</interference_sensitivity>
+                <incl_group type="12">00000000-0000-0000-0000-000000000000</incl_group>
+                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
+                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
+                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
+                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
+                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
+                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
+                <rf_scaling_factor type="3">10</rf_scaling_factor>
+                <audio_peak_hold type="1">false</audio_peak_hold>
+                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
+                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
+                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
+                <tone_gen_level type="2">-128</tone_gen_level>
+                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
+                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
+                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
+                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
+                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
+                <group_channel type="10">--,--</group_channel>
+            </channel>
+            <channel number="2">
+                <channel_name type="10"><![CDATA[Shure]]></channel_name>
+                <color type="3">4294967295</color>
+                <audio_gain type="2">12</audio_gain>
+                <frequency type="3">555450</frequency>
+                <diversity type="3">0</diversity>
+                <interference_mode type="3">1</interference_mode>
+                <interference_sensitivity type="3">0</interference_sensitivity>
+                <incl_group type="12">00000000-0000-0000-0000-000000000000</incl_group>
+                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
+                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
+                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
+                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
+                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
+                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
+                <rf_scaling_factor type="3">10</rf_scaling_factor>
+                <audio_peak_hold type="1">false</audio_peak_hold>
+                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
+                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
+                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
+                <tone_gen_level type="2">-128</tone_gen_level>
+                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
+                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
+                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
+                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
+                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
+                <group_channel type="10">--,--</group_channel>
+            </channel>
+        </device>
+        <device>
+            <id dcid="04D81BE8-FD5A-11E3-8B44-0015C5F3F612">4F17E27C-6162-4B9B-8CD0-9B6278DAE51B</id>
+            <series>AD</series>
+            <model type="10">AD4D-A</model>
+            <manufacturer type="10">Shure</manufacturer>
+            <firmware_version_valid type="1">true</firmware_version_valid>
+            <device_name type="10"><![CDATA[AD4D-A]]></device_name>
+            <scan_freq_step_capability type="11">25</scan_freq_step_capability>
+            <scan_rbw_capability type="11">200</scan_rbw_capability>
+            <start type="3">470150</start>
+            <end type="3">636000</end>
+            <band type="10">G56</band>
+            <cid_of_freq_server type="12">4f17e27c-6162-4b9b-8cd0-9b6278dae51b</cid_of_freq_server>
+            <front_panel_lock type="1">false</front_panel_lock>
+            <power_lock type="1">false</power_lock>
+            <dc_power type="1">true</dc_power>
+            <zone type="12">Test 1</zone>
+            <audio_encryption_mode type="3">0</audio_encryption_mode>
+            <modem_mode type="3">0</modem_mode>
+            <quadversity_mode type="3">0</quadversity_mode>
+            <channel number="1">
+                <channel_name type="10"><![CDATA[Shure]]></channel_name>
+                <color type="3">4294967295</color>
+                <audio_gain type="2">12</audio_gain>
+                <frequency type="3">587725</frequency>
+                <diversity type="3">0</diversity>
+                <interference_mode type="3">1</interference_mode>
+                <interference_sensitivity type="3">0</interference_sensitivity>
+                <incl_group type="12">fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
+                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
+                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
+                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
+                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
+                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
+                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
+                <rf_scaling_factor type="3">10</rf_scaling_factor>
+                <audio_peak_hold type="1">false</audio_peak_hold>
+                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
+                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
+                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
+                <tone_gen_level type="2">-128</tone_gen_level>
+                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
+                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
+                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
+                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
+                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
+                <group_channel type="10">--,--</group_channel>
+            </channel>
+            <channel number="2">
+                <channel_name type="10"><![CDATA[Shure]]></channel_name>
+                <color type="3">4294967295</color>
+                <audio_gain type="2">12</audio_gain>
+                <frequency type="3">594125</frequency>
+                <diversity type="3">0</diversity>
+                <interference_mode type="3">1</interference_mode>
+                <interference_sensitivity type="3">0</interference_sensitivity>
+                <incl_group type="12">fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
+                <ir_sync_audio_mute_switch type="3">255</ir_sync_audio_mute_switch>
+                <ir_sync_tx_sensitivity type="2">-1</ir_sync_tx_sensitivity>
+                <ir_sync_tx_power type="3">255</ir_sync_tx_power>
+                <ir_sync_remote_lock type="3">255</ir_sync_remote_lock>
+                <ir_sync_bat_type type="3">255</ir_sync_bat_type>
+                <ir_sync_custom_groups type="3">0</ir_sync_custom_groups>
+                <rf_scaling_factor type="3">10</rf_scaling_factor>
+                <audio_peak_hold type="1">false</audio_peak_hold>
+                <ir_sync_handheld_offset type="2">-128</ir_sync_handheld_offset>
+                <ir_sync_bodypack_offset type="2">-128</ir_sync_bodypack_offset>
+                <unregistered_tx_mode type="3">1</unregistered_tx_mode>
+                <tone_gen_level type="2">-128</tone_gen_level>
+                <ir_sync_tx_polarity type="3">255</ir_sync_tx_polarity>
+                <ir_sync_plugon_phantom_power type="3">255</ir_sync_plugon_phantom_power>
+                <ir_sync_plugon_offset type="2">-128</ir_sync_plugon_offset>
+                <ir_sync_plugon_high_pass_filter type="3">255</ir_sync_plugon_high_pass_filter>
+                <ir_sync_plugon_tx_sensitivity type="2">-1</ir_sync_plugon_tx_sensitivity>
+                <group_channel type="10">--,--</group_channel>
+            </channel>
+        </device>
         <zones version="1.1">
-            <zone ordinal="0" color="#6692fc">Default</zone>
-            <zone ordinal="1" color="#7863ed">Test 1</zone>
-            <zone ordinal="2" color="#da2d7f">Test 2</zone>
+            <zone color="#6692fc" ordinal="0">Default</zone>
+            <zone color="#7863ed" ordinal="1">Test 1</zone>
+            <zone color="#da2d7f" ordinal="2">Test 2</zone>
             <zone_matrix>
                 <from zone="Default">
                     <to zone="Default">
@@ -1922,7 +1927,7 @@
                 </channel>
             </frequency_exclusions>
             <compat_profiles>
-                <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" synthesizable="0" version="0.0.0.1" name="Standard" imd_source="1">
+                <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" name="Standard" synthesizable="0" version="0.0.0.1" imd_source="1">
                     <spacing freq_units="KHz">
                         <ch_ch>800</ch_ch>
                         <imd_2t3o>400</imd_2t3o>
@@ -1967,8 +1972,8 @@
         </band_planning>
     </coordination_info>
     <CFLs version="1.0">
-        <CFL id="87f18912-44f0-4146-9fb5-5ad85b603fea" zone_uuid="168efbc9-82c6-47a4-b9ff-75cde3d53017" date="Thu Sep 22 2022" part="1" zone="Default" parts="3" user="" time="23:55:34" version="0.3" machine="oyvinds-mbp.local">
-            <frequencies units="KHz" count="6">
+        <CFL id="87f18912-44f0-4146-9fb5-5ad85b603fea" zone_uuid="8d449c26-f701-4088-90ee-4beecb65c865" zone="Default" machine="oyvinds-mbp.local" user="" date="Thu Sep 22 2022" version="0.3" time="23:55:34" part="1" parts="3">
+            <frequencies count="6" units="KHz">
                 <frequency value="540700" gr_ch="G:-- Ch:--">
                     <series>AD</series>
                     <band>G56</band>
@@ -2084,7 +2089,7 @@
                     </additional_compat>
                 </frequency>
             </frequencies>
-            <device_list zone_uuid="{168efbc9-82c6-47a4-b9ff-75cde3d53017}" cfl_id="87f18912-44f0-4146-9fb5-5ad85b603fea" date="Thu Sep 22 2022" part="1" zone="Default" parts="3" time="23:55:36" version="0.3">
+            <device_list zone_uuid="{8d449c26-f701-4088-90ee-4beecb65c865}" zone="Default" date="Thu Sep 22 2022" version="0.3" time="23:55:36" cfl_id="87f18912-44f0-4146-9fb5-5ad85b603fea" part="1" parts="3">
                 <devices count="2">
                     <device>
                         <cid>A3F76A1D-A58A-472D-9269-A437E3699109</cid>
@@ -2101,7 +2106,7 @@
                         </wwb_types>
                         <diversity>0</diversity>
                         <zone_name>Default</zone_name>
-                        <zone_uuid>{168efbc9-82c6-47a4-b9ff-75cde3d53017}</zone_uuid>
+                        <zone_uuid>{8d449c26-f701-4088-90ee-4beecb65c865}</zone_uuid>
                         <channel_count>2</channel_count>
                         <channels>
                             <channel>
@@ -2113,7 +2118,7 @@
                                 <tx_profile/>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="" uuid=""/>
+                                <inclusion_group uuid="" name=""/>
                             </channel>
                             <channel>
                                 <num>1</num>
@@ -2124,7 +2129,7 @@
                                 <tx_profile/>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="" uuid=""/>
+                                <inclusion_group uuid="" name=""/>
                             </channel>
                         </channels>
                     </device>
@@ -2143,7 +2148,7 @@
                         </wwb_types>
                         <diversity>0</diversity>
                         <zone_name>Default</zone_name>
-                        <zone_uuid>{168efbc9-82c6-47a4-b9ff-75cde3d53017}</zone_uuid>
+                        <zone_uuid>{8d449c26-f701-4088-90ee-4beecb65c865}</zone_uuid>
                         <channel_count>2</channel_count>
                         <channels>
                             <channel>
@@ -2155,7 +2160,7 @@
                                 <tx_profile>Standard</tx_profile>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="" uuid=""/>
+                                <inclusion_group uuid="" name=""/>
                             </channel>
                             <channel>
                                 <num>1</num>
@@ -2166,7 +2171,7 @@
                                 <tx_profile>Standard</tx_profile>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="" uuid=""/>
+                                <inclusion_group uuid="" name=""/>
                             </channel>
                         </channels>
                     </device>
@@ -2188,7 +2193,7 @@
                     </channel>
                 </frequency_exclusions>
                 <compat_profiles>
-                    <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" synthesizable="0" version="0.0.0.1" name="Standard" imd_source="1">
+                    <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" name="Standard" synthesizable="0" version="0.0.0.1" imd_source="1">
                         <spacing freq_units="KHz">
                             <ch_ch>800</ch_ch>
                             <imd_2t3o>400</imd_2t3o>
@@ -2278,8 +2283,8 @@
             <exclusion_threshold units="dBm">-85</exclusion_threshold>
             <peak_threshold units="dBm">-60</peak_threshold>
         </CFL>
-        <CFL id="87f18912-44f0-4146-9fb5-5ad85b603fea" zone_uuid="6cc25817-6127-474f-b582-ab183e295015" date="Thu Sep 22 2022" part="2" zone="Test 1" parts="3" user="" time="23:55:34" version="0.3" machine="oyvinds-mbp.local">
-            <frequencies units="KHz" count="9">
+        <CFL id="87f18912-44f0-4146-9fb5-5ad85b603fea" zone_uuid="d20ce0af-1875-4754-86d1-687435764d85" zone="Test 1" machine="oyvinds-mbp.local" user="" date="Thu Sep 22 2022" version="0.3" time="23:55:34" part="2" parts="3">
+            <frequencies count="9" units="KHz">
                 <frequency value="521200" gr_ch="G:-- Ch:--">
                     <series>AD</series>
                     <band>G56</band>
@@ -2452,7 +2457,7 @@
                     </additional_compat>
                 </frequency>
             </frequencies>
-            <device_list zone_uuid="{6cc25817-6127-474f-b582-ab183e295015}" cfl_id="87f18912-44f0-4146-9fb5-5ad85b603fea" date="Thu Sep 22 2022" part="2" zone="Test 1" parts="3" time="23:55:36" version="0.3">
+            <device_list zone_uuid="{d20ce0af-1875-4754-86d1-687435764d85}" zone="Test 1" date="Thu Sep 22 2022" version="0.3" time="23:55:36" cfl_id="87f18912-44f0-4146-9fb5-5ad85b603fea" part="2" parts="3">
                 <devices count="3">
                     <device>
                         <cid>4314C463-D587-4A69-8C0D-BCBB336665E5</cid>
@@ -2469,7 +2474,7 @@
                         </wwb_types>
                         <diversity>0</diversity>
                         <zone_name>Test 1</zone_name>
-                        <zone_uuid>{6cc25817-6127-474f-b582-ab183e295015}</zone_uuid>
+                        <zone_uuid>{d20ce0af-1875-4754-86d1-687435764d85}</zone_uuid>
                         <channel_count>2</channel_count>
                         <channels>
                             <channel>
@@ -2481,7 +2486,7 @@
                                 <tx_profile>Standard</tx_profile>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="Group 1" uuid=""/>
+                                <inclusion_group uuid="" name="Group 1"/>
                             </channel>
                             <channel>
                                 <num>1</num>
@@ -2492,7 +2497,7 @@
                                 <tx_profile>Standard</tx_profile>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="Group 1" uuid=""/>
+                                <inclusion_group uuid="" name="Group 1"/>
                             </channel>
                         </channels>
                     </device>
@@ -2511,7 +2516,7 @@
                         </wwb_types>
                         <diversity>0</diversity>
                         <zone_name>Test 1</zone_name>
-                        <zone_uuid>{6cc25817-6127-474f-b582-ab183e295015}</zone_uuid>
+                        <zone_uuid>{d20ce0af-1875-4754-86d1-687435764d85}</zone_uuid>
                         <channel_count>2</channel_count>
                         <channels>
                             <channel>
@@ -2523,7 +2528,7 @@
                                 <tx_profile>Standard</tx_profile>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="Group 2" uuid=""/>
+                                <inclusion_group uuid="" name="Group 2"/>
                             </channel>
                             <channel>
                                 <num>1</num>
@@ -2534,7 +2539,7 @@
                                 <tx_profile>Standard</tx_profile>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="Group 2" uuid=""/>
+                                <inclusion_group uuid="" name="Group 2"/>
                             </channel>
                         </channels>
                     </device>
@@ -2553,7 +2558,7 @@
                         </wwb_types>
                         <diversity>0</diversity>
                         <zone_name>Test 1</zone_name>
-                        <zone_uuid>{6cc25817-6127-474f-b582-ab183e295015}</zone_uuid>
+                        <zone_uuid>{d20ce0af-1875-4754-86d1-687435764d85}</zone_uuid>
                         <channel_count>2</channel_count>
                         <channels>
                             <channel>
@@ -2565,7 +2570,7 @@
                                 <tx_profile/>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="Group 1" uuid=""/>
+                                <inclusion_group uuid="" name="Group 1"/>
                             </channel>
                             <channel>
                                 <num>1</num>
@@ -2576,7 +2581,7 @@
                                 <tx_profile/>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="Group 1" uuid=""/>
+                                <inclusion_group uuid="" name="Group 1"/>
                             </channel>
                         </channels>
                     </device>
@@ -2598,7 +2603,7 @@
                     </channel>
                 </frequency_exclusions>
                 <compat_profiles>
-                    <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" synthesizable="0" version="0.0.0.1" name="Standard" imd_source="1">
+                    <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" name="Standard" synthesizable="0" version="0.0.0.1" imd_source="1">
                         <spacing freq_units="KHz">
                             <ch_ch>800</ch_ch>
                             <imd_2t3o>400</imd_2t3o>
@@ -2688,8 +2693,8 @@
             <exclusion_threshold units="dBm">-85</exclusion_threshold>
             <peak_threshold units="dBm">-60</peak_threshold>
         </CFL>
-        <CFL id="87f18912-44f0-4146-9fb5-5ad85b603fea" zone_uuid="715b11ff-8beb-471a-b452-7a89d6ca8c26" date="Thu Sep 22 2022" part="3" zone="Test 2" parts="3" user="" time="23:55:34" version="0.3" machine="oyvinds-mbp.local">
-            <frequencies units="KHz" count="6">
+        <CFL id="87f18912-44f0-4146-9fb5-5ad85b603fea" zone_uuid="f52c412b-a209-49db-a0ec-519ecf93c003" zone="Test 2" machine="oyvinds-mbp.local" user="" date="Thu Sep 22 2022" version="0.3" time="23:55:34" part="3" parts="3">
+            <frequencies count="6" units="KHz">
                 <frequency value="577750" gr_ch="G:-- Ch:--">
                     <series>PSM1000</series>
                     <band>J8E</band>
@@ -2805,7 +2810,7 @@
                     </additional_compat>
                 </frequency>
             </frequencies>
-            <device_list zone_uuid="{715b11ff-8beb-471a-b452-7a89d6ca8c26}" cfl_id="87f18912-44f0-4146-9fb5-5ad85b603fea" date="Thu Sep 22 2022" part="3" zone="Test 2" parts="3" time="23:55:36" version="0.3">
+            <device_list zone_uuid="{f52c412b-a209-49db-a0ec-519ecf93c003}" zone="Test 2" date="Thu Sep 22 2022" version="0.3" time="23:55:36" cfl_id="87f18912-44f0-4146-9fb5-5ad85b603fea" part="3" parts="3">
                 <devices count="2">
                     <device>
                         <cid>748E60DB-F58E-44C2-9BBB-1D233BB7D1E0</cid>
@@ -2822,7 +2827,7 @@
                         </wwb_types>
                         <diversity>0</diversity>
                         <zone_name>Test 2</zone_name>
-                        <zone_uuid>{715b11ff-8beb-471a-b452-7a89d6ca8c26}</zone_uuid>
+                        <zone_uuid>{f52c412b-a209-49db-a0ec-519ecf93c003}</zone_uuid>
                         <channel_count>2</channel_count>
                         <channels>
                             <channel>
@@ -2834,7 +2839,7 @@
                                 <tx_profile/>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="Group 2" uuid=""/>
+                                <inclusion_group uuid="" name="Group 2"/>
                             </channel>
                             <channel>
                                 <num>1</num>
@@ -2845,7 +2850,7 @@
                                 <tx_profile/>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="Group 2" uuid=""/>
+                                <inclusion_group uuid="" name="Group 2"/>
                             </channel>
                         </channels>
                     </device>
@@ -2864,7 +2869,7 @@
                         </wwb_types>
                         <diversity>0</diversity>
                         <zone_name>Test 2</zone_name>
-                        <zone_uuid>{715b11ff-8beb-471a-b452-7a89d6ca8c26}</zone_uuid>
+                        <zone_uuid>{f52c412b-a209-49db-a0ec-519ecf93c003}</zone_uuid>
                         <channel_count>2</channel_count>
                         <channels>
                             <channel>
@@ -2876,7 +2881,7 @@
                                 <tx_profile>Standard</tx_profile>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="Group 2" uuid=""/>
+                                <inclusion_group uuid="" name="Group 2"/>
                             </channel>
                             <channel>
                                 <num>1</num>
@@ -2887,7 +2892,7 @@
                                 <tx_profile>Standard</tx_profile>
                                 <color>#000000</color>
                                 <linked_devices count="0"/>
-                                <inclusion_group name="Group 2" uuid=""/>
+                                <inclusion_group uuid="" name="Group 2"/>
                             </channel>
                         </channels>
                     </device>
@@ -2909,7 +2914,7 @@
                     </channel>
                 </frequency_exclusions>
                 <compat_profiles>
-                    <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" synthesizable="0" version="0.0.0.1" name="Standard" imd_source="1">
+                    <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" name="Standard" synthesizable="0" version="0.0.0.1" imd_source="1">
                         <spacing freq_units="KHz">
                             <ch_ch>800</ch_ch>
                             <imd_2t3o>400</imd_2t3o>
@@ -3004,20 +3009,20 @@
         <coordination_plot version="1.2">
             <plots>
                 <plot>
-                    <id selected="0" color="#ff0000">{b93935fb-57c8-4968-ac00-9e2f7a13114a}</id>
+                    <id selected="0" color="#ff0000">{145c7753-177e-417c-9a76-dede357d6bb3}</id>
                 </plot>
             </plots>
-            <start>462,516 MHz</start>
-            <center>615,418 MHz</center>
-            <end>768,320 MHz</end>
-            <span>305,804 MHz</span>
+            <start>586,450 MHz</start>
+            <center>596,450 MHz</center>
+            <end>606,450 MHz</end>
+            <span>20,000 MHz</span>
         </coordination_plot>
     </plot_info>
     <custom_user_group_list>
-        <inclusion_list active="false" version="1.0" name="Custom" uuid="33847979-8d4a-4b8b-a230-2f7b439b14d1">
-            <inclusion_group version="1.0" name="Test" uuid="0c3dd934-c8bc-4f92-bc94-3cfd64d7b38a" color="#ffffff">
-                <freqs units="KHz" count="0"/>
-                <freq_ranges units="KHz" count="1">
+        <inclusion_list active="false" uuid="33847979-8d4a-4b8b-a230-2f7b439b14d1" name="Custom" version="1.0">
+            <inclusion_group uuid="0c3dd934-c8bc-4f92-bc94-3cfd64d7b38a" name="Test" color="#ffffff" version="1.0">
+                <freqs count="0" units="KHz"/>
+                <freq_ranges count="1" units="KHz">
                     <fr>
                         <f>470000</f>
                         <f>580000</f>
@@ -3027,12 +3032,12 @@
         </inclusion_list>
     </custom_user_group_list>
     <band_plan_group_list version="1.0">
-        <band_plan_list active="true" version="1.0" name="Inclusion 1" uuid="d760f05b-5422-496f-8304-d52a02e2893b">
-            <inclusion_group version="1.0" name="Group 1" uuid="830cf9dc-b271-4315-82ac-9a683c17d219" color="#ffffff">
-                <freqs units="KHz" count="1">
+        <band_plan_list active="true" uuid="d760f05b-5422-496f-8304-d52a02e2893b" name="Inclusion 1" version="1.0">
+            <inclusion_group uuid="830cf9dc-b271-4315-82ac-9a683c17d219" name="Group 1" color="#ffffff" version="1.0">
+                <freqs count="1" units="KHz">
                     <f>567250</f>
                 </freqs>
-                <freq_ranges units="KHz" count="2">
+                <freq_ranges count="2" units="KHz">
                     <fr>
                         <f>494000</f>
                         <f>566000</f>
@@ -3043,9 +3048,9 @@
                     </fr>
                 </freq_ranges>
             </inclusion_group>
-            <inclusion_group version="1.0" name="Group 2" uuid="fdf415e6-f469-44d6-ab28-8091a49aab86" color="#ffffff">
-                <freqs units="KHz" count="0"/>
-                <freq_ranges units="KHz" count="3">
+            <inclusion_group uuid="fdf415e6-f469-44d6-ab28-8091a49aab86" name="Group 2" color="#ffffff" version="1.0">
+                <freqs count="0" units="KHz"/>
+                <freq_ranges count="3" units="KHz">
                     <fr>
                         <f>566000</f>
                         <f>636000</f>
@@ -3063,8 +3068,8 @@
         </band_plan_list>
     </band_plan_group_list>
     <coordinated_data_root id="73db527b-3239-4481-b484-d28f32bd00bf" version="0.3">
-        <mic_channels units="khz" count="21">
-            <freq_entry id="CED3A52E-1B79-4087-AD0F-6C0C4BD98469-0" tag="" color="#ffffff">
+        <mic_channels count="21" units="khz">
+            <freq_entry id="CED3A52E-1B79-4087-AD0F-6C0C4BD98469-0" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Default</zone>
                     <series>AD</series>
@@ -3094,7 +3099,7 @@
                     <dev_type>Rack</dev_type>
                 </dev_category>
             </freq_entry>
-            <freq_entry id="CED3A52E-1B79-4087-AD0F-6C0C4BD98469-1" tag="" color="#ffffff">
+            <freq_entry id="CED3A52E-1B79-4087-AD0F-6C0C4BD98469-1" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Default</zone>
                     <series>AD</series>
@@ -3124,7 +3129,7 @@
                     <dev_type>Rack</dev_type>
                 </dev_category>
             </freq_entry>
-            <freq_entry id="A3F76A1D-A58A-472D-9269-A437E3699109-0" tag="" color="#ffffff">
+            <freq_entry id="A3F76A1D-A58A-472D-9269-A437E3699109-0" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Default</zone>
                     <series>PSM1000</series>
@@ -3154,7 +3159,7 @@
                     <dev_type>Rack</dev_type>
                 </dev_category>
             </freq_entry>
-            <freq_entry id="A3F76A1D-A58A-472D-9269-A437E3699109-1" tag="" color="#ffffff">
+            <freq_entry id="A3F76A1D-A58A-472D-9269-A437E3699109-1" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Default</zone>
                     <series>PSM1000</series>
@@ -3184,7 +3189,7 @@
                     <dev_type>Rack</dev_type>
                 </dev_category>
             </freq_entry>
-            <freq_entry id="4314C463-D587-4A69-8C0D-BCBB336665E5-0" tag="" color="#ffffff">
+            <freq_entry id="4314C463-D587-4A69-8C0D-BCBB336665E5-0" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 1</zone>
                     <series>AD</series>
@@ -3214,7 +3219,7 @@
                     <dev_type>Rack</dev_type>
                 </dev_category>
             </freq_entry>
-            <freq_entry id="4314C463-D587-4A69-8C0D-BCBB336665E5-1" tag="" color="#ffffff">
+            <freq_entry id="4314C463-D587-4A69-8C0D-BCBB336665E5-1" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 1</zone>
                     <series>AD</series>
@@ -3244,7 +3249,7 @@
                     <dev_type>Rack</dev_type>
                 </dev_category>
             </freq_entry>
-            <freq_entry id="C6C495CA-FE4C-4C1B-B49F-14AEA190913A-0" tag="" color="#ffffff">
+            <freq_entry id="C6C495CA-FE4C-4C1B-B49F-14AEA190913A-0" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 2</zone>
                     <series>AD</series>
@@ -3274,7 +3279,7 @@
                     <dev_type>Rack</dev_type>
                 </dev_category>
             </freq_entry>
-            <freq_entry id="C6C495CA-FE4C-4C1B-B49F-14AEA190913A-1" tag="" color="#ffffff">
+            <freq_entry id="C6C495CA-FE4C-4C1B-B49F-14AEA190913A-1" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 2</zone>
                     <series>AD</series>
@@ -3304,7 +3309,7 @@
                     <dev_type>Rack</dev_type>
                 </dev_category>
             </freq_entry>
-            <freq_entry id="5114812F-825A-44D2-A8EC-708BACCB8BA0-0" tag="" color="#ffffff">
+            <freq_entry id="5114812F-825A-44D2-A8EC-708BACCB8BA0-0" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 1</zone>
                     <series>PSM1000</series>
@@ -3334,7 +3339,7 @@
                     <dev_type>Rack</dev_type>
                 </dev_category>
             </freq_entry>
-            <freq_entry id="5114812F-825A-44D2-A8EC-708BACCB8BA0-1" tag="" color="#ffffff">
+            <freq_entry id="5114812F-825A-44D2-A8EC-708BACCB8BA0-1" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 1</zone>
                     <series>PSM1000</series>
@@ -3364,7 +3369,7 @@
                     <dev_type>Rack</dev_type>
                 </dev_category>
             </freq_entry>
-            <freq_entry id="748E60DB-F58E-44C2-9BBB-1D233BB7D1E0-0" tag="" color="#ffffff">
+            <freq_entry id="748E60DB-F58E-44C2-9BBB-1D233BB7D1E0-0" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 2</zone>
                     <series>PSM1000</series>
@@ -3394,7 +3399,7 @@
                     <dev_type>Rack</dev_type>
                 </dev_category>
             </freq_entry>
-            <freq_entry id="ed6f6ddc-4664-4794-b502-588c1e499489" tag="" color="#ffffff">
+            <freq_entry id="ed6f6ddc-4664-4794-b502-588c1e499489" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Default</zone>
                     <series>PSM1000</series>
@@ -3419,7 +3424,7 @@
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
                 <source_name/>
             </freq_entry>
-            <freq_entry id="762cc672-5301-45a5-b192-503453897888" tag="" color="#ffffff">
+            <freq_entry id="762cc672-5301-45a5-b192-503453897888" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Default</zone>
                     <series>AD</series>
@@ -3444,7 +3449,7 @@
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
                 <source_name/>
             </freq_entry>
-            <freq_entry id="28908c23-e563-4e49-a30a-b50563fe09bf" tag="" color="#ffffff">
+            <freq_entry id="28908c23-e563-4e49-a30a-b50563fe09bf" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 1</zone>
                     <series>PSM1000</series>
@@ -3469,7 +3474,7 @@
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
                 <source_name/>
             </freq_entry>
-            <freq_entry id="e97a5f5a-f457-4211-ad01-98f1d4285fed" tag="" color="#ffffff">
+            <freq_entry id="e97a5f5a-f457-4211-ad01-98f1d4285fed" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 1</zone>
                     <series>AD</series>
@@ -3494,7 +3499,7 @@
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
                 <source_name/>
             </freq_entry>
-            <freq_entry id="c70c9c9b-192f-44ae-8abf-b4af49fb62a5" tag="" color="#ffffff">
+            <freq_entry id="c70c9c9b-192f-44ae-8abf-b4af49fb62a5" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 2</zone>
                     <series>PSM1000</series>
@@ -3519,7 +3524,7 @@
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
                 <source_name/>
             </freq_entry>
-            <freq_entry id="e2c2c2e7-8826-47d4-81a3-cd4730d0e38e" tag="" color="#ffffff">
+            <freq_entry id="e2c2c2e7-8826-47d4-81a3-cd4730d0e38e" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 2</zone>
                     <series>AD</series>
@@ -3544,7 +3549,7 @@
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
                 <source_name/>
             </freq_entry>
-            <freq_entry id="4F17E27C-6162-4B9B-8CD0-9B6278DAE51B-0" tag="" color="#ffffff">
+            <freq_entry id="4F17E27C-6162-4B9B-8CD0-9B6278DAE51B-0" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 1</zone>
                     <series>AD</series>
@@ -3574,7 +3579,7 @@
                     <dev_type>Rack</dev_type>
                 </dev_category>
             </freq_entry>
-            <freq_entry id="4F17E27C-6162-4B9B-8CD0-9B6278DAE51B-1" tag="" color="#ffffff">
+            <freq_entry id="4F17E27C-6162-4B9B-8CD0-9B6278DAE51B-1" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 1</zone>
                     <series>AD</series>
@@ -3604,7 +3609,7 @@
                     <dev_type>Rack</dev_type>
                 </dev_category>
             </freq_entry>
-            <freq_entry id="2d29faf5-a7ee-43fe-868c-c77fcc28b6b8" tag="" color="#ffffff">
+            <freq_entry id="2d29faf5-a7ee-43fe-868c-c77fcc28b6b8" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 1</zone>
                     <series>AD</series>
@@ -3629,7 +3634,7 @@
                 <source_id>00000000-0000-0000-0000-000000000002</source_id>
                 <source_name/>
             </freq_entry>
-            <freq_entry id="748E60DB-F58E-44C2-9BBB-1D233BB7D1E0-1" tag="" color="#ffffff">
+            <freq_entry id="748E60DB-F58E-44C2-9BBB-1D233BB7D1E0-1" color="#ffffff" tag="">
                 <compat_key>
                     <zone>Test 2</zone>
                     <series>PSM1000</series>
@@ -3660,14 +3665,14 @@
                 </dev_category>
             </freq_entry>
         </mic_channels>
-        <compatibility_profile_settings version="1.0" count="8">
+        <compatibility_profile_settings count="8" version="1.0">
             <profile>
                 <band>G56</band>
                 <series>AD</series>
                 <tx_profile>Standard</tx_profile>
                 <zone>Default</zone>
                 <incl_group>00000000-0000-0000-0000-000000000000</incl_group>
-                <compat_profile id="f1e4f397-b27b-f54e-f620-03c401dbfd5f" synthesizable="1" version="0.0.0.1" name="Standard" imd_source="1">
+                <compat_profile id="f1e4f397-b27b-f54e-f620-03c401dbfd5f" name="Standard" synthesizable="1" version="0.0.0.1" imd_source="1">
                     <spacing freq_units="KHz">
                         <ch_ch>350</ch_ch>
                         <imd_2t3o>75</imd_2t3o>
@@ -3689,7 +3694,7 @@
                 <tx_profile/>
                 <zone>Default</zone>
                 <incl_group>00000000-0000-0000-0000-000000000000</incl_group>
-                <compat_profile id="f3686491-6146-5a07-8108-bed37183ae4a" synthesizable="1" version="0.0.0.1" name="Standard" imd_source="1">
+                <compat_profile id="f3686491-6146-5a07-8108-bed37183ae4a" name="Standard" synthesizable="1" version="0.0.0.1" imd_source="1">
                     <spacing freq_units="KHz">
                         <ch_ch>350</ch_ch>
                         <imd_2t3o>250</imd_2t3o>
@@ -3716,7 +3721,7 @@
                 <tx_profile/>
                 <zone/>
                 <incl_group>00000000-0000-0000-0000-000000000000</incl_group>
-                <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" synthesizable="0" version="0.0.0.1" name="Standard" imd_source="1">
+                <compat_profile id="6cbbb7e8-55ab-e4bb-f5c7-1b86242f7fd2" name="Standard" synthesizable="0" version="0.0.0.1" imd_source="1">
                     <spacing freq_units="KHz">
                         <ch_ch>800</ch_ch>
                         <imd_2t3o>400</imd_2t3o>
@@ -3738,7 +3743,7 @@
                 <tx_profile>Standard</tx_profile>
                 <zone>Test 1</zone>
                 <incl_group>830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
-                <compat_profile id="f1e4f397-b27b-f54e-f620-03c401dbfd5f" synthesizable="1" version="0.0.0.1" name="Standard" imd_source="1">
+                <compat_profile id="f1e4f397-b27b-f54e-f620-03c401dbfd5f" name="Standard" synthesizable="1" version="0.0.0.1" imd_source="1">
                     <spacing freq_units="KHz">
                         <ch_ch>350</ch_ch>
                         <imd_2t3o>75</imd_2t3o>
@@ -3760,7 +3765,7 @@
                 <tx_profile>Standard</tx_profile>
                 <zone>Test 1</zone>
                 <incl_group>fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
-                <compat_profile id="f1e4f397-b27b-f54e-f620-03c401dbfd5f" synthesizable="1" version="0.0.0.1" name="Standard" imd_source="1">
+                <compat_profile id="f1e4f397-b27b-f54e-f620-03c401dbfd5f" name="Standard" synthesizable="1" version="0.0.0.1" imd_source="1">
                     <spacing freq_units="KHz">
                         <ch_ch>350</ch_ch>
                         <imd_2t3o>75</imd_2t3o>
@@ -3782,7 +3787,7 @@
                 <tx_profile/>
                 <zone>Test 1</zone>
                 <incl_group>830cf9dc-b271-4315-82ac-9a683c17d219</incl_group>
-                <compat_profile id="f3686491-6146-5a07-8108-bed37183ae4a" synthesizable="1" version="0.0.0.1" name="Standard" imd_source="1">
+                <compat_profile id="f3686491-6146-5a07-8108-bed37183ae4a" name="Standard" synthesizable="1" version="0.0.0.1" imd_source="1">
                     <spacing freq_units="KHz">
                         <ch_ch>350</ch_ch>
                         <imd_2t3o>250</imd_2t3o>
@@ -3809,7 +3814,7 @@
                 <tx_profile>Standard</tx_profile>
                 <zone>Test 2</zone>
                 <incl_group>fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
-                <compat_profile id="f1e4f397-b27b-f54e-f620-03c401dbfd5f" synthesizable="1" version="0.0.0.1" name="Standard" imd_source="1">
+                <compat_profile id="f1e4f397-b27b-f54e-f620-03c401dbfd5f" name="Standard" synthesizable="1" version="0.0.0.1" imd_source="1">
                     <spacing freq_units="KHz">
                         <ch_ch>350</ch_ch>
                         <imd_2t3o>75</imd_2t3o>
@@ -3831,7 +3836,7 @@
                 <tx_profile/>
                 <zone>Test 2</zone>
                 <incl_group>fdf415e6-f469-44d6-ab28-8091a49aab86</incl_group>
-                <compat_profile id="f3686491-6146-5a07-8108-bed37183ae4a" synthesizable="1" version="0.0.0.1" name="Standard" imd_source="1">
+                <compat_profile id="f3686491-6146-5a07-8108-bed37183ae4a" name="Standard" synthesizable="1" version="0.0.0.1" imd_source="1">
                     <spacing freq_units="KHz">
                         <ch_ch>350</ch_ch>
                         <imd_2t3o>250</imd_2t3o>
