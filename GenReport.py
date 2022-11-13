@@ -4,7 +4,8 @@
 """
 
 import argparse
-from WWBLexer.WWBLexer import WWBLexer
+#from WWBLexer.WWBLexer import WWBLexer
+from wwb.lexer import WWBLexer
 from Templates.WWBMarkdown import to_markdown
 
 
