@@ -82,7 +82,7 @@ class Other(dict):
             frequency       : list[str],
             notes           : str
         ) -> None:
-        """type, source, frequency, notes
+        """
         Form a WWB Other Exclusions Object from a list of identifiers
         """
 
@@ -113,7 +113,7 @@ class Other(dict):
         type            : str       = fields.pop(0)                 # Model field
         source          : str       = fields.pop(0)                 # Source field
         frequency       : list[str] = fields.pop(0).split(" - ")    # Model field
-        notes           : str       = fields.pop(0)                 # Model field
+        notes           : str       = fields[:-2]                   # Model field
         
         return cls(type, source, frequency, notes)
 
