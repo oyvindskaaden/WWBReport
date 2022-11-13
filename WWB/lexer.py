@@ -20,6 +20,7 @@ class CSVType(Enum):
     INCLUSION_LIST  = auto()
     ACTIVE_TV       = auto()
     OTHER_EXCL      = auto()
+    INFO            = auto()
 
 
 class WWBLexer(RegexLexer):
@@ -41,6 +42,7 @@ class WWBLexer(RegexLexer):
         self.wwb_tree["show_name"] = show_name
         self.wwb_tree["contact_info"] = []
         self.current_list = self.wwb_tree["contact_info"]
+        self.current_list_state = CSVType.INFO
         self.has_read_header = False
         
         yield match.start(), Token.WWB.ShowName, show_name
@@ -70,6 +72,9 @@ class WWBLexer(RegexLexer):
 
         self.current_group = self.current_zone["active"]
 
+        self.current_list_state = CSVType.ACTIVE
+        self.has_read_header = False
+
         yield match.start(), Token.WWB.ActiveChannels, no_channels
     
 
@@ -80,6 +85,9 @@ class WWBLexer(RegexLexer):
 
         self.current_group = self.current_zone["backup"]
 
+        self.current_list_state = CSVType.BACKUP
+        self.has_read_header = False
+
         yield match.start(), Token.WWB.ActiveChannel, no_backup
 
     def __register_group_cb(self, match: re.Match):
@@ -88,7 +96,7 @@ class WWBLexer(RegexLexer):
 
         self.current_group[inclusion_group] = []
         self.current_list = self.current_group[inclusion_group]
-        self.has_read_header = False
+        
 
         yield match.start(), Token.WWB.InclusionGroup, inclusion_group
 
@@ -106,7 +114,9 @@ class WWBLexer(RegexLexer):
         user_group  : str   = match.group(1)
         self.wwb_tree["parameters"]["inclusions"]["user_group_name"] = user_group
         self.wwb_tree["parameters"]["inclusions"]["user_group"] = []
+
         self.current_list = self.wwb_tree["parameters"]["inclusions"]["user_group"]
+        self.current_list_state = CSVType.USER_GROUP
         self.has_read_header = False
 
         yield match.start(), Token.WWB.UserGroup, user_group
@@ -115,7 +125,9 @@ class WWBLexer(RegexLexer):
     def __register_inclusion_list_cb(self, match: re.Match):
         self.wwb_tree["parameters"]["inclusions"]["inclusion_list_name"] = match.group(1)
         self.wwb_tree["parameters"]["inclusions"]["inclusion_list"] = []
+
         self.current_list = self.wwb_tree["parameters"]["inclusions"]["inclusion_list"]
+        self.current_list_state = CSVType.INCLUSION_LIST
         self.has_read_header = False
 
         yield match.start(), Token.WWB.InclusionList, "Inclusion List"
@@ -131,7 +143,9 @@ class WWBLexer(RegexLexer):
         tv_channels = match.group(1)
         self.wwb_tree["parameters"]["exclusions"]["no_active_tv"] = tv_channels
         self.wwb_tree["parameters"]["exclusions"]["active_tv"] = []
+
         self.current_list = self.wwb_tree["parameters"]["exclusions"]["active_tv"]
+        self.current_list_state = CSVType.ACTIVE_TV
         self.has_read_header = False
 
         yield match.start(), Token.WWB.TVChannels, tv_channels
@@ -141,7 +155,9 @@ class WWBLexer(RegexLexer):
         other_exclusions = match.group(1)
         self.wwb_tree["parameters"]["exclusions"]["no_other_exlusions"] = other_exclusions
         self.wwb_tree["parameters"]["exclusions"]["other_exlusions"] = []
+
         self.current_list = self.wwb_tree["parameters"]["exclusions"]["other_exlusions"]
+        self.current_list_state = CSVType.OTHER_EXCL
         self.has_read_header = False
 
         yield match.start(), Token.WWB.OtherExclusions, other_exclusions
@@ -209,8 +225,12 @@ class WWBLexer(RegexLexer):
 
             case CSVType.OTHER_EXCL:
                 self.current_list.append(
-                    exclusion.Active.from_csvrow(csv_line)
+                    exclusion.Other.from_csvrow(csv_line)
                 )
+                yield match.start(), Token.WWB.EXCLUSION.OTHER, "OTHER EXCL"
+
+            case CSVType.INFO:
+                self.current_list.append(csv_line)
                 yield match.start(), Token.WWB.EXCLUSION.OTHER, "OTHER EXCL"
 
         
@@ -248,14 +268,12 @@ class WWBLexer(RegexLexer):
         ],
     }
 
-    def __to_dataframe(self, csv_list: list[str]):
-        csv_list = pd.read_csv(csv_list)
 
     def __pre_process_wwb_string(self, wwb_string: str) -> str:
         """Preprocess the string, change wrong commas and change frequency decimal divider"""
         
         # Change the commas in the TV channel lists
-        wwb_string = wwb_string.replace(", ", ";")
+        #wwb_string = wwb_string.replace(", ", ";")
 
         # Change the commas to dots for the frequency
         wwb_string = re.sub(r'(\d{3}),(\d{3})',
@@ -273,6 +291,7 @@ class WWBLexer(RegexLexer):
 
     def __post_process_wwb_tree(self) -> None:
 
+
         if self.wwb_tree["contact_info"]:
             #self.wwb_tree["contact_info_show"] = pd.DataFrame(
             show_info: pd.DataFrame = pd.DataFrame(
@@ -285,61 +304,61 @@ class WWBLexer(RegexLexer):
             self.__generate_info_dict(show_info, "show", [0,1])
             self.__generate_info_dict(show_info, "customer", [3,4])
 
-        #for index, row in self.wwb_tree["contact_info_show"].iloc[:,[3,4]].copy().iterrows():
-        #    print(row[3].replace(":", "") , row[4])
+        for index, row in self.wwb_tree["contact_info_show"].iloc[:,[3,4]].copy().iterrows():
+           print(row[3].replace(":", "") , row[4])
 
-        #self.wwb_tree["contact_info_customer"] = self.wwb_tree["contact_info_show"].iloc[:,[3,4]].copy().to_dict()
-        #self.wwb_tree["contact_info_show"] = self.wwb_tree["contact_info_show"].iloc[:,[0,1]].copy().to_dict()
+        self.wwb_tree["contact_info_customer"] = self.wwb_tree["contact_info_show"].iloc[:,[3,4]].copy().to_dict()
+        self.wwb_tree["contact_info_show"] = self.wwb_tree["contact_info_show"].iloc[:,[0,1]].copy().to_dict()
 
-        # for zone in self.wwb_tree["zones"]:
-        #     for type in self.wwb_tree["zones"][zone]:
-        #         for group in self.wwb_tree["zones"][zone][type]:
-        #             if group == "header" or group.startswith("no_"):
-        #                 continue
+        for zone in self.wwb_tree["zones"]:
+            for type in self.wwb_tree["zones"][zone]:
+                for group in self.wwb_tree["zones"][zone][type]:
+                    if group == "header" or group.startswith("no_"):
+                        continue
                     
-        #             if not self.wwb_tree["zones"][zone][type][group]:
-        #                 continue
+                    if not self.wwb_tree["zones"][zone][type][group]:
+                        continue
 
-        #             # Move the Frequency header from GroupChannel to actual frequency.
-        #             header = self.wwb_tree["zones"][zone][type]["header"]
+                    # Move the Frequency header from GroupChannel to actual frequency.
+                    header = self.wwb_tree["zones"][zone][type]["header"]
 
-        #             # Group frequency is in column 4 (5) and the actual frequencies is in 5 (6)
-        #             header[4] = ""
-        #             header[5] = "Frequency"
+                    # Group frequency is in column 4 (5) and the actual frequencies is in 5 (6)
+                    header[4] = ""
+                    header[5] = "Frequency"
 
-        #             # Create dataframe with the new custom header.
-        #             # Using the same header over for multiple rf zones
-        #             df = pd.DataFrame(
-        #                 self.wwb_tree["zones"][zone][type][group],
-        #                 columns=header
-        #             )
+                    # Create dataframe with the new custom header.
+                    # Using the same header over for multiple rf zones
+                    df = pd.DataFrame(
+                        self.wwb_tree["zones"][zone][type][group],
+                        columns=header
+                    )
                     
-        #             # Drop the empty columns
-        #             df.drop("", axis="columns", inplace=True)
+                    # Drop the empty columns
+                    df.drop("", axis="columns", inplace=True)
                     
-        #             self.wwb_tree["zones"][zone][type][group] = df.to_dict()
+                    self.wwb_tree["zones"][zone][type][group] = df.to_dict()
                 
-        #         if "header" not in self.wwb_tree["zones"][zone][type]:
-        #             continue
-        #         self.wwb_tree["zones"][zone][type].pop("header")
+                if "header" not in self.wwb_tree["zones"][zone][type]:
+                    continue
+                self.wwb_tree["zones"][zone][type].pop("header")
 
 
-        # for params in self.wwb_tree["parameters"]:
-        #     for param in self.wwb_tree["parameters"][params]:
-        #         if param.startswith('no_') or param.endswith('_name'):
-        #             continue
+        for params in self.wwb_tree["parameters"]:
+            for param in self.wwb_tree["parameters"][params]:
+                if param.startswith('no_') or param.endswith('_name'):
+                    continue
 
-        #         if not self.wwb_tree["parameters"][params][param]:
-        #             continue
-        #         df = pd.DataFrame(
-        #             self.wwb_tree["parameters"][params][param][1:],
-        #             columns=self.wwb_tree["parameters"][params][param][0]
-        #         )
+                if not self.wwb_tree["parameters"][params][param]:
+                    continue
+                df = pd.DataFrame(
+                    self.wwb_tree["parameters"][params][param][1:],
+                    columns=self.wwb_tree["parameters"][params][param][0]
+                )
                 
-        #         # Drop the empty columns
-        #         df.drop("", axis="columns", inplace=True)
+                # Drop the empty columns
+                df.drop("", axis="columns", inplace=True)
 
-        #         self.wwb_tree["parameters"][params][param] = df.to_dict()
+                self.wwb_tree["parameters"][params][param] = df.to_dict()
         return
 
     
@@ -354,8 +373,8 @@ class WWBLexer(RegexLexer):
             continue
 
 
-        if post_process:
-            self.__post_process_wwb_tree()
+        # if post_process:
+        #     self.__post_process_wwb_tree()
         
         return self.wwb_tree
 
