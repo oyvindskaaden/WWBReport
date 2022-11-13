@@ -4,7 +4,9 @@ import wwb.channel as channel
 import wwb.inclusion as inclusion
 import wwb.exclusion as exclusion
 import json
+import wwb.info as info
 
+from pprint import pprint
 
 test = {
     "channel":      channel.Active.from_csvrow("AD4D-A,G56,Shure,[AD4D-A],G:-- Ch:--,552.075 MHz,Tag Test 1,Tag Test 2,,"),
@@ -20,4 +22,30 @@ test = {
 
 
 
-print(json.dumps(test, indent=2))
+#print(json.dumps(test, indent=2))
+
+info_string = [
+    "Venue:,Super Cool Venue,,Point of Contact:,ContactName Contact,",
+    "Address:,Venue Line 1",
+    "Venue Line 2",
+    "Venue Line 3, with commas",
+    "Venue City, Venue State   Venue Postal,,Address:,Contact Line 1",
+    "Contact Line 2",
+    "Contact Line 3, with commas,",
+    "Phone:,Venue Phone,,Phone:,Contact Phone 1,",
+    "Fax:,Venue Fax,,Fax:,Contact Fax,",
+    "E-mail:,venue@email.com,,E-mail:,contact@email.com,",
+    "Notes:,Notes line 1",
+    "Notes line 2, with commas!!,,,,"
+]
+
+def from_csv(
+        csv_lines   : list[str]  
+    ):
+    lines = [line.split(",") for line in csv_lines]
+
+    pprint(lines, width=120)
+    
+    return lines
+
+from_csv(info_string)
