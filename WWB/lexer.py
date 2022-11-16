@@ -11,6 +11,7 @@ import pandas as pd
 from . import channel as channel
 from . import inclusion as inclusion
 from . import exclusion as exclusion
+from . import info as info
 
 
 class CSVType(Enum):
@@ -40,8 +41,8 @@ class WWBLexer(RegexLexer):
         show_name = match.group(1)
         
         self.wwb_tree["show_name"] = show_name
-        self.wwb_tree["contact_info"] = []
-        self.current_list = self.wwb_tree["contact_info"]
+        self.wwb_tree["info"] = []
+        self.current_list = self.wwb_tree["info"]
         self.current_list_state = CSVType.INFO
         self.has_read_header = False
         
@@ -66,20 +67,20 @@ class WWBLexer(RegexLexer):
 
 
     def __register_active_cb(self, match: re.Match):
-        no_channels = match.group(1)
+        no_active = int(match.group(1))
         self.current_zone["active"] = {}
-        self.current_zone["active"]["no_active"] = no_channels
+        self.current_zone["active"]["no_active"] = no_active
 
         self.current_group = self.current_zone["active"]
 
         self.current_list_state = CSVType.ACTIVE
         self.has_read_header = False
 
-        yield match.start(), Token.WWB.ActiveChannels, no_channels
+        yield match.start(), Token.WWB.ActiveChannels, no_active
     
 
     def __register_backup_cb(self, match: re.Match):
-        no_backup = match.group(1)
+        no_backup = int(match.group(1))
         self.current_zone["backup"] = {}
         self.current_zone["backup"]["no_backup"] = no_backup
 
@@ -132,6 +133,11 @@ class WWBLexer(RegexLexer):
 
         yield match.start(), Token.WWB.InclusionList, "Inclusion List"
 
+
+    def __register_no_inclusions_cb(self, match: re.Match):
+        group   : str   = match.group(1)
+        yield match.start, Token.WWB.NO_INCLUSION, "No " + group
+
     
     def __register_exclusions_cb(self, match: re.Match):
         self.wwb_tree["parameters"]["exclusions"] = {}
@@ -140,7 +146,7 @@ class WWBLexer(RegexLexer):
 
 
     def __register_active_tv_cb(self, match: re.Match):
-        tv_channels = match.group(1)
+        tv_channels = int(match.group(1))
         self.wwb_tree["parameters"]["exclusions"]["no_active_tv"] = tv_channels
         self.wwb_tree["parameters"]["exclusions"]["active_tv"] = []
 
@@ -152,15 +158,15 @@ class WWBLexer(RegexLexer):
 
     
     def __register_other_exlusions_cb(self, match: re.Match):
-        other_exclusions = match.group(1)
-        self.wwb_tree["parameters"]["exclusions"]["no_other_exlusions"] = other_exclusions
+        no_other_exclusions = int(match.group(1))
+        self.wwb_tree["parameters"]["exclusions"]["no_other_exlusions"] = no_other_exclusions
         self.wwb_tree["parameters"]["exclusions"]["other_exlusions"] = []
 
         self.current_list = self.wwb_tree["parameters"]["exclusions"]["other_exlusions"]
         self.current_list_state = CSVType.OTHER_EXCL
         self.has_read_header = False
 
-        yield match.start(), Token.WWB.OtherExclusions, other_exclusions
+        yield match.start(), Token.WWB.OtherExclusions, no_other_exclusions
 
 
     def __register_date_created_cb(self, match: re.Match):
@@ -179,7 +185,11 @@ class WWBLexer(RegexLexer):
 
 
     def __register_csv_cb(self, match: re.Match):
-        csv_line = match.group(0)#.split(',')
+        csv_line = match.group(0)#.strip()#.split(',')
+        #print(csv_line)
+        if not csv_line:
+            yield match.start(), Token.NEWLINE, "NEWLINE"
+            return
         
         # if "header" not in self.current_group:
         #     self.current_group["header"] = csv_line
@@ -197,41 +207,41 @@ class WWBLexer(RegexLexer):
                 self.current_list.append(
                     channel.Active.from_csvrow(csv_line)
                 )
-                yield match.start(), Token.WWB.CHANNEL.ACTIVE, "ACTIVE CH"
+                yield match.start(), Token.WWB.CHANNEL.ACTIVE, csv_line
 
             case CSVType.BACKUP:
                 self.current_list.append(
                     channel.Backup.from_csvrow(csv_line)
                 )
-                yield match.start(), Token.WWB.CHANNEL.BACKUP, "BACKUP CH"
+                yield match.start(), Token.WWB.CHANNEL.BACKUP, csv_line
 
             case CSVType.USER_GROUP:
                 self.current_list.append(
                     inclusion.UserGroup.from_csvrow(csv_line)
                 )
-                yield match.start(), Token.WWB.INCLUSION.USER_GROUP, "USER GROUP INCL"
+                yield match.start(), Token.WWB.INCLUSION.USER_GROUP, csv_line
 
             case CSVType.INCLUSION_LIST:
                 self.current_list.append(
                     inclusion.InclusionList.from_csvrow(csv_line)
                 )
-                yield match.start(), Token.WWB.INCLUSION.LIST, "INCLUSION LIST"
+                yield match.start(), Token.WWB.INCLUSION.LIST, csv_line
 
             case CSVType.ACTIVE_TV:
                 self.current_list.append(
                     exclusion.ActiveTV.from_csvrow(csv_line)
                 )
-                yield match.start(), Token.WWB.EXCLUSION.ACTIVE_TV, "ACTIVE_TV EXCL"
+                yield match.start(), Token.WWB.EXCLUSION.ACTIVE_TV, csv_line
 
             case CSVType.OTHER_EXCL:
                 self.current_list.append(
                     exclusion.Other.from_csvrow(csv_line)
                 )
-                yield match.start(), Token.WWB.EXCLUSION.OTHER, "OTHER EXCL"
+                yield match.start(), Token.WWB.EXCLUSION.OTHER, csv_line
 
             case CSVType.INFO:
                 self.current_list.append(csv_line)
-                yield match.start(), Token.WWB.EXCLUSION.OTHER, "OTHER EXCL"
+                yield match.start(), Token.WWB.INFO, csv_line
 
         
         return
@@ -241,7 +251,7 @@ class WWBLexer(RegexLexer):
         'root': [
             (r'""\n"(.+)"\s+""',                    __register_showname_cb),
 
-            (r'"(.* Report)"\s+',                   __register_type_cb),
+            (r'(?:""\n)?"(.* Report)"\s+',          __register_type_cb),
 
             (r'"RF Zone: (.+)"\s+',                 __register_rf_zone_cb),
             (r'"Active Channels \((\d+)\)"\s+',     __register_active_cb),
@@ -255,16 +265,17 @@ class WWBLexer(RegexLexer):
             (r'"Inclusions"\s+',                    __register_inclusions_cb),
             (r'"User Group List: (.+)"\s+',         __register_user_group_cb),
             (r'"Inclusion List: (.+)"\s+',          __register_inclusion_list_cb),
+            (r'"No (.+) currently applied"',        __register_no_inclusions_cb),
             
             (r'"Exclusions"\s+',                    __register_exclusions_cb),
             (r'"Active TV Channels \((\d+)\)"\s+',  __register_active_tv_cb),
             (r'"Other Exclusions \((\d+)\)"\s+',    __register_other_exlusions_cb),
             
             (r'"Created on (.+ at .+)"\s+',         __register_date_created_cb),
-            (r'Generated using Wireless Workbench (.+)"\s+', 
+            (r'"Generated using Wireless Workbench (.+)"\s+', 
                                                     __register_wwb_version_cb),
-            
-            (r'(.*,)',                              __register_csv_cb)
+            (r'.+',                                 __register_csv_cb),
+
         ],
     }
 
@@ -369,9 +380,12 @@ class WWBLexer(RegexLexer):
     
         # Lex the string and itterate trough to get the tree back
         lexed_wwb_report = self.get_tokens_unprocessed(wwb_string)
-        for _, _, _ in lexed_wwb_report:
+        for i, j, k in lexed_wwb_report:
+            #print(i,j,k)
             continue
 
+        if self.wwb_tree["info"]:
+            self.wwb_tree["info"] = info.Info.from_csv(self.wwb_tree["info"])
 
         # if post_process:
         #     self.__post_process_wwb_tree()
@@ -380,7 +394,7 @@ class WWBLexer(RegexLexer):
 
 
     def to_json(self, minimize: bool = True) -> str:
-        return json.dumps(self.wwb_tree, indent= 4 if not minimize else None)
+        return json.dumps(self.wwb_tree, ensure_ascii=False,indent= 4 if not minimize else None)
 
     
     def __str__(self) -> str:
