@@ -282,9 +282,6 @@ class WWBLexer(RegexLexer):
 
     def __pre_process_wwb_string(self, wwb_string: str) -> str:
         """Preprocess the string, change wrong commas and change frequency decimal divider"""
-        
-        # Change the commas in the TV channel lists
-        #wwb_string = wwb_string.replace(", ", ";")
 
         # Change the commas to dots for the frequency
         wwb_string = re.sub(r'(\d{3}),(\d{3})',
@@ -292,103 +289,17 @@ class WWBLexer(RegexLexer):
                             wwb_string)
         return wwb_string
 
-    def __generate_info_dict(self, data_src: pd.DataFrame, data_target_key: str, location: list) -> None:
-        self.wwb_tree["contact_info"][data_target_key] = {}
-        for _, row in data_src.iloc[:,location].copy().iterrows():
-            if not row[location[0]]:
-                continue
-            self.wwb_tree["contact_info"][data_target_key][row[location[0]].replace(":", "")] = row[location[1]]
-        return
-
-    def __post_process_wwb_tree(self) -> None:
-
-
-        if self.wwb_tree["contact_info"]:
-            #self.wwb_tree["contact_info_show"] = pd.DataFrame(
-            show_info: pd.DataFrame = pd.DataFrame(
-                self.wwb_tree["contact_info"]#[1:],
-                #columns=self.wwb_tree["contact_info_show"][0]
-            )
-
-            self.wwb_tree["contact_info"] = {}
-
-            self.__generate_info_dict(show_info, "show", [0,1])
-            self.__generate_info_dict(show_info, "customer", [3,4])
-
-        for index, row in self.wwb_tree["contact_info_show"].iloc[:,[3,4]].copy().iterrows():
-           print(row[3].replace(":", "") , row[4])
-
-        self.wwb_tree["contact_info_customer"] = self.wwb_tree["contact_info_show"].iloc[:,[3,4]].copy().to_dict()
-        self.wwb_tree["contact_info_show"] = self.wwb_tree["contact_info_show"].iloc[:,[0,1]].copy().to_dict()
-
-        for zone in self.wwb_tree["zones"]:
-            for type in self.wwb_tree["zones"][zone]:
-                for group in self.wwb_tree["zones"][zone][type]:
-                    if group == "header" or group.startswith("no_"):
-                        continue
-                    
-                    if not self.wwb_tree["zones"][zone][type][group]:
-                        continue
-
-                    # Move the Frequency header from GroupChannel to actual frequency.
-                    header = self.wwb_tree["zones"][zone][type]["header"]
-
-                    # Group frequency is in column 4 (5) and the actual frequencies is in 5 (6)
-                    header[4] = ""
-                    header[5] = "Frequency"
-
-                    # Create dataframe with the new custom header.
-                    # Using the same header over for multiple rf zones
-                    df = pd.DataFrame(
-                        self.wwb_tree["zones"][zone][type][group],
-                        columns=header
-                    )
-                    
-                    # Drop the empty columns
-                    df.drop("", axis="columns", inplace=True)
-                    
-                    self.wwb_tree["zones"][zone][type][group] = df.to_dict()
-                
-                if "header" not in self.wwb_tree["zones"][zone][type]:
-                    continue
-                self.wwb_tree["zones"][zone][type].pop("header")
-
-
-        for params in self.wwb_tree["parameters"]:
-            for param in self.wwb_tree["parameters"][params]:
-                if param.startswith('no_') or param.endswith('_name'):
-                    continue
-
-                if not self.wwb_tree["parameters"][params][param]:
-                    continue
-                df = pd.DataFrame(
-                    self.wwb_tree["parameters"][params][param][1:],
-                    columns=self.wwb_tree["parameters"][params][param][0]
-                )
-                
-                # Drop the empty columns
-                df.drop("", axis="columns", inplace=True)
-
-                self.wwb_tree["parameters"][params][param] = df.to_dict()
-        return
-
-    
-
-    def get_wwb_tree(self, wwb_string: str, post_process: bool = True) -> dict:
+    def get_wwb_tree(self, wwb_string: str) -> dict:
         # Pre process the string to fix issues with wwb format
         wwb_string = self.__pre_process_wwb_string(wwb_string)
     
         # Lex the string and itterate trough to get the tree back
         lexed_wwb_report = self.get_tokens_unprocessed(wwb_string)
-        for i, j, k in lexed_wwb_report:
-            #print(i,j,k)
+        for _, _, _ in lexed_wwb_report:
             continue
 
         if self.wwb_tree["info"]:
             self.wwb_tree["info"] = info.Info.from_csv(self.wwb_tree["info"])
-
-        # if post_process:
-        #     self.__post_process_wwb_tree()
         
         return self.wwb_tree
 
