@@ -1,4 +1,4 @@
-<show source="oyvinds-mbp.local" date="Sun Nov 13 2022" time="19:12:55" version="1.0" appl_version="6.15.0.119">
+<show source="oyvinds-mbp.local" date="Mon Nov 14 2022" time="00:44:49" version="1.0" appl_version="6.15.0.119">
     <show_properties version="1.0">
         <show_info>
             <name>Test Show</name>
@@ -8,7 +8,7 @@
             <name>ContactName Contact</name>
             <address>Contact Line 1
 Contact Line 2
-Contact Line 3</address>
+Contact Line 3, with commas</address>
             <phone1>Contact Phone 1</phone1>
             <phone2>Contact Phone 2</phone2>
             <fax>Contact Fax</fax>
@@ -20,7 +20,7 @@ Contact Line 3</address>
             <name>Super Cool Venue</name>
             <address>Venue Line 1
 Venue Line 2
-Venue Line 3</address>
+Venue Line 3, with commas</address>
             <country>Venue Contry</country>
             <zipcode>Venue Postal</zipcode>
             <state>Venue State</state>

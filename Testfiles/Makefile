@@ -5,16 +5,11 @@ JSON_FILES 	= $(patsubst csv/%,%.json,$(FILES))
 
 GENERATOR	= ../GenReport.py
 
-all: md json
+all: json md
 
-md: md_clean $(MD_FILES)
+md: $(MD_FILES)
 
-json: json_clean $(JSON_FILES)
-
-test: 
-	echo $(FILES)
-	echo $(MD_FILES)
-	echo $(JSON_FILES)
+json: $(JSON_FILES)
 
 %.md: csv/%.csv
 	$(GENERATOR) -f md csv/$*.csv > ./md/$*.md
