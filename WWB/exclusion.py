@@ -29,7 +29,6 @@ class ActiveTV(dict):
 
         `Type,[Channels]*,,,,`
         """
-
         fields  = csv_line.split(",")
 
         # The csv string is as follows
@@ -104,7 +103,6 @@ class Other(dict):
 
         `Type,Source,Frequency,Notes,,`
         """
-
         fields  = csv_line.split(",")
 
         # The csv string is as follows

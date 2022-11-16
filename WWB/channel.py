@@ -37,7 +37,6 @@ class Active(dict):
 
         `Model, Band, Channel Name, Device ID, Channel/Group, Frequency, [Tags]*,,`
         """
-
         fields  = csv_line.split(",")
 
         # The csv string is as follows
@@ -136,7 +135,6 @@ class Backup(dict):
 
         `Type,Band,,,,Frequency,,,`
         """
-
         fields  = csv_line.split(",")
 
         # The csv string is as follows
