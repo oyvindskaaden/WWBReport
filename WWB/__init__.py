@@ -1,4 +1,10 @@
 __all__ = [
     "Channel",
-    "Backup"
+    "Backup",
+    "UserGroup",
+    "InclusionList",
+    "ActiveTV",
+    "Other",
+    "Info",
+    "WWBLexer"
 ]
