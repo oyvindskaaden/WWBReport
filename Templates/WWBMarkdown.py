@@ -12,12 +12,12 @@ def to_markdown(wwb_tree: dict) -> str:
 > Created on version: {wwb_tree["wwb_version"]}
 """
 
-#     if (wwb_tree["contact_info"]):
-#         for info in wwb_tree["contact_info"]:
-#             markdown_output += f"""
-# ## {info.capitalize()} Information
+    if (wwb_tree["info"]):
+        for info in wwb_tree["info"]:
+            markdown_output += f"""
+## {info.capitalize()} Information
 
-# {pd.DataFrame().from_records([wwb_tree["contact_info"][info]]).T.to_markdown()}
+{pd.DataFrame().from_records([wwb_tree["info"][info]]).T.to_markdown()}
 
 # """
 
