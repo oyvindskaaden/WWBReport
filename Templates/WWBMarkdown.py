@@ -19,7 +19,7 @@ def to_markdown(wwb_tree: dict) -> str:
 
 {pd.DataFrame().from_records([wwb_tree["info"][info]]).T.to_markdown()}
 
-# """
+"""
 
     markdown_output += f"""## {wwb_tree["type"]}
     """
