@@ -78,6 +78,10 @@ class Active(dict):
     @property
     def tags(self) -> list[str]:
         return self["tags"]
+
+    @property
+    def header(self) -> str:
+        return ["Model", "Band", "Channel Name", "Device ID", "Frequency", "Tags"]
     
 
     ######################
@@ -164,6 +168,10 @@ class Backup(dict):
     @property
     def frequency(self) -> str:
         return self["frequency"]
+
+    @property
+    def header(self) -> str:
+        return ["Model", "Band", "Frequency"]
     
 
     ######################

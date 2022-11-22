@@ -67,8 +67,12 @@ class UserGroup(dict):
         return self["frequency"]
     
     @property
-    def tags(self) -> list[str]:
-        return self["tags"]
+    def tv(self) -> list[str]:
+        return self["tv"]
+
+    @property
+    def header(self) -> str:
+        return ["User Group", "Type", "Frequency", "TV"]
     
 
     ######################
@@ -159,9 +163,13 @@ class InclusionList(dict):
         return self["frequency"]
     
     @property
-    def tags(self) -> list[str]:
-        return self["tags"]
+    def tv(self) -> list[str]:
+        return self["tv"]
     
+    @property
+    def header(self) -> str:
+        return ["Inclusion Group", "Type", "Frequency", "TV"]
+
 
     ######################
     ## INTERNAL METHODS ##
@@ -173,7 +181,7 @@ class InclusionList(dict):
         cls_str  = f"Inclusion group:   {self.inclusion_group}\n"
         cls_str += f"Type:              {self.type}\n"
         cls_str += f"Frequency:         {self.frequency}\n"
-        cls_str += f"TV Channels:       {self.tags}\n"
+        cls_str += f"TV Channels:       {self.tv}\n"
 
         return cls_str
 

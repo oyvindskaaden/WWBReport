@@ -49,6 +49,10 @@ class ActiveTV(dict):
     @property
     def channels(self) -> list[str]:
         return self["channels"]
+
+    @property
+    def header(self) -> str:
+        return ["Type", "Channels"]
     
 
     ######################
@@ -134,6 +138,10 @@ class Other(dict):
     @property
     def notes(self) -> str:
         return self["notes"]
+    
+    @property
+    def header(self) -> str:
+        return ["Type", "Source", "Frequency", "Notes"]
 
     ######################
     ## INTERNAL METHODS ##
