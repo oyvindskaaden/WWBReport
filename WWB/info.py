@@ -6,9 +6,6 @@ class Info(dict):
     def __init__(self,
             venue_name      : str,
             venue_address   : list[str],
-            venue_city      : str,
-            venue_state     : str,
-            venue_postal    : str,
             venue_phone     : str,
             venue_fax       : str,
             venue_email     : str,
@@ -24,9 +21,6 @@ class Info(dict):
         self["venue"] = {
             "name": venue_name,
             "address": venue_address,
-            "city": venue_city,
-            "state": venue_state,
-            "postal": venue_postal,
             "phone": venue_phone,
             "fax": venue_fax,
             "email": venue_email
@@ -42,6 +36,20 @@ class Info(dict):
         
         self["notes"] = notes
 
+
+        for t in ["venue", "contact"]:
+            empty = True
+            for k in self[t]:
+                empty = False if self[t][k] else empty
+            if empty:
+                del self[t]
+
+        # if empty:
+        #     del self["contact"]
+        #     del self["venue"]
+        #     del self["notes"]
+
+
     @classmethod
     def from_dict(cls,
             info_dict   : dict
@@ -49,9 +57,6 @@ class Info(dict):
         return cls(
             info_dict["venue"]["name"],
             info_dict["venue"]["address"],
-            info_dict["venue"]["city"],
-            info_dict["venue"]["state"],
-            info_dict["venue"]["postal"],
             info_dict["venue"]["phone"],
             info_dict["venue"]["fax"],
             info_dict["venue"]["email"],
@@ -94,6 +99,7 @@ class Info(dict):
             lines.pop(i)
 
         for i, line in enumerate(lines):
+            # print(i, line)
             match line[0]: 
                 case "Venue:":
                     info["venue"]["name"]       : str       = line[1]
@@ -102,21 +108,27 @@ class Info(dict):
                 case "Address:":
                     indices = [i for i, _ in enumerate(line) if _ == "Address:"]
 
-                    venue_address   : list[str] = [s.rstrip(",") for s in line[1:indices[1] - 3]]
-                    venue_city      : str       = line[indices[1] - 2]
-                    venue_other     : list[str] = line[indices[1] - 2].split("   ")
-
+                    venue_address   : list[str] = [
+                        item.strip() for sublist in [s.rstrip(",").split("   ") for s in line[indices[0] + 1:indices[1] - 1]] for item in sublist
+                    ]
                     contact_address : list[str] = [s.rstrip(",") for s in line[indices[1] + 1:]]
-                    
+
                     # Remove empty lines
-                    # venue_address   : list[str] = remove_lead_trail(venue_address)
-                    # contact_address : list[str] = remove_lead_trail(contact_address)
+                    venue_address   : list[str] = remove_lead_trail(venue_address)
+                    contact_address : list[str] = remove_lead_trail(contact_address)
+                    
+                    # Guess what should be commas
+                    lines_to_delete : list[int] = []
+                    for i, l in enumerate(venue_address):
+                        if l[0].islower() and len(venue_address) > 1:
+                            venue_address[i - 1] += ", " + l
+                            lines_to_delete.append(i)
+                    
+                    lines_to_delete.reverse()
+                    for i in lines_to_delete:
+                        venue_address.pop(i)
 
                     info["venue"]["address"]    : list[str] = venue_address
-                    info["venue"]["city"]       : str       = venue_city
-                    info["venue"]["state"]      : str       = venue_other[0] if len(venue_other) > 1 else ""
-                    info["venue"]["postal"]     : str       = venue_other[1] if len(venue_other) > 1 else ""
-
                     info["contact"]["address"]  : list[str] = contact_address
                     pass
                 case "Phone:":
@@ -133,7 +145,7 @@ class Info(dict):
                     pass
                 case "Notes:":
                     notes                       : str       = [s.rstrip(",") for s in line[1:]]
-                    # notes                       : str       = remove_lead_trail(notes)
+                    notes                       : str       = remove_lead_trail(notes)
                     info["notes"]               : str       = notes
                     pass
         
@@ -151,15 +163,6 @@ class Info(dict):
     @property
     def venue_address(self) -> list[str]:
         return self["venue"]["address"]
-    @property
-    def venue_city(self) -> str:
-        return self["venue"]["city"]
-    @property
-    def venue_state(self) -> str:
-        return self["venue"]["state"]
-    @property
-    def venue_postal(self) -> str:
-        return self["venue"]["postal"]
     @property
     def venue_phone(self) -> str:
         return self["venue"]["phone"]
@@ -195,6 +198,10 @@ class Info(dict):
     def notes(self) -> list[str]:
         return self["notes"]
 
+    @property
+    def header(self) -> str:
+        return ["Name", "Address", "Phone", "Fax", "E-mail"]
+
     ######################
     ## INTERNAL METHODS ##
     ########################
@@ -204,9 +211,6 @@ class Info(dict):
     def __str__(self) -> str:
         cls_str  = f"Venue Name:        {self.venue_name}\n"
         cls_str += f"Venue Address:     {self.venue_address}\n"
-        cls_str += f"Venue City:        {self.venue_city}\n"
-        cls_str += f"Venue State:       {self.venue_state}\n"
-        cls_str += f"Venue Postal:      {self.venue_postal}\n"
         cls_str += f"Venue Phone:       {self.venue_phone}\n"
         cls_str += f"Venue Fax:         {self.venue_fax}\n"
         cls_str += f"Venue E-Mail:      {self.venue_email}\n"
@@ -229,7 +233,6 @@ class Info(dict):
 
 def remove_lead_trail(l: list):
     """Removes leading and trailing falsy values from the list"""
-    print(l)
     while l and not l[0]:
         l.pop(0)
     while l and not l[-1]:
